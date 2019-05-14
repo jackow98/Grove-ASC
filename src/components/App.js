@@ -1,22 +1,20 @@
 import React from 'react'
-import {TopMenuBar, LongNavyLogo, MenuBarsIcon} from '../styling/TopMenuBarStyling'
+import TopMenuBar from "./TopMenuBar";
+import PhotoCard from "./PhotoCard";
+import {MainHeader, PageContent} from "../styling/GlobalStyling";
 
 class App extends React.Component{
 
     render(){
         return(
             <div>
-                <TopMenuBar>
-                    <MenuBarsIcon/>
-                    <LongNavyLogo/>
-                    <MenuBarsIcon/>
-                </TopMenuBar>
+                <TopMenuBar/>
 
-                <mainHeader>
-                    Top Menu Bar
-                </mainHeader>
+                <PageContent>
+                    <PhotoCard>
 
-                Home Page
+                    </PhotoCard>
+                </PageContent>
             </div>
         )
     }
