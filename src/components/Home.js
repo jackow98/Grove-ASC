@@ -2,7 +2,7 @@ import React from 'react'
 import TopMenuBar from "./TopMenuBar";
 import PhotoCard from "./PhotoCard";
 import {PageContent} from "../styling/GlobalStyling";
-import SideNavBar from "./SideNavBar";
+import {withRouter} from "react-router-dom";
 
 class Home extends React.Component{
 
@@ -10,7 +10,6 @@ class Home extends React.Component{
         return(
             <div>
                 <TopMenuBar/>
-
                 <PageContent>
                     <PhotoCard
                         mainBackground={"https://lh6.googleusercontent.com/t6UweLs2ilp0tAikXKF5jph2Rq_E84G_s7n9Mp32gfCGu30C518iMmoJNgc=w2400"}
@@ -35,4 +34,4 @@ class Home extends React.Component{
 
 }
 
-export default Home
+export default withRouter(Home)

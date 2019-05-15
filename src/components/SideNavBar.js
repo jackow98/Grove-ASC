@@ -29,8 +29,9 @@ export const CloseIcon = styled(Close)`
     width: 49.03px;
     height: 49.03px;
     margin: 3%;
-    
     color: #FFFF;
+    
+    position: absolute;
     
     :hover {
         cursor: pointer;
@@ -38,14 +39,70 @@ export const CloseIcon = styled(Close)`
     }
 `;
 
+export const MenuList = styled.div`
+    height: 80%
+    width: 100%;
+    
+    position: absolute;
+    bottom: 2%;
+  
+    background: #000040;
+`;
+
+export const MenuLink = styled.a`
+    height: 3.6%;
+    width: 30%;
+    
+    text-align: center;
+    display: block;
+    padding-top: 8%
+    margin-left: 35%
+    margin-right: 35%
+    
+    color: #A0DDF1;
+    font-family: "Myriad Pro Light";
+    font-size: 48px;
+    line-height: 24px;
+    transition: 0.3s;
+    
+    :hover {
+        cursor: pointer;
+    }
+    
+    @media screen and (max-width: 600px) {
+        padding-top: 12%
+    }
+    
+    @media screen and (max-width: 800px) {
+        width: 70%;
+        margin-left: 15%
+        margin-right: 15%
+        padding-top: 20%
+    }
+    
+`;
+
 
 class SideNavBar extends React.Component{
     render(){
         return(
-            <Rectangle open={this.props.open}>
+            <Rectangle open={this.props.open}>]
                 <CloseIcon onClick = {this.props.closeSideMenu()}/>
-
-            </Rectangle>
+                <MenuList>
+                    <MenuLink>
+                        Home
+                    </MenuLink>
+                    <MenuLink>
+                        About Us
+                    </MenuLink>
+                    <MenuLink>
+                        Members
+                    </MenuLink>
+                    <MenuLink>
+                        Contact Us
+                    </MenuLink>
+                </MenuList>
+             </Rectangle>
         )
     }
 }

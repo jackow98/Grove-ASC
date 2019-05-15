@@ -68,6 +68,7 @@ export const MainButton = styled.button`
     bottom: 2%;
     
     border-radius: 10px;
+    outline:none;
     
     background-color: #2FB6E1;
     color: white;
