@@ -10,9 +10,10 @@ import {MenuAltLeft} from "styled-icons/boxicons-regular/MenuAltLeft";
 //TODO: Add functionality to logo
 
 export const Rectangle = styled.div`
-    height: 10%;
+    height: 12%;
     width: 100%;
     top: 0
+    z-index: 10;
     
     text-align: center; 
     display: flex;
@@ -22,6 +23,9 @@ export const Rectangle = styled.div`
     
     background-color: #FFF;
     
+    @media only screen and (max-width: 600px) {
+        height: 10%;
+    }
 `;
 
 export const LongNavyLogo = styled.img`
