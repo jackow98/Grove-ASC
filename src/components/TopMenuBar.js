@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import logo from '../assets/GroveNavyLogoLong.png'
 import {Person} from 'styled-icons/octicons/Person'
 import {MenuAltLeft} from "styled-icons/boxicons-regular/MenuAltLeft";
+import SideNavBar from "./SideNavBar";
 
 //Uses styled Components and styled icons to display top navigation bar
 //TODO: Add functionality to menu icon
@@ -41,6 +42,11 @@ export const MenuBarsIcon = styled(MenuAltLeft)`
     margin: 2%;
     
     color: #000040;
+    
+    :hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
 `;
 
 export const AvatarIcon = styled(Person)`
@@ -52,15 +58,30 @@ export const AvatarIcon = styled(Person)`
 `;
 
 class TopMenuBar extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = { sideMenuOpen: false };
+    }
+
+    openSideMenu = () =>{
+        this.setState({sideMenuOpen: true})
+    };
+
+    closeSideMenu = () =>{
+        this.setState({sideMenuOpen: false})
+    };
+
     render() {
         return (
             <Rectangle>
-                <MenuBarsIcon/>
+                <SideNavBar open={this.state.sideMenuOpen} closeSideMenu = {() => this.closeSideMenu}/>
+                <MenuBarsIcon onClick={this.openSideMenu}/>
                 <LongNavyLogo/>
                 <AvatarIcon/>
             </Rectangle>
         )
     }
-}
+        }
 
 export default TopMenuBar
