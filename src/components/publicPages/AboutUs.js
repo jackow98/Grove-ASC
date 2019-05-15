@@ -1,14 +1,13 @@
 import React from 'react'
-import TopMenuBar from "./TopMenuBar";
-import {PageContent} from "../styling/GlobalStyling";
-import PhotoCard from "./PhotoCard";
+import TopMenu from "../navigation/TopMenu";
+import {PageContent} from "../../styling/pages";
 import {withRouter} from "react-router-dom";
 
 class AboutUs extends React.Component{
     render(){
         return(
             <div>
-                <TopMenuBar/>
+                <TopMenu/>
 
                 <PageContent>
                     About Us
@@ -18,4 +17,4 @@ class AboutUs extends React.Component{
     }
 }
 
-export default withRouter(AboutUs);
+export default AboutUs;
