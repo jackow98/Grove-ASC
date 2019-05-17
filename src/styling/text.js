@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const MainHeader = styled.h1`
-    margin: 5%;
-    text-align: center;
+    margin: ${props => (props.left ? "5% 0 5% 0" : "5%")}
+    text-align: ${props => (props.left ? "left" : "center")}
     
     color: #000040;
     font-family: "Myriad Pro Light";
@@ -24,4 +24,13 @@ export const OverlayHeader = styled.h2`
     font-size: 72px;
     font-weight: 700;
     line-height: 72px;    
+`;
+
+export const Description = styled.p`
+    height: 211.84px;
+    width: 329px;
+    color: #000040;
+    font-family: "Myriad Pro Light";
+    font-size: 24px;
+    line-height: 24px;    
 `;

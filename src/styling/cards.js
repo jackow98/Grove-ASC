@@ -3,17 +3,25 @@ import styled from "styled-components";
 //Containers
 export const Card = styled.div`
     width: 100%;
-    height: ${props => props.cardType === "PhotoCard" ? "499.99px" : "185px"};
+    height: ${props =>
+        (props.cardType === 'TitleCard' && '185px') ||
+        (props.cardType === 'PhotoCard' && '499.99px') ||
+        (props.cardType === 'TextCard' && '700px')
+    }
     margin-bottom: 1%;
     
-    display: flex;
+    display: ${props =>
+        (props.cardType === 'TitleCard' && 'flex') ||
+        (props.cardType === 'PhotoCard' && 'flex') ||
+        (props.cardType === 'TextCard' && 'block')
+    }
     justify-content: center;
     align-items: center;
     position: relative;
     
     border-radius: 0px;
     
-    background-color: #ECECEC;
+    background-color: #FFF;
     
    /* Adapt the background based on url prop */
     background-image: ${props => `url(${props.mainBackground})`};
@@ -26,7 +34,11 @@ export const Card = styled.div`
         border-radius: 10px;
         width: 93%;
         margin: 3%;
-        height: ${props => props.cardType === "PhotoCard" ? "500.22px" : "125px"};
+          height: ${props =>
+            (props.cardType === 'TitleCard' && '125px') ||
+            (props.cardType === 'PhotoCard' && '500.22px') ||
+            (props.cardType === 'TextCard' && '100%')
+        }
         align-items: flex-start;
         justify-content: none;
         background-image: ${props => props.mobileBackground ? `url(${props.mobileBackground})` : `url(${props.mainBackground})`};
@@ -34,7 +46,6 @@ export const Card = styled.div`
  `;
 
 export const PhotoTextBox = styled.div`
-    
     width: 40%;
     height: 50%;
     
@@ -58,7 +69,6 @@ export const PhotoTextBox = styled.div`
        border-radius: 0px;
        opacity 0.9;
     }
-    
 `;
 
 export const PhotoOverlay =styled.div`
@@ -75,3 +85,25 @@ export const PhotoOverlay =styled.div`
     width: 100%;
     background-color: rgba(0,0,64,0.41);
 `;
+
+export const Photo = styled.div`
+    width: 100%;
+    height: 400.41px;
+    background-image: ${props => props.mobileBackground ? `url(${props.mobileBackground})` :`url(${props.mainBackground})`};
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    
+     @media only screen and (max-width: 800px) {
+         height: 200.41px;
+       border-radius: 10px 10px 0px 0px;
+      }
+ `;
+
+export const TextualContent = styled.div`
+    clear: both;
+    position: block;
+    background: #FFFF;   
+    align-items: left;
+    margin: 3%;
+ `;
