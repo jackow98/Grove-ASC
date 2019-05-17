@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainHeader = styled.h1`
-    margin: ${props => (props.left ? "5% 0 5% 0" : "5%")}
+    margin: ${props => (props.left ? "5% 0 3% 0" : "5%")}
     text-align: ${props => (props.left ? "left" : "center")}
     
     color: #000040;
@@ -15,7 +15,7 @@ export const MainHeader = styled.h1`
     }
 `;
 
-export const OverlayHeader = styled.h2`
+export const OverlayHeader = styled.h3`
     text-align: center;
    
     opacity: 0.8;
@@ -26,11 +26,22 @@ export const OverlayHeader = styled.h2`
     line-height: 72px;    
 `;
 
+export const SecondaryHeader = styled.h2`
+    text-align: center;
+    color: #FFF;
+    font-family: "Myriad Pro Light";
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 72px;    
+    margin 2%
+`;
+
 export const Description = styled.p`
-    height: 211.84px;
-    width: 329px;
+    height: 100%;
+    width: 100%;
     color: #000040;
     font-family: "Myriad Pro Light";
     font-size: 24px;
     line-height: 24px;    
+    text-align: left;
 `;

@@ -12,21 +12,18 @@ class TextCard extends React.Component {
                 cardType="TextCard"
             >
                 <Photo
-                    mainBackground={"https://lh6.googleusercontent.com/N88KXfUWywOiAp1DufdILErHtmy8VYFJnhaJ7kfro_2a-gu8sHyPHwmqLQ0=w2400"}
+                    mainBackground={this.props.mainBackground}
                 />
 
                 <TextualContent>
                     <MainHeader left>
-                        Who are we?
+                        {this.props.header}
                     </MainHeader>
 
                     <Description>
-                        Grove ASC is an amateur swimming club based at Dalry Swim Centre in Edinburgh for school aged swimmers. We cater for a mix of abilities and pride ourselves in being a friendly, welcoming and enthusiastic club.
+                        {this.props.description}
                     </Description>
                 </TextualContent>
-
-
-
             </Card>
         )
     }

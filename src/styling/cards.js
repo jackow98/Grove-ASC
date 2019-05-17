@@ -3,25 +3,27 @@ import styled from "styled-components";
 //Containers
 export const Card = styled.div`
     width: 100%;
+
     height: ${props =>
         (props.cardType === 'TitleCard' && '185px') ||
         (props.cardType === 'PhotoCard' && '499.99px') ||
-        (props.cardType === 'TextCard' && '700px')
+        (props.cardType === 'TextCard' && '100%')
     }
-    margin-bottom: 1%;
     
     display: ${props =>
         (props.cardType === 'TitleCard' && 'flex') ||
         (props.cardType === 'PhotoCard' && 'flex') ||
-        (props.cardType === 'TextCard' && 'block')
+        (props.cardType === 'TextCard' && 'flex')
     }
+    
+    margin-bottom: 1%;
     justify-content: center;
     align-items: center;
     position: relative;
     
     border-radius: 0px;
     
-    background-color: #FFF;
+    background-color: #FFFF;
     
    /* Adapt the background based on url prop */
     background-image: ${props => `url(${props.mainBackground})`};
@@ -31,6 +33,11 @@ export const Card = styled.div`
     background-size: cover; 
     
     @media only screen and (max-width: 800px) {
+    
+        display: ${props =>
+            (props.cardType === 'TextCard' && 'block')
+        }
+    
         border-radius: 10px;
         width: 93%;
         margin: 3%;
@@ -106,4 +113,27 @@ export const TextualContent = styled.div`
     background: #FFFF;   
     align-items: left;
     margin: 3%;
- `;
+    height: 100%
+    width: 80%;
+    
+    @media only screen and (max-width: 800px) {
+         width: 100%;
+    }
+`;
+
+export const AlertCard = styled.div`
+    position: relative;
+    height: 236px;
+    width: 93%;
+    border-radius: 10px;
+    background-color: #2FB6E1;
+    margin: 3.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    :hover {
+         opacity: 0.7;
+         cursor:pointer;
+    }
+`;

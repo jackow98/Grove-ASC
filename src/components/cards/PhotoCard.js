@@ -14,7 +14,7 @@ class PhotoCard extends React.Component {
                 mobileBackground={this.props.mobileBackground}
             >
 
-                <PhotoTextBox>
+                <PhotoTextBox onClick={() => this.props.history.push(this.props.buttonLink)}>
                     <MainHeader>
                         {this.props.mainText}
                     </MainHeader>

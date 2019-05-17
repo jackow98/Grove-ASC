@@ -19,7 +19,7 @@ export const MainButton = styled.button`
     font-size: 32px;
     
    :hover {
-         background-color: #000040;
+         opacity: 0.7;
          cursor:pointer;
     }
 `;
