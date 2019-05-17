@@ -14,3 +14,14 @@ export const MainHeader = styled.h1`
         font-size: 48px;
     }
 `;
+
+export const OverlayHeader = styled.h2`
+    text-align: center;
+   
+    opacity: 0.8;
+    color: #FFF;
+    font-family: "Myriad Pro Light";
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 72px;    
+`;

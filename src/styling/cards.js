@@ -3,9 +3,8 @@ import styled from "styled-components";
 //Containers
 export const Card = styled.div`
     width: 100%;
-    height: 499.99px;
+    height: ${props => props.cardType === "PhotoCard" ? "499.99px" : "185px"};
     margin-bottom: 1%;
-    
     
     display: flex;
     justify-content: center;
@@ -24,9 +23,10 @@ export const Card = styled.div`
     background-size: cover; 
     
     @media only screen and (max-width: 800px) {
+        border-radius: 10px;
         width: 93%;
         margin: 3%;
-        height: 500.22px;
+        height: ${props => props.cardType === "PhotoCard" ? "500.22px" : "125px"};
         align-items: flex-start;
         justify-content: none;
         background-image: ${props => props.mobileBackground ? `url(${props.mobileBackground})` : `url(${props.mainBackground})`};
@@ -61,3 +61,17 @@ export const PhotoTextBox = styled.div`
     
 `;
 
+export const PhotoOverlay =styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+     @media only screen and (max-width: 800px) {
+        border-radius: 10px;
+        }
+    
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,64,0.41);
+`;

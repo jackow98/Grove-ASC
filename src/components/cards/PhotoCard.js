@@ -8,7 +8,11 @@ import {withRouter} from "react-router-dom";
 class PhotoCard extends React.Component {
     render() {
         return (
-            <Card mainBackground={this.props.mainBackground} mobileBackground={this.props.mobileBackground}>
+            <Card
+                cardType="PhotoCard"
+                mainBackground={this.props.mainBackground}
+                mobileBackground={this.props.mobileBackground}
+            >
                 <PhotoTextBox>
                     <MainHeader>
                         {this.props.mainText}
