@@ -27,7 +27,6 @@ export const SideMenuContainer = styled.div`
 `;
 
 
-
 export const MenuLinkList = styled.div`
     height: 80%
     width: 100%;

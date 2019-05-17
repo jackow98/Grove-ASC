@@ -1,14 +1,13 @@
 import React from 'react'
-import TopMenu from "../navigation/TopMenu";
 import PhotoCard from "../cards/PhotoCard";
 import {PageContent} from "../../styling/pages";
+import PublicPage from "./PublicPage";
 
-class Home extends React.Component{
+class Home extends React.Component {
 
-    render(){
-        return(
-            <div>
-                <TopMenu/>
+    render() {
+        return (
+            <PublicPage>
                 <PageContent>
                     <PhotoCard
                         mainBackground={"https://lh6.googleusercontent.com/t6UweLs2ilp0tAikXKF5jph2Rq_E84G_s7n9Mp32gfCGu30C518iMmoJNgc=w2400"}
@@ -30,10 +29,9 @@ class Home extends React.Component{
                         buttonLink={"/Contact-Us"}
                     />
                 </PageContent>
-            </div>
+            </PublicPage>
         )
     }
-
 }
 
 export default Home

@@ -29,7 +29,7 @@ export const Card = styled.div`
         height: 500.22px;
         align-items: flex-start;
         justify-content: none;
-        background-image: ${props => props.mobileBackground?`url(${props.mobileBackground})`:`url(${props.mainBackground})`};
+        background-image: ${props => props.mobileBackground ? `url(${props.mobileBackground})` : `url(${props.mainBackground})`};
     }
  `;
 

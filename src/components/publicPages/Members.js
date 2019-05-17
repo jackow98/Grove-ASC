@@ -1,18 +1,15 @@
 import React from 'react'
-import TopMenu from "../navigation/TopMenu";
 import {PageContent} from "../../styling/pages";
-import {withRouter} from "react-router-dom";
+import PublicPage from "./PublicPage";
 
-class Members extends React.Component{
-    render(){
-        return(
-            <div>
-                <TopMenu/>
-
+class Members extends React.Component {
+    render() {
+        return (
+            <PublicPage>
                 <PageContent>
-                   Members
+                    Members
                 </PageContent>
-            </div>
+            </PublicPage>
         )
     }
 }
