@@ -1,11 +1,11 @@
 import React from 'react'
-import {Description, MainHeader, SecondaryHeader} from "../../styling/text";
+import {Description, SecondaryHeader} from "../../styling/text";
 import {Form, FormContainer, TextAreaInput, TextInput} from "../../styling/forms";
 import {MainButton} from "../../styling/buttons";
 
-class ContactForm extends React.Component{
-    render(){
-        return(
+class ContactForm extends React.Component {
+    render() {
+        return (
             <FormContainer>
 
                 <Form>
@@ -25,7 +25,9 @@ class ContactForm extends React.Component{
                     <TextAreaInput/>
 
                     <Description small>
-                        We will never pass any of your data onto third parties. We may contact you from time to time with marketing content and store your data securely to allow us to do so.  You can make a request for us to erase your data using the form below at any time.
+                        We will never pass any of your data onto third parties. We may contact you from time to time
+                        with marketing content and store your data securely to allow us to do so. You can make a request
+                        for us to erase your data using the form below at any time.
                     </Description>
 
                     <MainButton>

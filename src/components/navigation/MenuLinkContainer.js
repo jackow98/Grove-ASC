@@ -3,7 +3,7 @@ import {MenuLink, MenuLinkList} from "../../styling/menus";
 import {withRouter} from "react-router-dom";
 
 //Generic container used in footer and side menu with a link to each public page
-class MenuLinkContainer extends React.Component{
+class MenuLinkContainer extends React.Component {
 
     menuItems = {
         "Home": {
@@ -24,19 +24,19 @@ class MenuLinkContainer extends React.Component{
         }
     };
 
-    renderLinks = () =>{
-      return Object.values(this.menuItems).map((key, index) => {
-          return(
-              <MenuLink menuType = {this.props.menuType} onClick={() => this.props.history.push(key.link)}>
-                  {key.name}
-              </MenuLink>
-          )
-      })
+    renderLinks = () => {
+        return Object.values(this.menuItems).map((key, index) => {
+            return (
+                <MenuLink menuType={this.props.menuType} onClick={() => this.props.history.push(key.link)}>
+                    {key.name}
+                </MenuLink>
+            )
+        })
     };
 
-    render(){
-        return(
-            <MenuLinkList menuType = {this.props.menuType}>
+    render() {
+        return (
+            <MenuLinkList menuType={this.props.menuType}>
                 {this.renderLinks()}
             </MenuLinkList>
         )

@@ -5,15 +5,15 @@ export const Card = styled.div`
     width: 100%;
 
     height: ${props =>
-        (props.cardType === 'TitleCard' && '185px') ||
-        (props.cardType === 'PhotoCard' && '499.99px') ||
-        (props.cardType === 'TextCard' && '100%')
+    (props.cardType === 'TitleCard' && '185px') ||
+    (props.cardType === 'PhotoCard' && '499.99px') ||
+    (props.cardType === 'TextCard' && '100%')
     }
     
     display: ${props =>
-        (props.cardType === 'TitleCard' && 'flex') ||
-        (props.cardType === 'PhotoCard' && 'flex') ||
-        (props.cardType === 'TextCard' && 'flex')
+    (props.cardType === 'TitleCard' && 'flex') ||
+    (props.cardType === 'PhotoCard' && 'flex') ||
+    (props.cardType === 'TextCard' && 'flex')
     }
     
     margin-bottom: 1%;
@@ -35,17 +35,17 @@ export const Card = styled.div`
     @media only screen and (max-width: 800px) {
     
         display: ${props =>
-            (props.cardType === 'TextCard' && 'block')
-        }
+    (props.cardType === 'TextCard' && 'block')
+    }
     
         border-radius: 10px;
         width: 93%;
         margin: 3%;
           height: ${props =>
-            (props.cardType === 'TitleCard' && '125px') ||
-            (props.cardType === 'PhotoCard' && '500.22px') ||
-            (props.cardType === 'TextCard' && '100%')
-        }
+    (props.cardType === 'TitleCard' && '125px') ||
+    (props.cardType === 'PhotoCard' && '500.22px') ||
+    (props.cardType === 'TextCard' && '100%')
+    }
         align-items: flex-start;
         justify-content: none;
         background-image: ${props => props.mobileBackground ? `url(${props.mobileBackground})` : `url(${props.mainBackground})`};
@@ -78,7 +78,7 @@ export const PhotoTextBox = styled.div`
     }
 `;
 
-export const PhotoOverlay =styled.div`
+export const PhotoOverlay = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +96,7 @@ export const PhotoOverlay =styled.div`
 export const Photo = styled.div`
     width: 100%;
     height: 400.41px;
-    background-image: ${props => props.mobileBackground ? `url(${props.mobileBackground})` :`url(${props.mainBackground})`};
+    background-image: ${props => props.mobileBackground ? `url(${props.mobileBackground})` : `url(${props.mainBackground})`};
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover; 
@@ -123,7 +123,7 @@ export const TextualContent = styled.div`
 
 export const AlertCard = styled.div`
     position: relative;
-    height: 236px;
+    height: 136px;
     width: 93%;
     border-radius: 10px;
     background-color: #2FB6E1;
@@ -137,3 +137,29 @@ export const AlertCard = styled.div`
          cursor:pointer;
     }
 `;
+
+export const Documents = styled.div`
+    width: 93%;
+    display: block;
+    justify-content: left;
+    margin: 3.5%;
+    align-items: center;    
+`;
+
+export const IconCardContainer = styled.div`
+    position: relative;
+    height: 112px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #ECECEC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4% 0;
+    
+    :hover {
+         opacity: 0.7;
+         cursor:pointer;
+    }
+`;
+

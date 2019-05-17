@@ -9,7 +9,7 @@ class Footer extends React.Component {
     render() {
         return (
             <FooterContainer>
-                <MenuLinkContainer menuType = "Footer"/>
+                <MenuLinkContainer menuType="Footer"/>
             </FooterContainer>
         )
     }

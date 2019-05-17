@@ -11,10 +11,10 @@ class App extends React.Component {
         return (
             <div>
                 <BrowserRouter>
-                        <Route path="/" exact component={Home}/>
-                        <Route path="/About-Us" exact component={AboutUs}/>
-                        <Route path="/Members" exact component={Members}/>
-                        <Route path="/Contact-Us" exact component={ContactUs}/>
+                    <Route path="/" exact component={Home}/>
+                    <Route path="/About-Us" exact component={AboutUs}/>
+                    <Route path="/Members" exact component={Members}/>
+                    <Route path="/Contact-Us" exact component={ContactUs}/>
                 </BrowserRouter>
             </div>
         )

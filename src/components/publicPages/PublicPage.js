@@ -7,8 +7,8 @@ import {PageContainer} from "../../styling/pages";
 //Container for all pages that can be viewed by anyone
 class PublicPage extends React.Component {
 
-    componentDidMount(){
-            window.scrollTo(0, 0);
+    componentDidMount() {
+        window.scrollTo(0, 0);
     }
 
     render() {

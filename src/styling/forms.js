@@ -26,7 +26,8 @@ export const TextInput = styled.input`
     box-sizing: border-box;
     width:100%
     height: 56px;
-    margin 1%;    
+    
+    margin: 1%
     
     border-radius: 10px;
     background-color: #FFF;
@@ -35,13 +36,17 @@ export const TextInput = styled.input`
      font-family: "Myriad Pro Light";
     font-size: 24px;
     
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 1%
     
     :focus { 
          border: 5px solid #ABB1BF;
+    }
+    
+    @media only screen and (max-width: 800px) {
+        margin 0 0 5% 0;  
     }
 `;
 
@@ -65,5 +70,9 @@ export const TextAreaInput = styled.textarea`
     
     :focus { 
          border: 5px solid #ABB1BF;
+    }
+    
+    @media only screen and (max-width: 800px) {
+        margin 0 0 5% 0;  
     }
 `;

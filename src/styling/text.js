@@ -30,11 +30,17 @@ export const SecondaryHeader = styled.h2`
     text-align: ${props => (props.left ? "left" : "center")}
     color: ${props => (props.white ? "#FFFFFF" : "#000040")}
     font-family: "Myriad Pro Light";
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 700;
-    line-height: 48px;    
+    line-height: 36px;    
     margin 1%;
-    display: flex;
+    display: block;
+    
+    @media only screen and (max-width: 800px) {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 36px;    
+    }
 `;
 
 export const Description = styled.p`
@@ -47,5 +53,8 @@ export const Description = styled.p`
     margin: ${props => (props.small ? "4%" : "0")}
     line-height: 24px;    
     text-align: left;
-    display: block;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
 `;
