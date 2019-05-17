@@ -3,6 +3,7 @@ import PhotoCard from "../cards/PhotoCard";
 import {PageContent} from "../../styling/pages";
 import PublicPage from "./PublicPage";
 
+//Home page used to display photo cards and act as a window for all users to the rest of the website
 class Home extends React.Component {
 
     render() {

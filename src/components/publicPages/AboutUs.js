@@ -2,6 +2,7 @@ import React from 'react'
 import {PageContent} from "../../styling/pages";
 import PublicPage from "./PublicPage";
 
+
 class AboutUs extends React.Component {
 
     render() {

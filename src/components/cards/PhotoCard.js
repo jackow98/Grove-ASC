@@ -4,6 +4,7 @@ import {Card, PhotoTextBox} from "../../styling/cards";
 import {MainButton} from "../../styling/buttons";
 import {withRouter} from "react-router-dom";
 
+//Card with image background and a short header with a related button linking to content
 class PhotoCard extends React.Component {
     render() {
         return (

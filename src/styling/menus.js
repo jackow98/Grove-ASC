@@ -3,11 +3,12 @@ import {Close} from "styled-icons/evil";
 import {MenuAltLeft} from "styled-icons/boxicons-regular";
 import {Person} from "styled-icons/octicons";
 
+//Containers
 export const SideMenuContainer = styled.div`
     height: 100%;
     width: ${props => props.open ? "100%;" : "0;"};
     position: fixed;
-    z-index: 20;
+    z-index: 2;
     
     top: 0;
     left: 0;
@@ -26,55 +27,11 @@ export const SideMenuContainer = styled.div`
     }
 `;
 
-
-export const MenuLinkList = styled.div`
-    height: 80%
-    width: 100%;
-    
-    position: absolute;
-    bottom: 2%;
-  
-    background: #000040;
-`;
-
-export const MenuLink = styled.a`
-    height: 3.6%;
-    width: 30%;
-    
-    text-align: center;
-    display: block;
-    padding-top: 8%
-    margin-left: 35%
-    margin-right: 35%
-    
-    color: #A0DDF1;
-    font-family: "Myriad Pro Light";
-    font-size: 48px;
-    line-height: 24px;
-    transition: 0.3s;
-    
-    :hover {
-        cursor: pointer;
-    }
-    
-    @media screen and (max-width: 600px) {
-        padding-top: 12%
-    }
-    
-    @media screen and (max-width: 800px) {
-        width: 70%;
-        margin-left: 15%
-        margin-right: 15%
-        padding-top: 20%
-    }
-    
-`;
-
 export const TopMenuContainer = styled.div`
     height: 12%;
     width: 100%;
     top: 0
-    z-index: 10;
+    z-index: 1;
     
     text-align: center; 
     display: flex;
@@ -89,6 +46,61 @@ export const TopMenuContainer = styled.div`
     }
 `;
 
+export const FooterContainer = styled.div`
+        height: 100%;
+        width: 100%;
+        z-index: 0;  
+        background-color: #000040;
+        flex-shrink: 0;
+        padding: 2%;
+`;
+
+//Links
+export const MenuLinkList = styled.div`
+    position: ${props => props.menuType === "SideMenu" ? "absolute" : "relative"};
+
+    height: 80%
+    width: 100%;
+    
+    bottom: 2%;
+  
+    background: #000040;
+`;
+
+export const MenuLink = styled.a`
+    height: 3.6%;
+    width: 30%;
+    
+    text-align: center;
+    display: block;
+    padding-top: ${props => props.menuType === "SideMenu" ? "8%" : "2%"};
+    margin-left: 35%
+    margin-right: 35%
+    
+    color: #A0DDF1;
+    font-family: "Myriad Pro Light";
+    font-size: ${props => props.menuType === "SideMenu" ? "48px" : "24px"};
+    line-height: 24px;
+    transition: 0.3s;
+    
+    :hover {
+        cursor: pointer;
+    }
+    
+    @media screen and (max-width: 600px) {
+        padding-top: ${props => props.menuType === "SideMenu" ? "12%" : "6%"};
+    }
+    
+    @media screen and (max-width: 800px) {
+        width: 70%;
+        margin-left: 15%
+        margin-right: 15%
+        padding-top: ${props => props.menuType === "SideMenu" ? "20%" : "10%"};
+    }
+    
+`;
+
+//Icons
 export const CloseIcon = styled(Close)`  
     width: 49.03px;
     height: 49.03px;

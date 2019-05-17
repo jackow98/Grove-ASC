@@ -4,9 +4,8 @@ import {AvatarIcon, MenuBarsIcon, TopMenuContainer} from "../../styling/menus";
 import {LongNavyLogo} from "../../styling/icons";
 import {withRouter} from "react-router-dom";
 
-//Uses styled Components and styled icons to display top navigation bar
+//Top menu bar fixed to top of all pages
 //TODO: Add functionality to avatar icon
-//TODO: Add functionality to logo
 
 class TopMenu extends React.Component {
 
