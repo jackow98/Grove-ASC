@@ -40,7 +40,7 @@ class AboutUs extends React.Component {
                     />
 
                     <AlertCard onClick={() => this.props.history.push("Contact-Us")}>
-                        <SecondaryHeader>
+                        <SecondaryHeader white>
                             Book a free trial today
                         </SecondaryHeader>
                     </AlertCard>

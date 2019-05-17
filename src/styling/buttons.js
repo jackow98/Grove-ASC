@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MainButton = styled.button`
     padding: 15px 48px;
     border: none;
-    position: absolute;
+    position: ${props => (props.photo ? "absolute" : "relative")}
     bottom: 2%;
     
     border-radius: 10px;
@@ -14,12 +14,20 @@ export const MainButton = styled.button`
     
     font-family: "Myriad Pro Light";
     font-weight: bold;
-    text-align: center;
+        
     text-decoration: none;
     font-size: 32px;
     
+    width: 22%;
+    margin: ${props => (props.photo ? "0" : "0 39%")}
+        
    :hover {
          opacity: 0.7;
          cursor:pointer;
+    }
+    
+    @media only screen and (max-width: 800px) {
+        width: 80%
+        margin: ${props => (props.photo ? "0" : "0 10%")}
     }
 `;

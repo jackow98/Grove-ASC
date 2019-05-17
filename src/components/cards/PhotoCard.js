@@ -20,7 +20,7 @@ class PhotoCard extends React.Component {
                     </MainHeader>
                 </PhotoTextBox>
 
-                <MainButton onClick={() => this.props.history.push(this.props.buttonLink)}>
+                <MainButton photo onClick={() => this.props.history.push(this.props.buttonLink)}>
                     {this.props.buttonText}
                 </MainButton>
             </Card>
