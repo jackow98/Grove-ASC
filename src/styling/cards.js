@@ -1,20 +1,17 @@
 import styled from "styled-components";
 
-//Container for a generic card
+//Container for a generic wide card
 export const Card = styled.div`
     width: 100%;
 
     height: ${props =>
     (props.cardType === 'TitleCard' && '145px') ||
-    (props.cardType === 'PhotoCard' && '499.99px') ||
+    (props.cardType === 'LargePhotoCard' && '499.99px') ||
+    (props.cardType === 'SmallPhotoCard' && '200px') ||
     (props.cardType === 'TextCard' && '100%')
     }
     
-    display: ${props =>
-    (props.cardType === 'TitleCard' && 'flex') ||
-    (props.cardType === 'PhotoCard' && 'flex') ||
-    (props.cardType === 'TextCard' && 'flex')
-    }
+    display: flex;
     
     margin-bottom: 1%;
     justify-content: center;
@@ -23,10 +20,10 @@ export const Card = styled.div`
     
     border-radius: ${props =>
     (props.cardType === 'TitleCard' && '0px') ||
-    (props.cardType === 'PhotoCard' && '0px') ||
+    (props.cardType === 'LargePhotoCard' && '0px') ||
+    (props.cardType === 'SmallPhotoCard' && '0px') ||
     (props.cardType === 'TextCard' && '10px')
     }
-    
    
     background-image: ${props => `url(${props.mainBackground})`};
     background-position: center; 
@@ -38,13 +35,11 @@ export const Card = styled.div`
     
         height: ${props =>
             (props.cardType === 'TitleCard' && '100px') ||
-            (props.cardType === 'PhotoCard' && '500.22px') ||
+            (props.cardType === 'LargePhotoCard' && '500.22px') ||
             (props.cardType === 'TextCard' && '100%')
-        };
+         };
     
-        display: ${props =>
-            (props.cardType === 'TextCard' && 'block')
-        };
+        display: ${props => (props.cardType === 'TextCard' && 'block')};
     
         border-radius: 10px;    
         
@@ -52,17 +47,16 @@ export const Card = styled.div`
         margin: 3%;
         align-items: flex-start;
         justify-content: none;
-      
-        
         background-image: ${props => props.mobileBackground ? `url(${props.mobileBackground})` : `url(${props.mainBackground})`};
     }
  `;
+
 
 //A container for a text box overlaying a photo
 export const PhotoTextBox = styled.div`
     width: 40%;
     height: 50%;
-    
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,6 +72,7 @@ export const PhotoTextBox = styled.div`
     }
     
     @media only screen and (max-width: 800px) {
+    
        width: 100%;
        height: 30%;
        border-radius: 0px;
@@ -141,7 +136,7 @@ export const AlertCard = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
     :hover {
          opacity: 0.7;
          cursor:pointer;
@@ -159,15 +154,15 @@ export const Documents = styled.div`
 
 //Container for a card rendering an icon beside some text
 export const IconCardContainer = styled.div`
-    position: relative;
-    height: 112px;
-    width: 100%;
+ 
+    height: ${props => props.narrow ? `70%` : `100%`};
+    width: ${props => props.narrow ? `93%` : `100%`};
     border-radius: 10px;
     background-color: #ECECEC;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4% 0;
+    margin: ${props => props.narrow ? `3.5% 3.5%` : `4% 0`};
     
     :hover {
          opacity: 0.7;

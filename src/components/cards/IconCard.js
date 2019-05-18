@@ -1,7 +1,8 @@
-import {DocumentIcon} from "../../styling/icons";
+
 import {Description} from "../../styling/text";
 import {IconCardContainer} from "../../styling/cards";
 import React from "react";
+import {LabelIcon} from "../../styling/icons";
 
 //Card for rendering an icon beside some text
 //TODO: Make usable without Icon other than document
@@ -9,8 +10,8 @@ import React from "react";
 class IconCard extends React.Component {
     render() {
         return (
-            <IconCardContainer icon={this.props.icon}>
-                <DocumentIcon/>
+            <IconCardContainer narrow={this.props.narrow} icon={this.props.icon}>
+                <LabelIcon icon={"Document"}/>
                 <Description>
                     {this.props.label}
                 </Description>

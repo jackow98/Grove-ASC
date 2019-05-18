@@ -17,7 +17,7 @@ export const LongNavyLogo = styled.img`
     }
 `;
 
-export const DocumentIcon = styled(Document)`
+export const LabelIcon = styled(Document)`
     width: 20%;
     height: 80%;  
     color: #2FB6E1;

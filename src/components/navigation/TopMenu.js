@@ -1,7 +1,7 @@
 import React from 'react'
 import SideMenu from "./SideMenu";
 import {TopMenuContainer} from "../../styling/menus";
-import {LongNavyLogo, MenuBarsIcon, TextIcon} from "../../styling/icons";
+import {AvatarIcon, LongNavyLogo, MenuBarsIcon, TextIcon} from "../../styling/icons";
 import {withRouter} from "react-router-dom";
 
 //Top menu bar fixed to top of all pages
@@ -27,10 +27,12 @@ class TopMenu extends React.Component {
                 <SideMenu open={this.state.sideMenuOpen} closeSideMenu={() => this.closeSideMenu}/>
                 <MenuBarsIcon onClick={this.openSideMenu}/>
                 <LongNavyLogo onClick={() => this.props.history.push("/")}/>
-                {/*<AvatarIcon onClick={() => this.props.history.push("/Members")}/>*/}
-                <TextIcon onClick={() => this.props.history.push("/Members")}>
-                    Sign In
-                </TextIcon>
+                {this.props.member ?
+                    <AvatarIcon onClick={() => this.props.history.push("/Members")}/> :
+                    <TextIcon onClick={() => this.props.history.push("/Members")}>
+                        Sign In
+                    </TextIcon>
+                }
             </TopMenuContainer>
         )
     }

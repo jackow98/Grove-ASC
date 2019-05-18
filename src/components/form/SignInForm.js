@@ -2,6 +2,7 @@ import React from 'react'
 import {InputLabel} from "../../styling/text";
 import {Form, FormContainer, TextInput} from "../../styling/forms";
 import {MainButton} from "../../styling/buttons";
+import {withRouter} from "react-router-dom";
 
 //Form for members to sign into account
 class SignInForm extends React.Component {
@@ -20,7 +21,7 @@ class SignInForm extends React.Component {
                     </InputLabel>
                     <TextInput/>
 
-                    <MainButton>
+                    <MainButton onClick={() => this.props.history.push("/Member-Home")}>
                         Sign In
                     </MainButton>
 
@@ -30,4 +31,4 @@ class SignInForm extends React.Component {
     }
 }
 
-export default SignInForm
+export default withRouter(SignInForm)

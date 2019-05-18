@@ -5,11 +5,11 @@ import {MainButton} from "../../styling/buttons";
 import {withRouter} from "react-router-dom";
 
 //Card with image background and a short header with a related button linking to content
-class PhotoCard extends React.Component {
+class LargePhotoCard extends React.Component {
     render() {
         return (
             <Card
-                cardType="PhotoCard"
+                cardType="LargePhotoCard"
                 mainBackground={this.props.mainBackground}
                 mobileBackground={this.props.mobileBackground}
             >
@@ -29,4 +29,4 @@ class PhotoCard extends React.Component {
 
 }
 
-export default withRouter(PhotoCard)
+export default withRouter(LargePhotoCard)

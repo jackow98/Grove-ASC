@@ -59,8 +59,8 @@ export const Description = styled.p`
     text-align: left;
     display: flex;
 
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     
     @media only screen and (max-width: 800px) {
         width: 100%;

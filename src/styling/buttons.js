@@ -6,7 +6,7 @@ export const MainButton = styled.button`
     border: none;
     position: ${props => (props.photo ? "absolute" : "relative")}
     bottom: ${props => (props.photo ? "2%" : "0%")}
-    
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
     border-radius: 10px;
     outline:none;
     
