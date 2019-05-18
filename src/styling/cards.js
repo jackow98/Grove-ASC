@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-//Containers
+//Container for a generic card
 export const Card = styled.div`
     width: 100%;
 
     height: ${props =>
-    (props.cardType === 'TitleCard' && '185px') ||
+    (props.cardType === 'TitleCard' && '145px') ||
     (props.cardType === 'PhotoCard' && '499.99px') ||
     (props.cardType === 'TextCard' && '100%')
     }
@@ -21,37 +21,44 @@ export const Card = styled.div`
     align-items: center;
     position: relative;
     
-    border-radius: 0px;
+    border-radius: ${props =>
+    (props.cardType === 'TitleCard' && '0px') ||
+    (props.cardType === 'PhotoCard' && '0px') ||
+    (props.cardType === 'TextCard' && '10px')
+    }
     
-    background-color: #FFFF;
-    
-   /* Adapt the background based on url prop */
+   
     background-image: ${props => `url(${props.mainBackground})`};
     background-position: center; 
-    
     background-repeat: no-repeat; 
     background-size: cover; 
+    background-color: #FFFF;
     
     @media only screen and (max-width: 800px) {
     
-        display: ${props =>
-    (props.cardType === 'TextCard' && 'block')
-    }
+        height: ${props =>
+            (props.cardType === 'TitleCard' && '100px') ||
+            (props.cardType === 'PhotoCard' && '500.22px') ||
+            (props.cardType === 'TextCard' && '100%')
+        };
     
-        border-radius: 10px;
+        display: ${props =>
+            (props.cardType === 'TextCard' && 'block')
+        };
+    
+        border-radius: 10px;    
+        
         width: 93%;
         margin: 3%;
-          height: ${props =>
-    (props.cardType === 'TitleCard' && '125px') ||
-    (props.cardType === 'PhotoCard' && '500.22px') ||
-    (props.cardType === 'TextCard' && '100%')
-    }
         align-items: flex-start;
         justify-content: none;
+      
+        
         background-image: ${props => props.mobileBackground ? `url(${props.mobileBackground})` : `url(${props.mainBackground})`};
     }
  `;
 
+//A container for a text box overlaying a photo
 export const PhotoTextBox = styled.div`
     width: 40%;
     height: 50%;
@@ -78,6 +85,7 @@ export const PhotoTextBox = styled.div`
     }
 `;
 
+//Container for a semi transparent dark photo overlay
 export const PhotoOverlay = styled.div`
     display: flex;
     justify-content: center;
@@ -93,6 +101,7 @@ export const PhotoOverlay = styled.div`
     background-color: rgba(0,0,64,0.41);
 `;
 
+//Container for a photograph
 export const Photo = styled.div`
     width: 100%;
     height: 400.41px;
@@ -121,6 +130,7 @@ export const TextualContent = styled.div`
     }
 `;
 
+//Card for adverts and important information, acts as a big button
 export const AlertCard = styled.div`
     position: relative;
     height: 136px;
@@ -138,6 +148,7 @@ export const AlertCard = styled.div`
     }
 `;
 
+//A container for list of documents
 export const Documents = styled.div`
     width: 93%;
     display: block;
@@ -146,6 +157,7 @@ export const Documents = styled.div`
     align-items: center;    
 `;
 
+//Container for a card rendering an icon beside some text
 export const IconCardContainer = styled.div`
     position: relative;
     height: 112px;

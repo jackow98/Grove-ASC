@@ -3,6 +3,7 @@ import {PageContent} from "../../styling/pages";
 import PublicPage from "./PublicPage";
 import TitleCard from "../cards/TitleCard";
 import ContactForm from "../form/ContactForm";
+import {MainButton} from "../../styling/buttons";
 
 class ContactUs extends React.Component {
     render() {
@@ -14,6 +15,10 @@ class ContactUs extends React.Component {
                         title={"Contact Us"}
                     />
                     <ContactForm/>
+
+                    <MainButton>
+                        Submit
+                    </MainButton>
                 </PageContent>
             </PublicPage>
         )

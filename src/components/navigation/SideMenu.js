@@ -1,7 +1,8 @@
 import React from 'react'
-import {CloseIcon, SideMenuContainer} from "../../styling/menus";
+import {SideMenuContainer} from "../../styling/menus";
 import {withRouter} from "react-router-dom";
 import MenuLinkContainer from "./MenuLinkContainer";
+import {CloseIcon} from "../../styling/icons";
 
 //Side menu available on all pages
 class SideMenu extends React.Component {

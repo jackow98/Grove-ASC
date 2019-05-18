@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
+//Container for a generic form across the website
 export const FormContainer = styled.div`
     width: 93%;
-    margin: 3.5%;
+    margin: 0 3.5%;
     
-    display: block;
+    display: flex;
     
-    padding: 2%;
+    padding: 1%;
     border-radius: 10px;
     
     justify-content: center;
@@ -14,21 +15,25 @@ export const FormContainer = styled.div`
     position: relative;
         
     background-color: #ECECEC;
+    
+    @media only screen and (max-width: 800px) {
+        display: block;  
+    }
  `;
 
+//The fields within the form
 export const Form = styled.form`
     position: relative;
     display: block
-    
+    width: 100%;
 `;
 
+//A small text input for a form
 export const TextInput = styled.input`
     box-sizing: border-box;
     width:100%
     height: 56px;
-    
-    margin: 1%
-    
+    margin: 1%    
     border-radius: 10px;
     background-color: #FFF;
     border: 2px solid #ABB1BF;
@@ -50,10 +55,11 @@ export const TextInput = styled.input`
     }
 `;
 
+//A larger text input for a form
 export const TextAreaInput = styled.textarea`
     box-sizing: border-box;
     width:100%
-    height: 156px;
+    height: 112px;
     margin 1%;
     
     border-radius: 10px;
@@ -74,5 +80,6 @@ export const TextAreaInput = styled.textarea`
     
     @media only screen and (max-width: 800px) {
         margin 0 0 5% 0;  
+        height: 90px;
     }
 `;

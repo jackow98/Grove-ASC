@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
+//Big light blue button
 export const MainButton = styled.button`
     padding: 15px 48px;
     border: none;
     position: ${props => (props.photo ? "absolute" : "relative")}
-    bottom: 2%;
+    bottom: ${props => (props.photo ? "2%" : "0%")}
     
     border-radius: 10px;
     outline:none;
@@ -19,7 +20,7 @@ export const MainButton = styled.button`
     font-size: 32px;
     
     width: 22%;
-    margin: ${props => (props.photo ? "0" : "0 39%")}
+    margin: ${props => (props.photo ? "0" : "1% 39%")}
         
    :hover {
          opacity: 0.7;
@@ -28,6 +29,6 @@ export const MainButton = styled.button`
     
     @media only screen and (max-width: 800px) {
         width: 80%
-        margin: ${props => (props.photo ? "0" : "0 10%")}
+        margin: ${props => (props.photo ? "0" : "5% 10%")}
     }
 `;

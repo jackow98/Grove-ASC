@@ -1,9 +1,5 @@
 import styled from "styled-components";
-import {Close} from "styled-icons/evil";
-import {MenuAltLeft} from "styled-icons/boxicons-regular";
-import {Person} from "styled-icons/octicons";
 
-//Containers
 export const SideMenuContainer = styled.div`
     height: 100%;
     width: ${props => props.open ? "100%;" : "0;"};
@@ -100,38 +96,3 @@ export const MenuLink = styled.a`
     
 `;
 
-//Icons
-export const CloseIcon = styled(Close)`  
-    width: 49.03px;
-    height: 49.03px;
-    margin: 3%;
-    color: #FFFF;
-    
-    position: absolute;
-    
-    :hover {
-        cursor: pointer;
-        opacity: 0.7;
-    }
-`;
-
-export const MenuBarsIcon = styled(MenuAltLeft)`  
-    width: 49.03px;
-    height: 49.03px;
-    margin: 2%;
-    
-    color: #000040;
-    
-    :hover {
-        cursor: pointer;
-        opacity: 0.7;
-    }
-`;
-
-export const AvatarIcon = styled(Person)`
-    width: 49.03px;
-    height: 49.03px;
-    margin: 2%;
-    
-    color: #000040;
-`;

@@ -5,6 +5,7 @@ import AboutUs from "./publicPages/AboutUs";
 import Members from "./publicPages/Members";
 import ContactUs from "./publicPages/ContactUs";
 
+//The root of the app detailing navigation to each page
 class App extends React.Component {
 
     render() {

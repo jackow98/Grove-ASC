@@ -19,7 +19,7 @@ class MenuLinkContainer extends React.Component {
             "link": "/Members"
         },
         "Contact-Us": {
-            "name": "Contact-Us",
+            "name": "Contact Us",
             "link": "/Contact-Us"
         }
     };

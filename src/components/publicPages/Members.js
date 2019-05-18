@@ -3,9 +3,8 @@ import {PageContent} from "../../styling/pages";
 import PublicPage from "./PublicPage";
 import TitleCard from "../cards/TitleCard";
 import SignInForm from "../form/SignInForm";
-import {Description, MainHeader} from "../../styling/text";
-import {Documents, IconCardContainer} from "../../styling/cards";
-import {DocumentIcon} from "../../styling/icons";
+import {MainHeader} from "../../styling/text";
+import {Documents} from "../../styling/cards";
 import IconCard from "../cards/IconCard";
 
 class Members extends React.Component {
@@ -38,9 +37,9 @@ class Members extends React.Component {
                             label={"Developing with Grove"}
                         />
                         <IconCard
-                        icon={"File"}
-                        label={"Spring/Summer calendar 2019"}
-                    />
+                            icon={"File"}
+                            label={"Spring/Summer calendar 2019"}
+                        />
 
                     </Documents>
 

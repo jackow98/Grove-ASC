@@ -1,23 +1,23 @@
 import React from 'react'
-import {SecondaryHeader} from "../../styling/text";
+import {InputLabel} from "../../styling/text";
 import {Form, FormContainer, TextInput} from "../../styling/forms";
 import {MainButton} from "../../styling/buttons";
 
-
+//Form for members to sign into account
 class SignInForm extends React.Component {
     render() {
         return (
             <FormContainer>
 
                 <Form>
-                    <SecondaryHeader left small>
+                    <InputLabel left small>
                         Username
-                    </SecondaryHeader>
+                    </InputLabel>
                     <TextInput/>
 
-                    <SecondaryHeader left small>
+                    <InputLabel left small>
                         Password
-                    </SecondaryHeader>
+                    </InputLabel>
                     <TextInput/>
 
                     <MainButton>

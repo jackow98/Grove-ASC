@@ -8,9 +8,7 @@ import {Description, MainHeader} from "../../styling/text";
 class TextCard extends React.Component {
     render() {
         return (
-            <Card
-                cardType="TextCard"
-            >
+            <Card cardType="TextCard">
                 <Photo
                     mainBackground={this.props.mainBackground}
                 />
