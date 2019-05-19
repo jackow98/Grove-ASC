@@ -6,11 +6,10 @@ import {Person} from "styled-icons/material/Person";
 
 
 export const LongNavyLogo = styled.img`
+    content: url(${logo});
     height: 49.03px;
     margin: 2%;
-    
-    content: url(${logo});
-    
+   
     :hover {
         cursor: pointer;
         opacity: 0.7;
@@ -18,19 +17,18 @@ export const LongNavyLogo = styled.img`
 `;
 
 export const LabelIcon = styled(Document)`
-    width: 20%;
-    height: 80%;  
     color: #2FB6E1;
+    height: 80%;  
+    width: 20%;
 `;
 
 
 export const CloseIcon = styled(Close)`  
-    width: 49.03px;
+    color: #FFFF;
     height: 49.03px;
     margin: 3%;
-    color: #FFFF;
-    
     position: absolute;
+    width: 49.03px;
     
     :hover {
         cursor: pointer;
@@ -38,11 +36,10 @@ export const CloseIcon = styled(Close)`
     }
 `;
 export const MenuBarsIcon = styled(MenuAltLeft)`  
-    width: 49.03px;
+    color: #000040;
     height: 49.03px;
     margin: 2%;
-    
-    color: #000040;
+    width: 49.03px;
     
     :hover {
         cursor: pointer;
@@ -52,29 +49,24 @@ export const MenuBarsIcon = styled(MenuAltLeft)`
 
 //Icon to be used once user is logged in
 export const AvatarIcon = styled(Person)`
-    width: 49.03px;
+    color: #000040;
     height: 49.03px;
     margin: 2%;
-    
-    color: #000040;
+    width: 49.03px;
 `;
 
 //Icon for displaying a short text
 export const TextIcon = styled.p`
-    width: 49.03px;
-    height: 49.03px;
-    margin: 2%;
-    
-    color: #000040;
-    
-    text-align: ${props => (props.left ? "left" : "center")}
     color: ${props => (props.white ? "#FFFFFF" : "#000040")}
     font-family: "PT Sans";
     font-size: 24px;
     font-weight: 700;
+    height: 49.03px;
     line-height: 24px;    
- 
-    
+    margin: 2%;
+    text-align: ${props => (props.left ? "left" : "center")}
+    width: 49.03px;
+     
     :hover {
         cursor: pointer;
         opacity: 0.7;

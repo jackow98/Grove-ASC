@@ -1,20 +1,17 @@
 import styled from "styled-components";
 
 export const SideMenuContainer = styled.div`
-    height: 100%;
-    width: ${props => props.open ? "100%;" : "0;"};
-    position: fixed;
-    z-index: 2;
-  
     background-color: #000040;
-    
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 2%;
-    
-    text-align: center; 
     display: flex;
+    height: 100%;
     justify-content: space-between;
+    overflow-x: hidden;
+    padding-top: 2%;
+    position: fixed;
+    text-align: center; 
+    transition: 0.5s;
+    width: ${props => props.open ? "100%;" : "0;"};
+    z-index: 2;
     
     @media screen and (max-height: 450px) {
         padding-top: 15px;
@@ -22,62 +19,52 @@ export const SideMenuContainer = styled.div`
 `;
 
 export const TopMenuContainer = styled.div`
-    height: 12%;
-    width: 100%;
-   
-    z-index: 1;
-    
-    text-align: center; 
-    display: flex;
-    position: fixed;
     background: #FFFF;
-
-    justify-content: space-between;
+    display: flex;
     clear: both;
-  
-    
+    height: 12%;
+    justify-content: space-between;
+    position: fixed;
+    text-align: center; 
+    width: 100%;
+    z-index: 1;
+   
     @media only screen and (max-width: 600px) {
         height: 10%;
     }
 `;
 
 export const FooterContainer = styled.div`
-        height: 100%;
-        width: 100%;
-        z-index: 0;  
-        background-color: #000040;
-        display: flex;
-        padding: 2% 0;
+    background-color: #000040;
+    display: flex;
+    height: 100%;
+    padding: 2% 0;
+    width: 100%;
+    z-index: 0;  
 `;
 
 //Links
 export const MenuLinkList = styled.div`
-    position: ${props => props.menuType === "SideMenu" ? "absolute" : "relative"};
-
-    height: 80%
-    width: 100%;
-    
-    bottom: 2%;
-  
     background: #000040;
+    bottom: 2%;
+    height: 80%
+    position: ${props => props.menuType === "SideMenu" ? "absolute" : "relative"};
+    width: 100%; 
 `;
 
 export const MenuLink = styled.a`
-    height: 3.6%;
-    width: 30%;
-    
-    text-align: center;
-    display: block;
-    padding-top: ${props => props.menuType === "SideMenu" ? "8%" : "2%"};
-    margin-left: 35%
-    margin-right: 35%
-    
     color: #A0DDF1;
+    display: block;
     font-family: "PT Sans";
     font-size: ${props => props.menuType === "SideMenu" ? "48px" : "24px"};
-    line-height: 24px;
+    line-height: 100%;
+    margin-left: 35%
+    margin-right: 35%
+    padding-top: ${props => props.menuType === "SideMenu" ? "4%" : "1%"};
+    text-align: center;
     transition: 0.3s;
-    
+    width: 30%;
+       
     :hover {
         cursor: pointer;
     }
@@ -87,11 +74,10 @@ export const MenuLink = styled.a`
     }
     
     @media screen and (max-width: 800px) {
-        width: 70%;
         margin-left: 15%
         margin-right: 15%
-        padding-top: ${props => props.menuType === "SideMenu" ? "20%" : "10%"};
+
+        width: 70%;
     }
-    
 `;
 

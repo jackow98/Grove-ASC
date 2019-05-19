@@ -2,19 +2,15 @@ import styled from "styled-components";
 
 //Container for a generic form across the website
 export const FormContainer = styled.div`
-    width: 93%;
-    margin: 0 3.5%;
-    
-    display: flex;
-    
-    padding: 1%;
-    border-radius: 10px;
-    
-    justify-content: center;
     align-items: center;
-    position: relative;
-        
     background-color: #ECECEC;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 0 3.5%;
+    padding: 1%;
+    position: relative;
+    width: 93%;
     
     @media only screen and (max-width: 800px) {
         display: block;  
@@ -23,29 +19,28 @@ export const FormContainer = styled.div`
 
 //The fields within the form
 export const Form = styled.form`
-    position: relative;
     display: block
+    position: relative;
     width: 100%;
 `;
 
 //A small text input for a form
 export const TextInput = styled.input`
-    box-sizing: border-box;
-    width:100%
-    height: 56px;
-    margin: 1%    
-    border-radius: 10px;
+    align-items: center;
     background-color: #FFF;
     border: 2px solid #ABB1BF;
-    outline: none
-     font-family: "PT Sans";
-    font-size: 24px;
-    
+    border-radius: 10px;
+    box-sizing: border-box;
     display: flex;
+    font-family: "PT Sans";
+    font-size: 24px;
+    height: 100%;
     justify-content: center;
-    align-items: center;
+    margin: 1%    
+    outline: none
     padding: 1%
-    
+    width:100%
+   
     :focus { 
          border: 5px solid #ABB1BF;
     }
@@ -57,22 +52,20 @@ export const TextInput = styled.input`
 
 //A larger text input for a form
 export const TextAreaInput = styled.textarea`
-    box-sizing: border-box;
-    width:100%
-    height: 112px;
-    margin 1%;
-    
-    border-radius: 10px;
+    align-items: center;
     background-color: #FFF;
     border: 2px solid #ABB1BF;
-    outline: none
-     font-family: "PT Sans";
-    font-size: 24px;
-    
+    border-radius: 10px;
+    box-sizing: border-box;
     display: block;
+    font-family: "PT Sans";
+    font-size: 24px;
+    height: 112px;
     justify-content: center;
-    align-items: center;
+    margin 1%;
+    outline: none
     padding: 1%
+    width:100%
     
     :focus { 
          border: 5px solid #ABB1BF;
