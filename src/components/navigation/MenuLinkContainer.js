@@ -41,6 +41,10 @@ class MenuLinkContainer extends React.Component {
             "name": "20 Min Swims",
             "link": "/Members/TwentyMinSwims"
         },
+        "News": {
+            "name": "News",
+            "link": "/Members/News"
+        },
         "PublicHome": {
             "name": "Visitor Site",
             "link": "/"
@@ -49,7 +53,7 @@ class MenuLinkContainer extends React.Component {
 
     renderLinks = () => {
 
-        const menuItems = this.props.user === "public"?this.publicPageItems:this.memberPageItems;
+        const menuItems = this.props.user === "public" ? this.publicPageItems : this.memberPageItems;
 
         return Object.values(menuItems).map((key, index) => {
             return (

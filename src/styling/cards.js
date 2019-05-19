@@ -4,22 +4,22 @@ import styled from "styled-components";
 export const Card = styled.div`
 
     align-items: center;
-    background-color: ${props => props.grey?"#f0eeeecf":"#FFF"};
+    background-color: ${props => props.grey ? "#f0eeeecf" : "#FFF"};
     background-image: ${props => `url(${props.mainBackground})`};
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover; 
     border-radius: ${props =>
-        (props.cardType === 'TitleCard' && '0px') ||
-        (props.cardType === 'LargePhotoCard' && '0px') ||
-        (props.cardType === 'TextCard' && '10px')
+    (props.cardType === 'TitleCard' && '0px') ||
+    (props.cardType === 'LargePhotoCard' && '0px') ||
+    (props.cardType === 'TextCard' && '10px')
     }
    
     display: flex;
     height: ${props =>
-        (props.cardType === 'TitleCard' && '145px') ||
-        (props.cardType === 'LargePhotoCard' && '499.99px') ||
-        (props.cardType === 'TextCard' && '100%')
+    (props.cardType === 'TitleCard' && '145px') ||
+    (props.cardType === 'LargePhotoCard' && '499.99px') ||
+    (props.cardType === 'TextCard' && '100%')
     }
     
     justify-content: center;
@@ -34,17 +34,16 @@ export const Card = styled.div`
         border-radius: 10px;    
         display: ${props => (props.cardType === 'TextCard' && 'block')};
         height: ${props =>
-            (props.cardType === 'TitleCard' && '100px') ||
-            (props.cardType === 'LargePhotoCard' && '500.22px') ||
-            (props.cardType === 'TextCard' && '100%')
-        };
+    (props.cardType === 'TitleCard' && '100px') ||
+    (props.cardType === 'LargePhotoCard' && '500.22px') ||
+    (props.cardType === 'TextCard' && '100%')
+    };
     
         justify-content: none;
         margin: 5% 3.5%;
         width: 93%;
     }
  `;
-
 
 
 //A container for a text box overlaying a photo
@@ -106,7 +105,7 @@ export const Photo = styled.div`
 
 export const TextualContent = styled.div`
     align-items: left;
-    background-color: ${props => props.grey?"null":"#FFF"};
+    background-color: ${props => props.grey ? "null" : "#FFF"};
     clear: both;
     height: 100%
     margin: 3%;
@@ -115,7 +114,7 @@ export const TextualContent = styled.div`
     
     @media only screen and (max-width: 800px) {
          width: 100%;
-         margin: ${props => props.left?"3%":"0"}
+         margin: ${props => props.left ? "3%" : "0"}
     }
 `;
 

@@ -2,7 +2,6 @@ import React from 'react'
 import MemberPage from "./MemberPage";
 import {PageContent} from "../../styling/pages";
 import TitleCard from "../cards/TitleCard";
-import SlidingMenu from "../navigation/SlidingMenuContainer";
 import DataCard from "../cards/DataCard";
 import {DataEntry, DataLine, FlexiGrid} from "../../styling/cards";
 
@@ -24,22 +23,22 @@ class TwentyMinSwims extends React.Component {
                             <DataLine>
                                 <DataEntry>May 2018</DataEntry>
                                 <DataEntry>54</DataEntry>
-                                <DataEntry>{54*25}y</DataEntry>
+                                <DataEntry>{54 * 25}y</DataEntry>
                             </DataLine>
                             <DataLine>
                                 <DataEntry>May 2017</DataEntry>
                                 <DataEntry>54</DataEntry>
-                                <DataEntry>{54*25}y</DataEntry>
+                                <DataEntry>{54 * 25}y</DataEntry>
                             </DataLine>
                             <DataLine>
                                 <DataEntry>May 2016</DataEntry>
                                 <DataEntry>54</DataEntry>
-                                <DataEntry>{54*25}y</DataEntry>
+                                <DataEntry>{54 * 25}y</DataEntry>
                             </DataLine>
                             <DataLine>
                                 <DataEntry>May 2015</DataEntry>
                                 <DataEntry>54</DataEntry>
-                                <DataEntry>{54*25}y</DataEntry>
+                                <DataEntry>{54 * 25}y</DataEntry>
                             </DataLine>
                         </DataCard>
                     </FlexiGrid>

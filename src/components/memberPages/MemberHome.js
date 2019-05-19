@@ -45,6 +45,7 @@ class MemberHome extends React.Component {
                             mainBackground={"https://lh4.googleusercontent.com/ZdoAr5BsEuc5b902ffnJYVazgZpx8XALKeHe2zw6iDb3sdB7mro8mLAWxDI=w2400"}
                             mainText={"Swimmer Stories"}
                         />
+
                     </FlexiGrid>
                 </PageContent>
             </MemberPage>

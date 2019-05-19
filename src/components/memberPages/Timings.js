@@ -8,7 +8,7 @@ import {DataEntry, DataLine, FlexiGrid} from "../../styling/cards";
 
 //Member Timings to display all fastest timings and timings by event
 //TODO: Integrate live data
-class MemberTimings extends React.Component {
+class Timings extends React.Component {
 
     render() {
         return (
@@ -21,7 +21,8 @@ class MemberTimings extends React.Component {
                     <SlidingMenu/>
 
                     <FlexiGrid>
-                        <DataCard mainTitle = {"Butterfly"} subTitle={"The Butterfly timings for jack are as follows below here therfore thus"}>
+                        <DataCard mainTitle={"Butterfly"}
+                                  subTitle={"The Butterfly timings for jack are as follows below here therfore thus"}>
                             <DataLine>
                                 <DataEntry>25y</DataEntry>
                                 <DataEntry>00:11:02</DataEntry>
@@ -44,7 +45,7 @@ class MemberTimings extends React.Component {
                             </DataLine>
                         </DataCard>
 
-                        <DataCard mainTitle = {"Frontcrawl"}>
+                        <DataCard mainTitle={"Frontcrawl"}>
                             <DataLine>
                                 <DataEntry>25y</DataEntry>
                                 <DataEntry>00:11:02</DataEntry>
@@ -59,7 +60,7 @@ class MemberTimings extends React.Component {
                             </DataLine>
                         </DataCard>
 
-                        <DataCard mainTitle = {"Backstroke"}>
+                        <DataCard mainTitle={"Backstroke"}>
                             <DataLine>
                                 <DataEntry>25y</DataEntry>
                                 <DataEntry>00:11:02</DataEntry>
@@ -74,7 +75,7 @@ class MemberTimings extends React.Component {
                             </DataLine>
                         </DataCard>
 
-                        <DataCard mainTitle = {"Breaststroke"}>
+                        <DataCard mainTitle={"Breaststroke"}>
                             <DataLine>
                                 <DataEntry>25y</DataEntry>
                                 <DataEntry>00:11:02</DataEntry>
@@ -89,7 +90,7 @@ class MemberTimings extends React.Component {
                             </DataLine>
                         </DataCard>
 
-                        <DataCard mainTitle = {"IM"}>
+                        <DataCard mainTitle={"IM"}>
                             <DataLine>
                                 <DataEntry>25y</DataEntry>
                                 <DataEntry>00:11:02</DataEntry>
@@ -110,4 +111,4 @@ class MemberTimings extends React.Component {
     }
 }
 
-export default MemberTimings
+export default Timings

@@ -1,6 +1,6 @@
 import React from 'react'
 import {SecondaryHeader} from "../../styling/text";
-import {Card, PhotoTextBox, SmallPhotoCardContainer} from "../../styling/cards";
+import {PhotoTextBox, SmallPhotoCardContainer} from "../../styling/cards";
 import {withRouter} from "react-router-dom";
 
 

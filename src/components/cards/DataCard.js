@@ -1,8 +1,6 @@
-import {Description, MainHeader, SecondaryHeader, TertiaryHeader} from "../../styling/text";
-import {DataCardContainer, IconCardContainer} from "../../styling/cards";
+import {SecondaryHeader, TertiaryHeader} from "../../styling/text";
+import {DataCardContainer} from "../../styling/cards";
 import React from "react";
-import {LabelIcon} from "../../styling/icons";
-import TextCard from "./TextCard";
 
 //Card for rendering retrieved data
 class IconCard extends React.Component {

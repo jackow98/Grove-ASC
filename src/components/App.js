@@ -5,9 +5,10 @@ import AboutUs from "./publicPages/AboutUs";
 import Members from "./publicPages/Members";
 import ContactUs from "./publicPages/ContactUs";
 import MemberHome from "./memberPages/MemberHome";
-import MemberTimings from "./memberPages/MemberTimings";
+import Timings from "./memberPages/Timings";
 import TwentyMinSwims from "./memberPages/TwentyMinSwims";
-import MemberAchievements from "./memberPages/MemberAchievements";
+import Achievements from "./memberPages/Achievements";
+import News from "./memberPages/News";
 
 //The root of the app detailing navigation to each page
 class App extends React.Component {
@@ -23,9 +24,10 @@ class App extends React.Component {
 
                 {/*Member Pages*/}
                 <Route path="/Members/Home" exact component={MemberHome}/>
-                <Route path="/Members/Timings" exact component={MemberTimings}/>
-                <Route path="/Members/Achievements" exact component={MemberAchievements}/>
+                <Route path="/Members/Timings" exact component={Timings}/>
+                <Route path="/Members/Achievements" exact component={Achievements}/>
                 <Route path="/Members/TwentyMinSwims" exact component={TwentyMinSwims}/>
+                <Route path="/Members/News" exact component={News}/>
 
             </BrowserRouter>
         )

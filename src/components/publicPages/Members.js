@@ -40,7 +40,6 @@ class Members extends React.Component {
                             icon={"File"}
                             label={"Spring/Summer calendar 2019"}
                         />
-
                     </FlexiGrid>
 
                 </PageContent>
