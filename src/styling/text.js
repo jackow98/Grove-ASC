@@ -31,6 +31,17 @@ export const SecondaryHeader = styled.h2`
     text-align: ${props => (props.left ? "left" : "center")}
 `;
 
+export const TertiaryHeader = styled.h3`
+    color: ${props => (props.white ? "#FFFFFF" : "#2FB6E1")}
+    display: flex;
+    font-family: "PT Sans";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;    
+    margin 1.5%;
+    text-align: ${props => (props.left ? "left" : "center")}
+`;
+
 export const OverlayHeader = styled.h3`
     color: #FFF;
     font-family: "PT Sans";

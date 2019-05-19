@@ -27,7 +27,7 @@ class MenuLinkContainer extends React.Component {
     memberPageItems = {
         "Home": {
             "name": "Home",
-            "link": "/"
+            "link": "/Members/Home"
         },
         "Timings": {
             "name": "Timings",

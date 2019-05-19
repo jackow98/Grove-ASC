@@ -134,7 +134,7 @@ export const AlertCard = styled.div`
 `;
 
 //A container for list of documents
-export const IconGrid = styled.div`
+export const FlexiGrid = styled.div`
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -148,7 +148,7 @@ export const IconGrid = styled.div`
 export const IconCardContainer = styled.div`
     align-content: center;
     align-items: center;
-    background-color: #ECECEC;
+    background-color: #f0eeeecf;
     border-radius: 10px;
     display: flex;
     height: 100px;
@@ -169,7 +169,7 @@ export const IconCardContainer = styled.div`
 export const SmallPhotoCardContainer = styled.div`  
     align-content: center;
     align-items: center;
-    background-color: #ECECEC;
+    background-color: #f0eeeecf;
     background-image: ${props => `url(${props.mainBackground})`};
     background-position: center; 
     background-repeat: no-repeat; 
@@ -178,7 +178,7 @@ export const SmallPhotoCardContainer = styled.div`
     display: flex;
     height: 200px;
     justify-content: center;
-    margin: 1% 3.5%;
+    margin: 3.5%;
     width: 40%;
     
     :hover {
@@ -188,4 +188,31 @@ export const SmallPhotoCardContainer = styled.div`
     @media only screen and (max-width: 800px) {
          width: 92%;
     }
+`;
+
+export const DataCardContainer = styled.div`
+    width: 38%;
+    margin: 0 4% 3.5%;    
+    display: block;
+    background: #f0eeeecf;
+    border-radius: 10px;
+    padding: 2%;    
+       
+    @media only screen and (max-width: 800px) {
+         width: 93%;
+    }
+`;
+
+export const DataLine = styled.div`
+    display: flex
+    flex: 1 3 auto;
+    font-family: "PT Sans";
+    font-size: 24px;
+    line-height: 24px;
+    margin: 7%;
+    width: 100%;
+`;
+
+export const DataEntry = styled.div`
+    width: 50%;
 `;

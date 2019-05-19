@@ -55,7 +55,6 @@ export const SlidingMenuContainer = styled.div`
     margin: 3.5%;
     text-align: center; 
     width: 93%;
-       
 `;
 
 export const SliderText = styled.div`

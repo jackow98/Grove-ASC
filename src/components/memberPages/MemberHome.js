@@ -2,7 +2,7 @@ import React from 'react'
 import MemberPage from "./MemberPage";
 import {PageContent} from "../../styling/pages";
 import SmallPhotoCard from "../cards/SmallPhotoCard";
-import {IconGrid} from "../../styling/cards";
+import {FlexiGrid} from "../../styling/cards";
 import {withRouter} from "react-router-dom";
 
 //Member Home page acts as a window to all member features
@@ -12,7 +12,7 @@ class MemberHome extends React.Component {
         return (
             <MemberPage>
                 <PageContent>
-                    <IconGrid>
+                    <FlexiGrid>
                         <SmallPhotoCard
                             mainBackground={"https://lh4.googleusercontent.com/YL1hDJrDb_dRdO9gtFN91h3dgtJfJopwLwpXnL38jy6uIoNpwzuDJVKpldA=w2400"}
                             mainText={"Timings"}
@@ -42,7 +42,7 @@ class MemberHome extends React.Component {
                             mainBackground={"https://lh4.googleusercontent.com/ZdoAr5BsEuc5b902ffnJYVazgZpx8XALKeHe2zw6iDb3sdB7mro8mLAWxDI=w2400"}
                             mainText={"Swimmer Stories"}
                         />
-                    </IconGrid>
+                    </FlexiGrid>
                 </PageContent>
             </MemberPage>
         )

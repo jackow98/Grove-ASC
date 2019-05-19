@@ -3,7 +3,7 @@ import styled from "styled-components";
 //Container for a generic form across the website
 export const FormContainer = styled.div`
     align-items: center;
-    background-color: #ECECEC;
+    background-color: #f0eeeecf;
     border-radius: 10px;
     display: flex;
     justify-content: center;
