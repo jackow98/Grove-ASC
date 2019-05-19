@@ -13,9 +13,8 @@ export const MainButton = styled.button`
     background-color: #2FB6E1;
     color: white;
     
-    font-family: "Myriad Pro Light";
+    font-family: "PT Sans";
     font-weight: bold;
-        
     text-decoration: none;
     font-size: 32px;
     

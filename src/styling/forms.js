@@ -38,7 +38,7 @@ export const TextInput = styled.input`
     background-color: #FFF;
     border: 2px solid #ABB1BF;
     outline: none
-     font-family: "Myriad Pro Light";
+     font-family: "PT Sans";
     font-size: 24px;
     
     display: flex;
@@ -66,7 +66,7 @@ export const TextAreaInput = styled.textarea`
     background-color: #FFF;
     border: 2px solid #ABB1BF;
     outline: none
-     font-family: "Myriad Pro Light";
+     font-family: "PT Sans";
     font-size: 24px;
     
     display: block;

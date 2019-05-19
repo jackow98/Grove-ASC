@@ -5,7 +5,7 @@ export const MainHeader = styled.h1`
     text-align: ${props => (props.left ? "left" : "center")}
     
     color: ${props => (props.white ? "#FFFFFF" : "#000040")}
-    font-family: "Myriad Pro Light";
+    font-family: "PT Sans";
     font-size: 54px;
     font-weight: bold;
     line-height: 48px;
@@ -23,7 +23,7 @@ export const MainHeader = styled.h1`
 export const SecondaryHeader = styled.h2`
     text-align: ${props => (props.left ? "left" : "center")}
     color: ${props => (props.white ? "#FFFFFF" : "#000040")}
-    font-family: "Myriad Pro Light";
+    font-family: "PT Sans";
     font-size: 36px;
     font-weight: 700;
     line-height: 36px;    
@@ -36,7 +36,7 @@ export const OverlayHeader = styled.h3`
    
     opacity: 0.8;
     color: #FFF;
-    font-family: "Myriad Pro Light";
+    font-family: "PT Sans";
     font-size: 72px;
     font-weight: 700;
     line-height: 72px;   
@@ -52,7 +52,7 @@ export const Description = styled.p`
   
     width: ${props => (props.small ? "40%" : "99%")} ;
     color: #000040;
-    font-family: "Myriad Pro Light";
+    font-family: "PT Sans";
     font-size: ${props => (props.small ? "18px" : "24px")}
     margin: ${props => (props.small ? "4%" : "0")}
     line-height: 24px;    
@@ -73,7 +73,7 @@ export const Description = styled.p`
 export const InputLabel = styled.label`
     text-align: ${props => (props.left ? "left" : "center")}
     color: ${props => (props.white ? "#FFFFFF" : "#000040")}
-    font-family: "Myriad Pro Light";
+    font-family: "PT Sans";
     font-size: 24px;
     font-weight: 700;
     line-height: 24px;    

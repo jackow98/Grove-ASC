@@ -11,7 +11,6 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
                 <BrowserRouter>
                     <Route path="/" exact component={PublicHome}/>
                     <Route path="/About-Us" exact component={AboutUs}/>
@@ -21,7 +20,6 @@ class App extends React.Component {
                     <Route path="/Member-Home" exact component={MemberHome}/>
 
                 </BrowserRouter>
-            </div>
         )
     }
 }

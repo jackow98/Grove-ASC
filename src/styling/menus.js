@@ -5,9 +5,7 @@ export const SideMenuContainer = styled.div`
     width: ${props => props.open ? "100%;" : "0;"};
     position: fixed;
     z-index: 2;
-    
-    top: 0;
-    left: 0;
+  
     background-color: #000040;
     
     overflow-x: hidden;
@@ -26,16 +24,15 @@ export const SideMenuContainer = styled.div`
 export const TopMenuContainer = styled.div`
     height: 12%;
     width: 100%;
-    top: 0
+   
     z-index: 1;
     
     text-align: center; 
     display: flex;
+
     justify-content: space-between;
-    position: fixed;
     clear: both;
-    
-    background-color: #FFF;
+  
     
     @media only screen and (max-width: 600px) {
         height: 10%;
@@ -47,8 +44,8 @@ export const FooterContainer = styled.div`
         width: 100%;
         z-index: 0;  
         background-color: #000040;
-        flex-shrink: 0;
-        padding: 2%;
+        display: flex;
+        padding: 2% 0;
 `;
 
 //Links
@@ -74,7 +71,7 @@ export const MenuLink = styled.a`
     margin-right: 35%
     
     color: #A0DDF1;
-    font-family: "Myriad Pro Light";
+    font-family: "PT Sans";
     font-size: ${props => props.menuType === "SideMenu" ? "48px" : "24px"};
     line-height: 24px;
     transition: 0.3s;

@@ -2,7 +2,6 @@ import React from 'react'
 import MemberPage from "./MemberPage";
 import {PageContent} from "../../styling/pages";
 import SmallPhotoCard from "../cards/SmallPhotoCard";
-import IconCard from "../cards/IconCard";
 
 //Member Home page acts as a window to all member features
 class MemberHome extends React.Component {

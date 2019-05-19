@@ -69,11 +69,11 @@ export const TextIcon = styled.p`
     
     text-align: ${props => (props.left ? "left" : "center")}
     color: ${props => (props.white ? "#FFFFFF" : "#000040")}
-    font-family: "Myriad Pro Light";
+    font-family: "PT Sans";
     font-size: 24px;
     font-weight: 700;
     line-height: 24px;    
-    display: flex;
+ 
     
     :hover {
         cursor: pointer;
