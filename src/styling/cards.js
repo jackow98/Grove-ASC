@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Card = styled.div`
 
     align-items: center;
-    background-color: #FFFF;
+    background-color: ${props => props.grey?"#f0eeeecf":"#FFF"};
     background-image: ${props => `url(${props.mainBackground})`};
     background-position: center; 
     background-repeat: no-repeat; 
@@ -59,7 +59,7 @@ export const PhotoTextBox = styled.div`
     width: ${props => (props.small ? "82%" : "40%")}
    
     :hover {
-         opacity 0.9;
+         opacity 1;
          cursor:pointer;
     }
     
@@ -88,11 +88,14 @@ export const PhotoOverlay = styled.div`
 
 //Container for a photograph
 export const Photo = styled.div`
+    align-self: center;
     background-image: ${props => props.mobileBackground ? `url(${props.mobileBackground})` : `url(${props.mainBackground})`};
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
-    height: 400.41px; 
+    height: 400.41px;
+    justify-content: center; 
+    margin: 0px;
     width: 100%; 
     
      @media only screen and (max-width: 800px) {
@@ -103,7 +106,7 @@ export const Photo = styled.div`
 
 export const TextualContent = styled.div`
     align-items: left;
-    background: #FFFF;   
+    background-color: ${props => props.grey?"null":"#FFF"};
     clear: both;
     height: 100%
     margin: 3%;
@@ -112,6 +115,7 @@ export const TextualContent = styled.div`
     
     @media only screen and (max-width: 800px) {
          width: 100%;
+         margin: ${props => props.left?"3%":"0"}
     }
 `;
 
@@ -211,6 +215,14 @@ export const DataLine = styled.div`
     font-size: 24px;
     line-height: 24px;
     margin: 7%;
+    width: 100%;
+`;
+
+export const DataPhotoCardContainer = styled.div`
+    background: red;
+    display: block;
+    font-family: "PT Sans";
+    height: 10%;
     width: 100%;
 `;
 

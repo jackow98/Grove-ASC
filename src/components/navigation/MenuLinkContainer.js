@@ -40,6 +40,10 @@ class MenuLinkContainer extends React.Component {
         "TwentyMinSwims": {
             "name": "20 Min Swims",
             "link": "/Members/TwentyMinSwims"
+        },
+        "PublicHome": {
+            "name": "Visitor Site",
+            "link": "/"
         }
     };
 

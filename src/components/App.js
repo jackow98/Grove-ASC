@@ -7,6 +7,7 @@ import ContactUs from "./publicPages/ContactUs";
 import MemberHome from "./memberPages/MemberHome";
 import MemberTimings from "./memberPages/MemberTimings";
 import TwentyMinSwims from "./memberPages/TwentyMinSwims";
+import MemberAchievements from "./memberPages/MemberAchievements";
 
 //The root of the app detailing navigation to each page
 class App extends React.Component {
@@ -23,6 +24,7 @@ class App extends React.Component {
                 {/*Member Pages*/}
                 <Route path="/Members/Home" exact component={MemberHome}/>
                 <Route path="/Members/Timings" exact component={MemberTimings}/>
+                <Route path="/Members/Achievements" exact component={MemberAchievements}/>
                 <Route path="/Members/TwentyMinSwims" exact component={TwentyMinSwims}/>
 
             </BrowserRouter>

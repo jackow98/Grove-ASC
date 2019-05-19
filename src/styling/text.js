@@ -7,7 +7,7 @@ export const MainHeader = styled.h1`
     font-weight: bold;
     flex: 1 1 100%;
     margin: ${props => (props.left ? "3% 0 1% 0" : "5%")}
-    line-height: 48px;
+    line-height: 54px;
     text-align: ${props => (props.left ? "left" : "center")}
     
     @media only screen and (max-width: 600px) {
@@ -32,14 +32,15 @@ export const SecondaryHeader = styled.h2`
 `;
 
 export const TertiaryHeader = styled.h3`
-    color: ${props => (props.white ? "#FFFFFF" : "#2FB6E1")}
+    color: ${props => (props.white ? "#FFFFFF" : "#2FB6E1")};
     display: flex;
     font-family: "PT Sans";
     font-size: 24px;
     font-weight: 600;
     line-height: 24px;    
-    margin 1.5%;
-    text-align: ${props => (props.left ? "left" : "center")}
+    margin: ${props => (props.left ? "1.5%" : "10%")};
+    text-align: ${props => (props.left ? "left" : "center")};
+    justify-content: center;
 `;
 
 export const OverlayHeader = styled.h3`

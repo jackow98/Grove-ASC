@@ -12,15 +12,16 @@ class LargePhotoCard extends React.Component {
                 cardType="LargePhotoCard"
                 mainBackground={this.props.mainBackground}
                 mobileBackground={this.props.mobileBackground}
+                onClick={() => this.props.history.push(this.props.link)}
             >
 
-                <PhotoTextBox onClick={() => this.props.history.push(this.props.buttonLink)}>
+                <PhotoTextBox onClick={() => this.props.history.push(this.props.link)}>
                     <MainHeader>
                         {this.props.mainText}
                     </MainHeader>
                 </PhotoTextBox>
 
-                <MainButton photo onClick={() => this.props.history.push(this.props.buttonLink)}>
+                <MainButton photo onClick={() => this.props.history.push(this.props.link)}>
                     {this.props.buttonText}
                 </MainButton>
             </Card>
