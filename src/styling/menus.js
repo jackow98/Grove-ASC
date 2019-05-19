@@ -29,6 +29,10 @@ export const TopMenuContainer = styled.div`
     width: 100%;
     z-index: 1;
    
+    @media only screen and (max-width: 800px) {
+        height: 9%;
+    }
+   
     @media only screen and (max-width: 600px) {
         height: 10%;
     }

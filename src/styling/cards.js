@@ -42,7 +42,7 @@ export const Card = styled.div`
         };
     
         justify-content: none;
-        margin: 3%;
+        margin: 5% 3%;
         width: 93%;
     }
  `;

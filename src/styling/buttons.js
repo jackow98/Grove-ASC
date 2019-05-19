@@ -15,7 +15,7 @@ export const MainButton = styled.button`
     outline:none;
     padding: 15px 48px;
     position: ${props => (props.photo ? "absolute" : "relative")}
-    width: 22%;
+    width: 28%;
     
    :hover {
          opacity: 0.7;
