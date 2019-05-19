@@ -14,9 +14,9 @@ class MemberPage extends React.Component {
     render() {
         return (
             <PageContainer>
-                <TopMenu member/>
+                <TopMenu user={"member"}/>
                 {this.props.children}
-                <Footer/>
+                <Footer user={"member"}/>
             </PageContainer>
         )
     }

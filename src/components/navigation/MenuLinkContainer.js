@@ -2,10 +2,10 @@ import React from "react";
 import {MenuLink, MenuLinkList} from "../../styling/menus";
 import {withRouter} from "react-router-dom";
 
-//Generic container used in footer and side menu with a link to each public page
+//Generic container used in footer and side menu with a link to each page rendered differently for logged in users
 class MenuLinkContainer extends React.Component {
 
-    menuItems = {
+    publicPageItems = {
         "Home": {
             "name": "Home",
             "link": "/"
@@ -24,8 +24,22 @@ class MenuLinkContainer extends React.Component {
         }
     };
 
+    memberPageItems = {
+        "Home": {
+            "name": "Home",
+            "link": "/"
+        },
+        "Timings": {
+            "name": "Timings",
+            "link": "/Members/Timings"
+        }
+    };
+
     renderLinks = () => {
-        return Object.values(this.menuItems).map((key, index) => {
+
+        const menuItems = this.props.user === "public"?this.publicPageItems:this.memberPageItems;
+
+        return Object.values(menuItems).map((key, index) => {
             return (
                 <MenuLink menuType={this.props.menuType} onClick={() => this.props.history.push(key.link)}>
                     {key.name}

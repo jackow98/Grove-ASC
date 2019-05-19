@@ -3,6 +3,7 @@ import MemberPage from "./MemberPage";
 import {PageContent} from "../../styling/pages";
 import SmallPhotoCard from "../cards/SmallPhotoCard";
 import {IconGrid} from "../../styling/cards";
+import {withRouter} from "react-router-dom";
 
 //Member Home page acts as a window to all member features
 class MemberHome extends React.Component {
@@ -48,4 +49,4 @@ class MemberHome extends React.Component {
     }
 }
 
-export default MemberHome
+export default withRouter(MemberHome)

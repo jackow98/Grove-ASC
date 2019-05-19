@@ -21,7 +21,7 @@ class SignInForm extends React.Component {
                     </InputLabel>
                     <TextInput/>
 
-                    <MainButton onClick={() => this.props.history.push("/Member-Home")}>
+                    <MainButton onClick={() => this.props.history.push("/Members/Home")}>
                         Sign In
                     </MainButton>
 

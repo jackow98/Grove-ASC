@@ -24,7 +24,7 @@ class TopMenu extends React.Component {
     render() {
         return (
             <TopMenuContainer>
-                <SideMenu open={this.state.sideMenuOpen} closeSideMenu={() => this.closeSideMenu}/>
+                <SideMenu user={this.props.user} open={this.state.sideMenuOpen} closeSideMenu={() => this.closeSideMenu}/>
                 <MenuBarsIcon onClick={this.openSideMenu}/>
                 <LongNavyLogo onClick={() => this.props.history.push("/")}/>
                 {this.props.member ?

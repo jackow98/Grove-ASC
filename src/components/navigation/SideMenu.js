@@ -10,7 +10,7 @@ class SideMenu extends React.Component {
         return (
             <SideMenuContainer open={this.props.open}>]
                 <CloseIcon onClick={this.props.closeSideMenu()}/>
-                <MenuLinkContainer menuType="SideMenu"/>
+                <MenuLinkContainer user={this.props.user} menuType="SideMenu"/>
             </SideMenuContainer>
         )
     }

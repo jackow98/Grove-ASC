@@ -9,6 +9,7 @@ class LargePhotoCard extends React.Component {
     render() {
         return (
             <SmallPhotoCardContainer
+                onClick={() => this.props.history.push("/Members/Timings")}
                 cardType="SmallPhotoCard"
                 mainBackground={this.props.mainBackground}
                 mobileBackground={this.props.mobileBackground}

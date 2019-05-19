@@ -7,7 +7,7 @@ class Footer extends React.Component {
     render() {
         return (
             <FooterContainer>
-                <MenuLinkContainer menuType="Footer"/>
+                <MenuLinkContainer user={this.props.user} menuType="Footer"/>
             </FooterContainer>
         )
     }

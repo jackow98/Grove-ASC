@@ -14,9 +14,9 @@ class PublicPage extends React.Component {
     render() {
         return (
             <PageContainer>
-                <TopMenu/>
+                <TopMenu user={"public"}/>
                 {this.props.children}
-                <Footer/>
+                <Footer user={"public"}/>
             </PageContainer>
         )
     }
