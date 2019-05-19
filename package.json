@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "faker": "^4.1.0",
     "octicons": "^8.5.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.1",
     "styled-components": "^4.2.0",
-    "styled-icons": "^7.14.0"
+    "styled-icons": "^7.15.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,5 +25,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "case-sensitive-paths-webpack-plugin": "^2.2.0"
+  }
 }

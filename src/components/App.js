@@ -11,15 +11,15 @@ class App extends React.Component {
 
     render() {
         return (
-                <BrowserRouter>
-                    <Route path="/" exact component={PublicHome}/>
-                    <Route path="/About-Us" exact component={AboutUs}/>
-                    <Route path="/Members" exact component={Members}/>
-                    <Route path="/Contact-Us" exact component={ContactUs}/>
+            <BrowserRouter>
+                <Route path="/" exact component={PublicHome}/>
+                <Route path="/About-Us" exact component={AboutUs}/>
+                <Route path="/Members" exact component={Members}/>
+                <Route path="/Contact-Us" exact component={ContactUs}/>
 
-                    <Route path="/Member-Home" exact component={MemberHome}/>
+                <Route path="/Member-Home" exact component={MemberHome}/>
 
-                </BrowserRouter>
+            </BrowserRouter>
         )
     }
 }

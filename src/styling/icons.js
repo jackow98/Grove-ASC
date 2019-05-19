@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import logo from "../assets/GroveNavyLogoLong.png";
-import {Document} from "styled-icons/typicons/Document";
-import {Close} from "styled-icons/evil";
-import {Person} from "styled-icons/octicons";
-import {MenuAltLeft} from "styled-icons/boxicons-regular";
+import {Close} from "styled-icons/evil/Close";
+import {MenuAltLeft} from "styled-icons/boxicons-regular/MenuAltLeft";
+import {Person} from "styled-icons/material/Person";
+
 
 export const LongNavyLogo = styled.img`
     height: 49.03px;
