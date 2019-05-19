@@ -7,7 +7,7 @@ export const FormContainer = styled.div`
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    margin: 0 3.5%;
+    margin: 0 2.5%;
     padding: 1%;
     position: relative;
     width: 93%;
@@ -39,7 +39,7 @@ export const TextInput = styled.input`
     margin: 1%    
     outline: none
     padding: 1%
-    width:100%
+    width:98%
    
     :focus { 
          border: 5px solid #ABB1BF;

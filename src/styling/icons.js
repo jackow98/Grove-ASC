@@ -3,6 +3,7 @@ import logo from "../assets/GroveNavyLogoLong.png";
 import {Close} from "styled-icons/evil/Close";
 import {MenuAltLeft} from "styled-icons/boxicons-regular/MenuAltLeft";
 import {Person} from "styled-icons/material/Person";
+import {Document} from "styled-icons/typicons/Document";
 
 
 export const LongNavyLogo = styled.img`

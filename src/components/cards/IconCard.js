@@ -11,7 +11,7 @@ class IconCard extends React.Component {
         return (
             <IconCardContainer narrow={this.props.narrow} icon={this.props.icon}>
                 <LabelIcon icon={"Document"}/>
-                <Description>
+                <Description center>
                     {this.props.label}
                 </Description>
             </IconCardContainer>

@@ -11,7 +11,7 @@ export const MainButton = styled.button`
     font-family: "PT Sans";
     font-size: 32px;
     font-weight: bold;
-    margin: ${props => (props.photo ? "0" : "1% 39%")}
+    margin: ${props => (props.photo ? "0" : "1% 36%")}
     outline:none;
     padding: 15px 48px;
     position: ${props => (props.photo ? "absolute" : "relative")}

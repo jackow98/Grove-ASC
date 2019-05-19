@@ -5,7 +5,8 @@ export const MainHeader = styled.h1`
     font-family: "PT Sans";
     font-size: 54px;
     font-weight: bold;
-    margin: ${props => (props.left ? "5% 0 3% 0" : "5%")}
+    flex: 1 1 100%;
+    margin: ${props => (props.left ? "3% 0 1% 0" : "5%")}
     line-height: 48px;
     text-align: ${props => (props.left ? "left" : "center")}
     
@@ -46,13 +47,13 @@ export const OverlayHeader = styled.h3`
 `;
 
 export const Description = styled.p`
-    align-items: left;
+    align-items: ${props => (props.center ? "center" : "left")};
     color: #000040;
     display: flex;
     font-family: "PT Sans";
     font-size: ${props => (props.small ? "18px" : "24px")}
     height: 100%;
-    justify-content: left;
+    justify-content: center;
     line-height: 24px;    
     margin: ${props => (props.small ? "4%" : "0")}
     text-align: left;

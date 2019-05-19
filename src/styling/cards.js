@@ -42,7 +42,7 @@ export const Card = styled.div`
         };
     
         justify-content: none;
-        margin: 5% 3%;
+        margin: 5% 3.5%;
         width: 93%;
     }
  `;
@@ -138,7 +138,8 @@ export const AlertCard = styled.div`
 //A container for list of documents
 export const Documents = styled.div`
     align-items: center;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: left;
     margin: 3.5%;
     width: 93%;    
@@ -147,15 +148,14 @@ export const Documents = styled.div`
 
 //Container for a card rendering an icon beside some text
 export const IconCardContainer = styled.div`
- 
+    align-content: center;
     align-items: center;
     background-color: #ECECEC;
     border-radius: 10px;
     display: flex;
-    height: ${props => props.narrow ? `70%` : `100%`};
+    height: 100px;
     justify-content: center;
-    margin: ${props => props.narrow ? `3.5% 3.5%` : `4% 0`};
-    width: ${props => props.narrow ? `93%` : `100%`};
+    margin: 1% 3.5%;
     
     :hover {
          cursor:pointer;
