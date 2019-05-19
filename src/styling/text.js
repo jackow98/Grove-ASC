@@ -52,8 +52,13 @@ export const OverlayHeader = styled.h3`
     text-align: center;
    
     @media only screen and (max-width: 800px) {
-        font-size: 56px;
+        font-size: 52px;
         line-height: 56px;   
+    } 
+    
+    @media only screen and (max-width: 600px) {
+        font-size: 48px;
+        line-height: 48px;   
     } 
 `;
 

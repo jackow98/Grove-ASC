@@ -139,7 +139,7 @@ export const FlexiGrid = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 3.5%;
+    margin: 1% 3.5%;
     width: 93%;    
 `;
 
@@ -178,7 +178,7 @@ export const SmallPhotoCardContainer = styled.div`
     display: flex;
     height: 200px;
     justify-content: center;
-    margin: 3.5%;
+    margin: 1% 3.5%;
     width: 40%;
     
     :hover {
@@ -186,6 +186,7 @@ export const SmallPhotoCardContainer = styled.div`
          opacity: 0.7;
     }
     @media only screen and (max-width: 800px) {
+         margin: 3.5%;
          width: 92%;
     }
 `;

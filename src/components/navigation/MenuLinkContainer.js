@@ -32,6 +32,14 @@ class MenuLinkContainer extends React.Component {
         "Timings": {
             "name": "Timings",
             "link": "/Members/Timings"
+        },
+        "Achievements": {
+            "name": "Achievements",
+            "link": "/Members/Achievements"
+        },
+        "TwentyMinSwims": {
+            "name": "20 Min Swims",
+            "link": "/Members/TwentyMinSwims"
         }
     };
 
