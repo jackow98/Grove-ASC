@@ -29,6 +29,8 @@ export const TopMenuContainer = styled.div`
     
     text-align: center; 
     display: flex;
+    position: fixed;
+    background: #FFFF;
 
     justify-content: space-between;
     clear: both;
