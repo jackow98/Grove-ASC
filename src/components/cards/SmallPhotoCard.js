@@ -1,6 +1,6 @@
 import React from 'react'
-import {MainHeader} from "../../styling/text";
-import {Card, PhotoTextBox} from "../../styling/cards";
+import {SecondaryHeader} from "../../styling/text";
+import {Card, PhotoTextBox, SmallPhotoCardContainer} from "../../styling/cards";
 import {withRouter} from "react-router-dom";
 
 
@@ -8,19 +8,19 @@ import {withRouter} from "react-router-dom";
 class LargePhotoCard extends React.Component {
     render() {
         return (
-            <Card
+            <SmallPhotoCardContainer
                 cardType="SmallPhotoCard"
                 mainBackground={this.props.mainBackground}
                 mobileBackground={this.props.mobileBackground}
             >
 
-                <PhotoTextBox center onClick={() => this.props.history.push(this.props.buttonLink)}>
-                    <MainHeader>
+                <PhotoTextBox small onClick={() => this.props.history.push(this.props.buttonLink)}>
+                    <SecondaryHeader>
                         {this.props.mainText}
-                    </MainHeader>
+                    </SecondaryHeader>
                 </PhotoTextBox>
 
-            </Card>
+            </SmallPhotoCardContainer>
         )
     }
 

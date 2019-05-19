@@ -12,7 +12,6 @@ export const Card = styled.div`
     border-radius: ${props =>
         (props.cardType === 'TitleCard' && '0px') ||
         (props.cardType === 'LargePhotoCard' && '0px') ||
-        (props.cardType === 'SmallPhotoCard' && '0px') ||
         (props.cardType === 'TextCard' && '10px')
     }
    
@@ -20,7 +19,6 @@ export const Card = styled.div`
     height: ${props =>
         (props.cardType === 'TitleCard' && '145px') ||
         (props.cardType === 'LargePhotoCard' && '499.99px') ||
-        (props.cardType === 'SmallPhotoCard' && '200px') ||
         (props.cardType === 'TextCard' && '100%')
     }
     
@@ -55,10 +53,10 @@ export const PhotoTextBox = styled.div`
     background-color: white;
     border-radius: 10px;
     display: flex;
-    height: 50%;
+    height: 40%;
     justify-content: center;
-    opacity: 1;
-    width: 40%;
+    opacity: 0.9;
+    width: ${props => (props.small ? "82%" : "40%")}
    
     :hover {
          opacity 0.9;
@@ -66,10 +64,10 @@ export const PhotoTextBox = styled.div`
     }
     
     @media only screen and (max-width: 800px) {
-       border-radius: 0px;
-       height: 30%;
+       border-radius: ${props => (props.small ? "10px" : "0px")};
+       height: ${props => (props.small ? "35%" : "30%")};
        opacity 0.9;
-       width: 100%;
+       width: ${props => (props.small ? "82%" : "100%")};
     }
 `;
 
@@ -136,11 +134,11 @@ export const AlertCard = styled.div`
 `;
 
 //A container for list of documents
-export const Documents = styled.div`
+export const IconGrid = styled.div`
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     margin: 3.5%;
     width: 93%;    
 `;
@@ -156,9 +154,38 @@ export const IconCardContainer = styled.div`
     height: 100px;
     justify-content: center;
     margin: 1% 3.5%;
+    width: 43%
     
     :hover {
          cursor:pointer;
          opacity: 0.7;
+    }
+    
+    @media only screen and (max-width: 800px) {
+         width: 92%;
+    }
+`;
+
+export const SmallPhotoCardContainer = styled.div`  
+    align-content: center;
+    align-items: center;
+    background-color: #ECECEC;
+    background-image: ${props => `url(${props.mainBackground})`};
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    border-radius: 10px;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    margin: 1% 3.5%;
+    width: 40%;
+    
+    :hover {
+         cursor:pointer;
+         opacity: 0.7;
+    }
+    @media only screen and (max-width: 800px) {
+         width: 92%;
     }
 `;

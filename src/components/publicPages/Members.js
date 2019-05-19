@@ -4,7 +4,7 @@ import PublicPage from "./PublicPage";
 import TitleCard from "../cards/TitleCard";
 import SignInForm from "../form/SignInForm";
 import {MainHeader} from "../../styling/text";
-import {Documents} from "../../styling/cards";
+import {IconGrid} from "../../styling/cards";
 import IconCard from "../cards/IconCard";
 
 class Members extends React.Component {
@@ -19,7 +19,7 @@ class Members extends React.Component {
 
                     <SignInForm/>
 
-                    <Documents>
+                    <IconGrid>
                         <MainHeader left>
                             Information
                         </MainHeader>
@@ -41,7 +41,7 @@ class Members extends React.Component {
                             label={"Spring/Summer calendar 2019"}
                         />
 
-                    </Documents>
+                    </IconGrid>
 
                 </PageContent>
             </PublicPage>

@@ -65,6 +65,10 @@ export const Description = styled.p`
         text-align: ${props => (props.small ? "center" : "left")}
         width: 93%;
     }
+    
+    @media only screen and (max-width: 400px) {
+        font-size: ${props => (props.small ? "12px" : "18px")}
+    }
 `;
 
 export const InputLabel = styled.label`
