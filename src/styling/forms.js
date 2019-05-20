@@ -36,10 +36,10 @@ export const TextInput = styled.input`
     font-size: 24px;
     height: 100%;
     justify-content: center;
-    margin: 1%    
-    outline: none
-    padding: 1%
-    width:98%
+    margin: 1%;
+    outline: none;
+    padding: 1%;
+    width: 98%;
    
     :focus { 
          border: 5px solid #ABB1BF;

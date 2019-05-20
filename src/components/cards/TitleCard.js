@@ -9,9 +9,10 @@ class TitleCard extends React.Component {
             <Card
                 cardType="TitleCard"
                 mainBackground={this.props.mainBackground}
+                mobileBackground={this.props.mobileBackground}
                 title={this.props.title}
             >
-                <PhotoOverlay>
+                <PhotoOverlay>=
                     <OverlayHeader>
                         {this.props.title}
                     </OverlayHeader>

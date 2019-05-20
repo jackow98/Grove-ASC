@@ -5,6 +5,7 @@ import TitleCard from "../cards/TitleCard";
 import TextCard from "../cards/TextCard";
 import {AlertCard} from "../../styling/cards";
 import {SecondaryHeader} from "../../styling/text";
+import LargePhotoCard from "../cards/LargePhotoCard";
 
 
 class AboutUs extends React.Component {
@@ -24,7 +25,7 @@ class AboutUs extends React.Component {
                         description={"Grove ASC is an amateur swimming club based at Dalry Swim Centre in Edinburgh for school aged swimmers. We cater for a mix of abilities and pride ourselves in being a friendly, welcoming and enthusiastic club."}
                     />
                     <TextCard
-                        mainBackground={"https://lh5.googleusercontent.com/pgdZ6UKnT-XhLPN0_J5LSFGGkPIVxv55lxSceGKDo5lBMhkpX26BPhzjTWc=w2400"}
+                        mainBackground={"https://lh5.googleusercontent.com/7cpgVlPHrPqYQfrvhb-uSBTq6AZChNuk8i5zlSXNCM_6fcKMtbUx2KGnPWA=w2400"}
                         header={"Sessions"}
                         description={"Currently the club focuses on improving school aged swimmers' stamina and stroke development beyond the point which they would normally attain in swimming lessons. We cater for a mix of abilities, but all swimmers must have basic water confidence and the ability to swim at least 50m in three of the four recognised strokes. Monday and Thursday - 8pm to 9pm (except most school holidays and some selected local holidays). There is a nightly fee of £4 with a free swim for the first night of attendance. In addition, there is an annual membership fee."}
                     />

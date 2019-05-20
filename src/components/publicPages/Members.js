@@ -6,6 +6,7 @@ import SignInForm from "../form/SignInForm";
 import {MainHeader} from "../../styling/text";
 import {FlexiGrid} from "../../styling/cards";
 import IconCard from "../cards/IconCard";
+import LargePhotoCard from "../cards/LargePhotoCard";
 
 class Members extends React.Component {
     render() {
@@ -13,7 +14,8 @@ class Members extends React.Component {
             <PublicPage>
                 <PageContent>
                     <TitleCard
-                        mainBackground={"https://lh5.googleusercontent.com/ARThs942DoODUHCOQz_Oa_Fj4PGHtfPzn5kLfyMEjhCu6m4i-qIGwIKCPDg=w2400"}
+                        mainBackground={"https://lh6.googleusercontent.com/jrh4UI4C-vDdq0N5tvYipQ8ZOyu0zrruQL7rMce7-XO08POVesB6UFcMyUU=w2400"}
+                        mobileBackground={"https://lh5.googleusercontent.com/ARThs942DoODUHCOQz_Oa_Fj4PGHtfPzn5kLfyMEjhCu6m4i-qIGwIKCPDg=w2400"}
                         title={"Members"}
                     />
 

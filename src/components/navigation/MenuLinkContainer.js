@@ -25,28 +25,16 @@ class MenuLinkContainer extends React.Component {
     };
 
     memberPageItems = {
-        "Home": {
-            "name": "Home",
+        "MemberHome": {
+            "name": "Member home",
             "link": "/Members/Home"
         },
-        "Timings": {
-            "name": "Timings",
-            "link": "/Members/Timings"
-        },
-        "Achievements": {
-            "name": "Achievements",
-            "link": "/Members/Achievements"
-        },
-        "TwentyMinSwims": {
-            "name": "20 Min Swims",
-            "link": "/Members/TwentyMinSwims"
-        },
-        "News": {
-            "name": "News",
-            "link": "/Members/News"
+        "Contact-Us": {
+            "name": "Contact Us",
+            "link": "/Contact-Us"
         },
         "PublicHome": {
-            "name": "Visitor Site",
+            "name": "Visitor site",
             "link": "/"
         }
     };
