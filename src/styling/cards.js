@@ -215,6 +215,11 @@ export const DataLine = styled.div`
     line-height: 24px;
     margin: 7%;
     width: 100%;
+    
+     @media only screen and (max-width: 800px) {
+        font-size: 18px;
+        line-height: 18px;
+    }
 `;
 
 export const DataPhotoCardContainer = styled.div`

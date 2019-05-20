@@ -65,7 +65,7 @@ export const TextAreaInput = styled.textarea`
     margin 1%;
     outline: none
     padding: 1%
-    width:100%
+    width: 98%
     
     :focus { 
          border: 5px solid #ABB1BF;

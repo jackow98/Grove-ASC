@@ -28,7 +28,7 @@ class TopMenu extends React.Component {
                           closeSideMenu={() => this.closeSideMenu}/>
                 <MenuBarsIcon onClick={this.openSideMenu}/>
                 <LongNavyLogo onClick={() => this.props.history.push("/")}/>
-                {this.props.member ?
+                {this.props.user === "member" ?
                     <AvatarIcon onClick={() => this.props.history.push("/Members")}/> :
                     <TextIcon onClick={() => this.props.history.push("/Members")}>
                         Sign In
