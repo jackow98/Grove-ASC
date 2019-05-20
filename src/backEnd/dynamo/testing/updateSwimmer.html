@@ -1,0 +1,51 @@
+<html>
+<head>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+
+    <script>
+        AWS.config.update({
+            region: "eu-west-2",
+            endpoint: 'http://localhost:8000',
+            accessKeyId: "AKIAQ5PUQQYLR2CJVGQR",
+            secretAccessKey: "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"
+        });
+
+        var docClient = new AWS.DynamoDB.DocumentClient();
+
+        function updateSwimmer() {
+            var table = "Swimmers";
+            var SASANumber = "784576";
+
+            var params = {
+                TableName: table,
+                Key:{
+                    "SASANumber": SASANumber
+                },
+                UpdateExpression: "set forename = :forename, butterfly['50y'] = :newTime",
+                ReturnValues:"UPDATED_NEW",
+                ExpressionAttributeValues:{
+                    ":forename":"Jack",
+                    ":newTime": "22:22:22"
+                }
+
+            };
+
+            docClient.update(params, function(err, data) {
+                if (err) {
+                    document.getElementById('textarea').innerHTML = "Unable to update item: " + "\n" + JSON.stringify(err, undefined, 2);
+                } else {
+                    document.getElementById('textarea').innerHTML = "UpdateItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
+                }
+            });
+        }
+
+    </script>
+</head>
+
+<body>
+<input id="updateItem" type="button" value="Update Item" onclick="updateSwimmer();" />
+<br><br>
+<textarea readonly id= "textarea" style="width:400px; height:800px"></textarea>
+
+</body>
+</html>

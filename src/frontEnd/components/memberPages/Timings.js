@@ -48,7 +48,7 @@ class Timings extends React.Component {
                             </DataLine>
                         </DataCard>
 
-                        <DataCard mainTitle={"Frontcrawl"}>
+                        <DataCard mainTitle={"Front Carwl"}>
                             <DataLine>
                                 <DataEntry bold>Distance</DataEntry>
                                 <DataEntry bold>Time</DataEntry>

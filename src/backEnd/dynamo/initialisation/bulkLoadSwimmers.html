@@ -1,0 +1,78 @@
+<html>
+<head>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+
+    <script type="text/javascript">
+        AWS.config.update({
+            region: "eu-west-2",
+            endpoint: 'http://localhost:8000',
+            accessKeyId: "AKIAQ5PUQQYLR2CJVGQR",
+            secretAccessKey: "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"
+        });
+
+        var docClient = new AWS.DynamoDB.DocumentClient();
+
+        function processFile(evt) {
+            document.getElementById('textarea').innerHTML = "";
+            document.getElementById('textarea').innerHTML += "Importing swimmers into DynamoDB. Please wait..." + "\n";
+            var file = evt.target.files[0];
+            if (file) {
+                var r = new FileReader();
+                r.onload = function (e) {
+                    var contents = e.target.result;
+                    var allSwimmers = JSON.parse(contents);
+
+                    allSwimmers.forEach(function (swimmer) {
+                        document.getElementById('textarea').innerHTML += "Processing: " + swimmer.SASANumber + "\n";
+                        var params = {
+                            TableName: "Swimmers",
+                            Item: {
+                                "SASANumber": swimmer.SASANumber,
+                                "forename": swimmer.forename,
+                                "surname": swimmer.surname,
+                                "emails": swimmer.emails,
+                                "phones": swimmer.phones,
+                                "guardians": swimmer.guardians,
+                                "gender": swimmer.gender,
+                                "consent": swimmer.consent,
+                                "butterfly": swimmer.butterfly,
+                                "backstroke": swimmer.backstroke,
+                                "frontCrawl": swimmer.frontCrawl,
+                                "breaststroke": swimmer.breaststroke,
+                                "IM": swimmer.IM,
+                                "eventTimings": swimmer.eventTimings,
+                                "achievements": swimmer.achievements,
+                                "twentyMinSwims": swimmer.twentyMinSwims,
+                            }
+                        };
+                        docClient.put(params, function (err, data) {
+                            if (err) {
+                                document.getElementById('textarea').innerHTML += "Unable to add swimmer: " + count + swimmer.SASANumber + "\n";
+                                document.getElementById('textarea').innerHTML += "Error JSON: " + JSON.stringify(err) + "\n";
+                            } else {
+                                document.getElementById('textarea').innerHTML += "PutItem succeeded: " + swimmer.SASANumber + "\n";
+                                textarea.scrollTop = textarea.scrollHeight;
+                            }
+                        });
+                    });
+                };
+                r.readAsText(file);
+            } else {
+                alert("Could not read Swimmer data file");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+<input type="file" id="fileinput" accept='application/json'/>
+<br><br>
+<textarea readonly id="textarea" style="width:400px; height:800px"></textarea>
+
+<script>
+    document.getElementById('fileinput').addEventListener('change', processFile, false);
+</script>
+</body>
+</html>
+
