@@ -2,10 +2,9 @@ import React from 'react'
 import MemberPage from "./MemberPage";
 import {PageContent} from "../../styling/pages";
 import TitleCard from "../cards/TitleCard";
-import {FlexiGrid, Photo} from "../../styling/cards";
+import {FlexiGrid} from "../../styling/cards";
 import {MainHeader} from "../../styling/text";
 import IconCard from "../cards/IconCard";
-import TextCard from "../cards/TextCard";
 
 //Member Timings to display all fastest timings and timings by event
 //TODO: Integrate live data

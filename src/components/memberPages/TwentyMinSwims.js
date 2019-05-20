@@ -21,6 +21,11 @@ class TwentyMinSwims extends React.Component {
                     <FlexiGrid>
                         <DataCard subTitle={"The table below shows the number of lengths"}>
                             <DataLine>
+                                <DataEntry bold>Date</DataEntry>
+                                <DataEntry bold>Lengths</DataEntry>
+                                <DataEntry bold>Distance</DataEntry>
+                            </DataLine>
+                            <DataLine>
                                 <DataEntry>May 2018</DataEntry>
                                 <DataEntry>54</DataEntry>
                                 <DataEntry>{54 * 25}y</DataEntry>

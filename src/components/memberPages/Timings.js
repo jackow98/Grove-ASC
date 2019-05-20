@@ -21,8 +21,11 @@ class Timings extends React.Component {
                     <SlidingMenu/>
 
                     <FlexiGrid>
-                        <DataCard mainTitle={"Butterfly"}
-                                  subTitle={"The Butterfly timings for jack are as follows below here therfore thus"}>
+                        <DataCard mainTitle={"Butterfly"}>
+                            <DataLine>
+                                <DataEntry bold>Distance</DataEntry>
+                                <DataEntry bold>Time</DataEntry>
+                            </DataLine>
                             <DataLine>
                                 <DataEntry>25y</DataEntry>
                                 <DataEntry>00:11:02</DataEntry>
@@ -47,6 +50,10 @@ class Timings extends React.Component {
 
                         <DataCard mainTitle={"Frontcrawl"}>
                             <DataLine>
+                                <DataEntry bold>Distance</DataEntry>
+                                <DataEntry bold>Time</DataEntry>
+                            </DataLine>
+                            <DataLine>
                                 <DataEntry>25y</DataEntry>
                                 <DataEntry>00:11:02</DataEntry>
                             </DataLine>
@@ -61,6 +68,10 @@ class Timings extends React.Component {
                         </DataCard>
 
                         <DataCard mainTitle={"Backstroke"}>
+                            <DataLine>
+                                <DataEntry bold>Distance</DataEntry>
+                                <DataEntry bold>Time</DataEntry>
+                            </DataLine>
                             <DataLine>
                                 <DataEntry>25y</DataEntry>
                                 <DataEntry>00:11:02</DataEntry>
@@ -77,6 +88,10 @@ class Timings extends React.Component {
 
                         <DataCard mainTitle={"Breaststroke"}>
                             <DataLine>
+                                <DataEntry bold>Distance</DataEntry>
+                                <DataEntry bold>Time</DataEntry>
+                            </DataLine>
+                            <DataLine>
                                 <DataEntry>25y</DataEntry>
                                 <DataEntry>00:11:02</DataEntry>
                             </DataLine>
@@ -91,6 +106,10 @@ class Timings extends React.Component {
                         </DataCard>
 
                         <DataCard mainTitle={"IM"}>
+                            <DataLine>
+                                <DataEntry bold>Distance</DataEntry>
+                                <DataEntry bold>Time</DataEntry>
+                            </DataLine>
                             <DataLine>
                                 <DataEntry>25y</DataEntry>
                                 <DataEntry>00:11:02</DataEntry>

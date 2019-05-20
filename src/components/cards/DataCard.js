@@ -6,7 +6,7 @@ import React from "react";
 class IconCard extends React.Component {
     render() {
         return (
-            <DataCardContainer>
+            <DataCardContainer grey={this.props.grey}>
                 <SecondaryHeader left>
                     {this.props.mainTitle}
                 </SecondaryHeader>

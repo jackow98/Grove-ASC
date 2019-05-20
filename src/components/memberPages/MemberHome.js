@@ -31,6 +31,7 @@ class MemberHome extends React.Component {
                         <SmallPhotoCard
                             mainBackground={"https://lh5.googleusercontent.com/ijRgUhx2_asUrHz5D6ENDIo0QkNhtg_a_x-YXA7FPN9b8lXycpbmmwLZq6Y=w2400"}
                             mainText={"Calendar"}
+                            link={"/Members/Calendar"}
                         />
                         <SmallPhotoCard
                             mainBackground={"https://lh4.googleusercontent.com/mh1pURaPvzHRdAf8t0u1lhREKbl32Pux8H3Gz_d-nDTqvmyhjGO6YkR98Gs=w2400"}
@@ -38,13 +39,13 @@ class MemberHome extends React.Component {
                             link={"/Members/TwentyMinSwims"}
                         />
                         {/*<SmallPhotoCard*/}
-                            {/*mobileBackground={"https://lh5.googleusercontent.com/4p4GwiDsncZ7OVIjW2UTM4vtWcyE9YecM1O7vWBx3881SJjmVznoqaQ3cMQ=w2400"}*/}
-                            {/*mainBackground={"https://lh5.googleusercontent.com/pgdZ6UKnT-XhLPN0_J5LSFGGkPIVxv55lxSceGKDo5lBMhkpX26BPhzjTWc=w2400"}*/}
-                            {/*mainText={"Store"}*/}
+                        {/*mobileBackground={"https://lh5.googleusercontent.com/4p4GwiDsncZ7OVIjW2UTM4vtWcyE9YecM1O7vWBx3881SJjmVznoqaQ3cMQ=w2400"}*/}
+                        {/*mainBackground={"https://lh5.googleusercontent.com/pgdZ6UKnT-XhLPN0_J5LSFGGkPIVxv55lxSceGKDo5lBMhkpX26BPhzjTWc=w2400"}*/}
+                        {/*mainText={"Store"}*/}
                         {/*/>*/}
                         {/*<SmallPhotoCard*/}
-                            {/*mainBackground={"https://lh4.googleusercontent.com/ZdoAr5BsEuc5b902ffnJYVazgZpx8XALKeHe2zw6iDb3sdB7mro8mLAWxDI=w2400"}*/}
-                            {/*mainText={"Swimmer Stories"}*/}
+                        {/*mainBackground={"https://lh4.googleusercontent.com/ZdoAr5BsEuc5b902ffnJYVazgZpx8XALKeHe2zw6iDb3sdB7mro8mLAWxDI=w2400"}*/}
+                        {/*mainText={"Swimmer Stories"}*/}
                         {/*/>*/}
 
                     </FlexiGrid>

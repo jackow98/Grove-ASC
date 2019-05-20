@@ -6,7 +6,6 @@ import SignInForm from "../form/SignInForm";
 import {MainHeader} from "../../styling/text";
 import {FlexiGrid} from "../../styling/cards";
 import IconCard from "../cards/IconCard";
-import LargePhotoCard from "../cards/LargePhotoCard";
 
 class Members extends React.Component {
     render() {

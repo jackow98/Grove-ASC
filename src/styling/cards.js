@@ -34,10 +34,10 @@ export const Card = styled.div`
         border-radius: 10px;    
         display: ${props => (props.cardType === 'TextCard' && 'block')};
         height: ${props =>
-    (props.cardType === 'TitleCard' && '100px') ||
-    (props.cardType === 'LargePhotoCard' && '500.22px') ||
-    (props.cardType === 'TextCard' && '100%')
-    };
+            (props.cardType === 'TitleCard' && '100px') ||
+            (props.cardType === 'LargePhotoCard' && '500.22px') ||
+            (props.cardType === 'TextCard' && '100%')
+        };
     
         justify-content: none;
         margin: 5% 3.5%;
@@ -198,7 +198,7 @@ export const DataCardContainer = styled.div`
     width: 38%;
     margin: 0 4% 3.5%;    
     display: block;
-    background: #f0eeeecf;
+    background: ${props => (props.grey ? "#f0eeeecf" : "#FFFFFF")};
     border-radius: 10px;
     padding: 2%;    
        
@@ -226,5 +226,25 @@ export const DataPhotoCardContainer = styled.div`
 `;
 
 export const DataEntry = styled.div`
+    color: ${props => props.red ? "red" : "#000040"};
+    color: ${props => 
+        (props.red && 'red') ||
+        (props.lightBlue && '#2FB6E1') ||
+        '#000040'
+    }
+    font-weight: ${props => props.bold ? "bold" : "normal"};
     width: 50%;
+`;
+
+export const Dot = styled.span`
+    background-color: ${props =>
+        (props.red && 'red') ||
+        (props.lightBlue && '#2FB6E1') ||
+        '#000040'
+    }  
+    border-radius: 50%;
+    display: inline-block; 
+    margin: 0 25%; 
+    height: 25px;
+    width: 25px;
 `;

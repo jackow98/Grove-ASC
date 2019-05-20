@@ -5,7 +5,6 @@ import TitleCard from "../cards/TitleCard";
 import TextCard from "../cards/TextCard";
 import {AlertCard} from "../../styling/cards";
 import {SecondaryHeader} from "../../styling/text";
-import LargePhotoCard from "../cards/LargePhotoCard";
 
 
 class AboutUs extends React.Component {
