@@ -33,12 +33,16 @@ export const TopMenuContainer = styled.div`
         height: 7%;
     }
    
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 900px) {
         height: 9%;
     }
    
     @media only screen and (max-width: 600px) {
         height: 10%;
+    }
+    
+    @media only screen and (max-width: 400px) {
+        height: 12%;
     }
 `;
 

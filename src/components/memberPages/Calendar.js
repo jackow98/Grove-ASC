@@ -25,7 +25,7 @@ class Calendar extends React.Component {
                                 <DataEntry>
                                     <Dot red/>
                                 </DataEntry>
-                                <DataEntry bold>Bank Holiday</DataEntry>
+                                <DataEntry bold>No swimming</DataEntry>
                             </DataLine>
                             <DataLine>
                                 <DataEntry>

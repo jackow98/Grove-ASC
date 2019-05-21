@@ -14,7 +14,7 @@ export const MainHeader = styled.h1`
         font-size: 48px;
     }
     
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 450px) {
         font-size: 32px;
     }
 `;
@@ -84,7 +84,7 @@ export const Description = styled.p`
     }
     
     @media only screen and (max-width: 400px) {
-        font-size: ${props => (props.small ? "12px" : "18px")}
+        font-size: ${props => (props.small ? "10px" : "18px")}
     }
 `;
 
@@ -98,4 +98,10 @@ export const InputLabel = styled.label`
     margin 1%;
     text-align: ${props => (props.left ? "left" : "center")}
     width: 20%
+    
+    @media only screen and (max-width: 800px) {
+        font-size: 18px;
+        line-height: 18px;   
+     
+    }
 `;

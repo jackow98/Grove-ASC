@@ -18,19 +18,19 @@
 
             var params = {
                 TableName: table,
-                Key:{
+                Key: {
                     "SASANumber": SASANumber
                 },
                 UpdateExpression: "set forename = :forename, butterfly['50y'] = :newTime",
-                ReturnValues:"UPDATED_NEW",
-                ExpressionAttributeValues:{
-                    ":forename":"Jack",
+                ReturnValues: "UPDATED_NEW",
+                ExpressionAttributeValues: {
+                    ":forename": "Jack",
                     ":newTime": "22:22:22"
                 }
 
             };
 
-            docClient.update(params, function(err, data) {
+            docClient.update(params, function (err, data) {
                 if (err) {
                     document.getElementById('textarea').innerHTML = "Unable to update item: " + "\n" + JSON.stringify(err, undefined, 2);
                 } else {
@@ -43,9 +43,9 @@
 </head>
 
 <body>
-<input id="updateItem" type="button" value="Update Item" onclick="updateSwimmer();" />
+<input id="updateItem" type="button" value="Update Item" onclick="updateSwimmer();"/>
 <br><br>
-<textarea readonly id= "textarea" style="width:400px; height:800px"></textarea>
+<textarea readonly id="textarea" style="width:400px; height:800px"></textarea>
 
 </body>
 </html>

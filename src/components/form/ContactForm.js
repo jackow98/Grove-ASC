@@ -3,6 +3,7 @@ import {Description, InputLabel} from "../../styling/text";
 import {Form, FormContainer, TextAreaInput, TextInput} from "../../styling/forms";
 
 //Form for public to get in touch with the club
+//TODO: Implement popup/auto scroll with tick box
 class ContactForm extends React.Component {
     render() {
         return (
@@ -26,11 +27,11 @@ class ContactForm extends React.Component {
 
                 </Form>
 
-                <Description small>
-                    We will never pass any of your data onto third parties. We may contact you from time to time
-                    with marketing content and store your data securely to allow us to do so. You can make a request
-                    for us to erase your data using this form at any time.
-                </Description>
+                {/*<Description small>*/}
+                    {/*We will never pass any of your data onto third parties. We may contact you from time to time*/}
+                    {/*with marketing content and store your data securely to allow us to do so. You can make a request*/}
+                    {/*for us to erase your data using this form at any time.*/}
+                {/*</Description>*/}
             </FormContainer>
         )
     }

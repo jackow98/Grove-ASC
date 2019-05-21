@@ -14,6 +14,8 @@ export const FormContainer = styled.div`
     
     @media only screen and (max-width: 800px) {
         display: block;  
+        width: 89%;
+        padding: 3%;
     }
  `;
 

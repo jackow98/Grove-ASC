@@ -28,18 +28,31 @@
             secretAccessKey: "P65SUcSji0MONn+SHmDDbdODyUj9MioXSgJhGZEg"
         });
 
-        var dynamodb = new AWS.DynamoDB();
+        var docClient = new AWS.DynamoDB.DocumentClient();
 
-        function deleteMovies() {
+        function increaseRating() {
+            var table = "Movies";
+            var year = 2015;
+            var title = "The Big New Movie";
+
             var params = {
-                TableName : "Movies2"
+                TableName: table,
+                Key: {
+                    "year": year,
+                    "title": title
+                },
+                UpdateExpression: "set info.rating = info.rating + :val",
+                ExpressionAttributeValues: {
+                    ":val": 1
+                },
+                ReturnValues: "UPDATED_NEW"
             };
 
-            dynamodb.deleteTable(params, function(err, data) {
+            docClient.update(params, function (err, data) {
                 if (err) {
-                    document.getElementById('textarea').innerHTML = "Unable to delete table: " + "\n" + JSON.stringify(err, undefined, 2);
+                    document.getElementById('textarea').innerHTML = "Unable to update rating: " + "\n" + JSON.stringify(err, undefined, 2);
                 } else {
-                    document.getElementById('textarea').innerHTML = "Table deleted.";
+                    document.getElementById('textarea').innerHTML = "Increase Rating succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
                 }
             });
         }
@@ -48,9 +61,9 @@
 </head>
 
 <body>
-<input id="deleteTableButton" type="button" value="Delete Table" onclick="deleteMovies();" />
+<input id="increaseRating" type="button" value="Increase Rating" onclick="increaseRating();"/>
 <br><br>
-<textarea readonly id= "textarea" style="width:400px; height:800px"></textarea>
+<textarea readonly id="textarea" style="width:400px; height:800px"></textarea>
 
 </body>
 </html>

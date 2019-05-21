@@ -30,31 +30,23 @@
 
         var docClient = new AWS.DynamoDB.DocumentClient();
 
-        function conditionalUpdate() {
+        function readItem() {
             var table = "Movies";
             var year = 2015;
             var title = "The Big New Movie";
 
-            // Conditional update (will fail)
             var params = {
-                TableName:table,
-                Key:{
+                TableName: table,
+                Key: {
                     "year": year,
                     "title": title
-                },
-                UpdateExpression: "remove info.actors[0]",
-                ConditionExpression: "size(info.actors) >= :num",
-                ExpressionAttributeValues:{
-                    ":num":3
-                },
-                ReturnValues:"UPDATED_NEW"
+                }
             };
-
-            docClient.update(params, function(err, data) {
+            docClient.get(params, function (err, data) {
                 if (err) {
-                    document.getElementById('textarea').innerHTML = "The conditional update failed: " + "\n" + JSON.stringify(err, undefined, 2);
+                    document.getElementById('textarea').innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
                 } else {
-                    document.getElementById('textarea').innerHTML = "The conditional update succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
+                    document.getElementById('textarea').innerHTML = "GetItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
                 }
             });
         }
@@ -63,9 +55,9 @@
 </head>
 
 <body>
-<input id="conditionalUpdate" type="button" value="Conditional Update" onclick="conditionalUpdate();" />
+<input id="readItem" type="button" value="Read Item" onclick="readItem();"/>
 <br><br>
-<textarea readonly id= "textarea" style="width:400px; height:800px"></textarea>
+<textarea readonly id="textarea" style="width:400px; height:800px"></textarea>
 
 </body>
 </html>
