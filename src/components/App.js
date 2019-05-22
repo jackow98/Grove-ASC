@@ -17,6 +17,7 @@ class App extends React.Component {
     render() {
         return (
             <BrowserRouter>
+
                 {/*Public Pages*/}
                 <Route path="/" exact component={PublicHome}/>
                 <Route path="/About-Us" exact component={AboutUs}/>
