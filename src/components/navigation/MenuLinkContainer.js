@@ -45,7 +45,7 @@ class MenuLinkContainer extends React.Component {
 
         return Object.values(menuItems).map((key, index) => {
             return (
-                <MenuLink menuType={this.props.menuType} onClick={() => this.props.history.push(key.link)}>
+                <MenuLink menuType={this.props.menuType} key={index} onClick={() => this.props.history.push(key.link)}>
                     {key.name}
                 </MenuLink>
             )

@@ -11,8 +11,15 @@ import Achievements from "./memberPages/Achievements";
 import News from "./memberPages/News";
 import Calendar from "./memberPages/Calendar";
 
+import Amplify from 'aws-amplify';
+import awsmobile from '../aws-exports';
+import { withAuthenticator } from 'aws-amplify-react';
+
+Amplify.configure(awsmobile);
+
 //The root of the app detailing navigation to each page
 class App extends React.Component {
+
 
     render() {
         return (
@@ -37,4 +44,4 @@ class App extends React.Component {
     }
 }
 
-export default App
+export default withAuthenticator(App, true);
