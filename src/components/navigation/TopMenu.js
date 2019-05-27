@@ -1,8 +1,10 @@
 import React from 'react'
 import SideMenu from "./SideMenu";
 import {TopMenuContainer} from "../../styling/menus";
-import {AvatarIcon, LongNavyLogo, MenuBarsIcon, TextIcon} from "../../styling/icons";
+import {LongNavyLogo, MenuBarsIcon} from "../../styling/icons";
 import {withRouter} from "react-router-dom";
+import {Authenticator, Greetings} from "aws-amplify-react";
+import {cognitoTheme} from "../../styling/authentication";
 
 //Top menu bar fixed to top of all pages
 //TODO: Add conditional rendering for avatar and sign in
@@ -28,12 +30,21 @@ class TopMenu extends React.Component {
                           closeSideMenu={() => this.closeSideMenu}/>
                 <MenuBarsIcon onClick={this.openSideMenu}/>
                 <LongNavyLogo onClick={() => this.props.history.push("/")}/>
-                {this.props.user === "member" ?
-                    <AvatarIcon onClick={() => this.props.history.push("/Members")}/> :
-                    <TextIcon onClick={() => this.props.history.push("/Members")}>
-                        Sign In
-                    </TextIcon>
-                }
+
+                <div onClick={() => this.props.history.push("/Members/Home")}>
+                    <Authenticator
+                        hideDefault={true}
+                        onStateChange={this.handleAuthStateChange}
+                        theme={cognitoTheme}
+                    >
+                        <Greetings
+                            inGreeting=" "
+                            outGreeting="Sign in"
+                        />
+                    </Authenticator>
+                </div>
+
+
             </TopMenuContainer>
         )
     }
