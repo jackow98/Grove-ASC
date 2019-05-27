@@ -64,9 +64,9 @@ export const TextIcon = styled.p`
     font-weight: 700;
     height: 49.03px;
     line-height: 24px;    
-    margin: 2%;
+    margin: 2.5% 2%;
     text-align: ${props => (props.left ? "left" : "center")}
-    width: 49.03px;
+    width: 80.03px;
      
     :hover {
         cursor: pointer;
@@ -74,8 +74,8 @@ export const TextIcon = styled.p`
     }
     
     @media screen and (max-width: 800px) {
-        font-size: 18px;
-        line-height: 18px;  
-        margin: 4%;
+        font-size: 16px;
+        line-height: 16px;  
+        margin: 4% 0;
     }
 `;

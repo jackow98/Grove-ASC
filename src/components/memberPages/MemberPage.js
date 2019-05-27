@@ -1,31 +1,54 @@
 import React from 'react'
-import TopMenu from "../navigation/TopMenu";
-import Footer from "../navigation/Footer";
 import {withRouter} from "react-router-dom";
-import {PageContainer} from "../../styling/pages";
-import {withAuthenticator} from "aws-amplify-react";
+import {Authenticator, Greetings, SignUp, withAuthenticator} from "aws-amplify-react";
 import {cognitoTheme} from "../../styling/authentication";
+import Footer from "../navigation/Footer";
+import TopMenu from "../navigation/TopMenu";
+import {PageContainer} from "../../styling/pages";
+import {MainButton} from "../../styling/buttons";
 
 //Container for all pages that can be viewed by members
 class MemberPage extends React.Component {
+
+    //TODO: Refactor to not require use of local state, this is a temporary fix but I feel there is a better way
+    constructor(props) {
+        super(props);
+        this.state = {authState: undefined};
+    }
 
     componentDidMount() {
         window.scrollTo(0, 0);
     }
 
-
     render() {
 
-        return (
+        if(this.state.authState === "signedIn") {
+            return (
+                <PageContainer>
+                    <TopMenu user={"member"}/>
+                    {this.props.children}
+                    <Footer user={"member"}/>
+                </PageContainer>
+            )
 
-            <PageContainer>
-                <TopMenu user={"member"}/>
-                {this.props.children}
-                <Footer user={"member"}/>
-            </PageContainer>
+        }else {
+            return (
+                <div>
+                    <MainButton small onClick = {() => this.props.history.push("/")}>
+                        Back to visitor site
+                    </MainButton>
 
-        )
+                    <Authenticator
+                        hide={[SignUp, Greetings]}
+                        onStateChange={(authState) => this.setState({authState: authState})}
+                        theme={cognitoTheme}
+                    >
+                    </Authenticator>
+                </div>
+
+            )
+        }
     }
 }
 
-export default withAuthenticator(withRouter(MemberPage), false, [], null, cognitoTheme)
+export default withRouter(MemberPage)

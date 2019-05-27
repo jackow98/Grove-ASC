@@ -9,7 +9,7 @@ export const MainButton = styled.button`
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
     color: white;
     font-family: "PT Sans";
-    font-size: 32px;
+    font-size: ${props => (props.small ? '24px' : '32px')};
     font-weight: bold;
     margin: ${props => (props.photo ? "0" : "1% 36%")}
     outline:none;

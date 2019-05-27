@@ -5,6 +5,7 @@ import SmallPhotoCard from "../cards/SmallPhotoCard";
 import {FlexiGrid} from "../../styling/cards";
 import {withRouter} from "react-router-dom";
 
+//TODO: Add account features
 //Member Home page acts as a window to all member features
 class MemberHome extends React.Component {
 
