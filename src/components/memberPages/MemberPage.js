@@ -28,19 +28,20 @@ class MemberPage extends React.Component {
             console.log(currentUser.attributes.sub);
             let currentUserSub = currentUser.attributes.sub;
             this.get(currentUserSub)
-            // this.post();
+            // this.post(currentUserSub);
             // this.list();
         }
 
         this.setState({authState: authState})
     };
 
-    post = async () => {
+    post = async (currentUserSub) => {
         console.log('calling api');
         const response = await API.post('groveRestapi', '/items', {
             body: {
                 SASANumber: '6ba580db-c8a1-40b4-93b2-7e7ca64a31f4',
-                forename: 'Jack'
+                forename: 'Jack',
+                cognitoSub: currentUserSub
             }
         });
         alert(JSON.stringify(response, null, 2));
@@ -48,7 +49,7 @@ class MemberPage extends React.Component {
 
     get = async (currentUserSub) => {
         console.log('calling api');
-        const response = await API.get('groveRestapi', '/items/object/6ba580db-c8a1-40b4-93b2-7e7ca64a31f4');
+        const response = await API.get('groveRestapi', `/items/${currentUserSub}`);
         alert(JSON.stringify(response, null, 2));
     };
 

@@ -13,7 +13,6 @@ import Calendar from "./memberPages/Calendar";
 import Amplify from 'aws-amplify';
 import awsmobile from '../aws-exports';
 
-
 Amplify.configure(awsmobile);
 
 //The root of the app detailing navigation to each page
