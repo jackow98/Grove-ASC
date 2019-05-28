@@ -145,7 +145,8 @@ app.put(path, function(req, res) {
 
   let putItemParams = {
     TableName: tableName,
-    Item: req.body
+    Item: req.body,
+      ReturnValues: 'ALL_OLD'
   }
   dynamodb.put(putItemParams, (err, data) => {
     if(err) {

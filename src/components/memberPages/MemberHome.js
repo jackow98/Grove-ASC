@@ -14,7 +14,6 @@ class MemberHome extends React.Component {
         return (
             <MemberPage>
                 <PageContent>
-                    <button onClick={this.post}>POST</button>
                     <FlexiGrid>
                         <SmallPhotoCard
                             mainBackground={"https://lh4.googleusercontent.com/YL1hDJrDb_dRdO9gtFN91h3dgtJfJopwLwpXnL38jy6uIoNpwzuDJVKpldA=w2400"}

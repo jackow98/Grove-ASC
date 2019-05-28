@@ -9,53 +9,48 @@ import {PageContainer} from "../../styling/pages";
 import {MainButton} from "../../styling/buttons";
 import connect from "react-redux/es/connect/connect";
 import {loadUser} from "../../redux/actions";
+import testUsers from "../../assets/testUsers"
 
 //Container for all pages that can be viewed by members
 class MemberPage extends React.Component {
 
     handleAuthStateChange = async (authState) => {
 
+        //If user signs in for first time, retrieve data from database and store in redux
         if (authState === 'signedIn' && !(this.props.user)) {
 
             let currentUser = await Auth.currentAuthenticatedUser({
-                bypassCache: false  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
+                bypassCache: false
             }).then(user => {
                 return user
             })
                 .catch(err => console.log(err));
 
-
-            console.log(currentUser.attributes.sub);
             let currentUserSub = currentUser.attributes.sub;
-            this.get(currentUserSub)
-            // this.post(currentUserSub);
-            // this.list();
+            this.props.loadUser(await this.get(currentUserSub))
+
+        //If user signs out, remove data from redux
+        } else if (authState === 'signIn' && this.props.user) {
+            this.props.loadUser(null)
         }
 
+        console.log(this.props.user);
         this.setState({authState: authState})
     };
 
-    post = async (currentUserSub) => {
-        console.log('calling api');
-        const response = await API.post('groveRestapi', '/items', {
-            body: {
-                SASANumber: '6ba580db-c8a1-40b4-93b2-7e7ca64a31f4',
-                forename: 'Jack',
-                cognitoSub: currentUserSub
-            }
-        });
-        alert(JSON.stringify(response, null, 2));
-    };
-
+    //Gets record of currently logged in user using rest api
     get = async (currentUserSub) => {
         console.log('calling api');
         const response = await API.get('groveRestapi', `/items/${currentUserSub}`);
-        alert(JSON.stringify(response, null, 2));
+        return response
     };
 
-    list = async () => {
+    post = async (user) => {
+        console.log(user);
         console.log('calling api');
-        const response = await API.get('groveRestapi', '/items/1');
+        const response = await API.post('groveRestapi', '/items', {
+            body: user
+        });
         alert(JSON.stringify(response, null, 2));
     };
 
@@ -78,6 +73,7 @@ class MemberPage extends React.Component {
                     <TopMenu user={"member"}/>
                     {this.props.children}
                     <Footer user={"member"}/>
+                    <button onClick={() => {this.post(testUsers[0])}}>POST</button>
                 </PageContainer>
             )
 
@@ -88,7 +84,7 @@ class MemberPage extends React.Component {
                         Back to visitor site
                     </MainButton>
 
-                    {/*Diables sign up feature for users and applies custom theme*/}
+                    {/*Disables sign up feature for users and applies custom theme*/}
                     <Authenticator
                         hide={[SignUp, Greetings]}
                         onStateChange={(authState) => this.handleAuthStateChange(authState)}
