@@ -6,9 +6,9 @@ import DataCard from "../cards/DataCard";
 import {DataEntry, DataLine, FlexiGrid} from "../../styling/cards";
 import connect from "react-redux/es/connect/connect";
 import {Link} from "react-router-dom";
+import {getMonthYear} from "../../styling/prettyPrint";
 
 //Member Timings to display all fastest timings and timings by event
-//TODO: Integrate live data
 class TwentyMinSwims extends React.Component {
 
     //Iterate over twenty minute swims object and retrieve stroke counts
@@ -18,16 +18,14 @@ class TwentyMinSwims extends React.Component {
 
                 const twentyMinSwims = this.props.user[0]['twentyMinSwims'];
 
-
                 return Object.values(twentyMinSwims).map((key, index) => {
+
                     let dateString = Object.keys(key).toString();
-                    let monthList = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
-                    let year = dateString.split("-", 2)[0];
-                    let month = dateString.split("-", 2)[1];
+                    let prettyDate = getMonthYear(dateString)
 
                     return (
                         <DataLine key={index}>
-                            <DataEntry>{monthList[parseInt(month) - 1]} {year}</DataEntry>
+                            <DataEntry>{prettyDate}</DataEntry>
                             <DataEntry>{key[dateString]}</DataEntry>
                             <DataEntry>{key[dateString] * 25}y</DataEntry>
                         </DataLine>
