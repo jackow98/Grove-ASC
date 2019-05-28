@@ -4,21 +4,19 @@ import {PageContent} from "../../styling/pages";
 import SmallPhotoCard from "../cards/SmallPhotoCard";
 import {FlexiGrid} from "../../styling/cards";
 import {withRouter} from "react-router-dom";
+import {API, Auth} from 'aws-amplify';
+import testUsers from '../../assets/testUsers'
 
 //TODO: Add account features
 //Member Home page acts as a window to all member features
+
 class MemberHome extends React.Component {
 
     render() {
         return (
             <MemberPage>
                 <PageContent>
-                    {/*<TitleCard*/}
-                    {/*mainBackground={"https://lh6.googleusercontent.com/jrh4UI4C-vDdq0N5tvYipQ8ZOyu0zrruQL7rMce7-XO08POVesB6UFcMyUU=w2400"}*/}
-                    {/*mobileBackground={"https://lh5.googleusercontent.com/ARThs942DoODUHCOQz_Oa_Fj4PGHtfPzn5kLfyMEjhCu6m4i-qIGwIKCPDg=w2400"}*/}
-                    {/*title={"Members/Home"}*/}
-                    {/*/>*/}
-
+                    <button onClick={this.post}>POST</button>
                     <FlexiGrid>
                         <SmallPhotoCard
                             mainBackground={"https://lh4.googleusercontent.com/YL1hDJrDb_dRdO9gtFN91h3dgtJfJopwLwpXnL38jy6uIoNpwzuDJVKpldA=w2400"}

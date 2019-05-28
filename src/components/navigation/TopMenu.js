@@ -8,7 +8,6 @@ import {cognitoTheme} from "../../styling/authentication";
 import MenuGreeting from "../authentication/MenuGreeting";
 
 //Top menu bar fixed to top of all pages
-//TODO: Add conditional rendering for avatar and sign in
 
 class TopMenu extends React.Component {
 
@@ -32,6 +31,7 @@ class TopMenu extends React.Component {
                 <MenuBarsIcon onClick={this.openSideMenu}/>
                 <LongNavyLogo onClick={() => this.props.history.push("/")}/>
 
+                {/*Uses aws cognito to render menu greeting conditionally */}
                 <TextIcon onClick={() => this.props.history.push("/Members/Home")}>
                     <Authenticator
                         hideDefault={true}

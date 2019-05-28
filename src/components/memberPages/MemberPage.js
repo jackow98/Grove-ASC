@@ -1,11 +1,15 @@
 import React from 'react'
 import {withRouter} from "react-router-dom";
-import {Authenticator, Greetings, SignUp, withAuthenticator} from "aws-amplify-react";
+import {Authenticator, Greetings, SignUp} from "aws-amplify-react";
+import {Auth, API} from 'aws-amplify'
 import {cognitoTheme} from "../../styling/authentication";
 import Footer from "../navigation/Footer";
 import TopMenu from "../navigation/TopMenu";
 import {PageContainer} from "../../styling/pages";
 import {MainButton} from "../../styling/buttons";
+import connect from "react-redux/es/connect/connect";
+import {loadUser} from "../../redux/actions";
+import testUsers from "../../assets/testUsers";
 
 //Container for all pages that can be viewed by members
 class MemberPage extends React.Component {
@@ -20,9 +24,35 @@ class MemberPage extends React.Component {
         window.scrollTo(0, 0);
     }
 
+    handleAuthStateChange = async (authState) =>{
+
+       if(authState === 'signedIn' && !(this.props.user)){
+
+            let currentUser = await Auth.currentAuthenticatedUser({
+                bypassCache: false  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
+            }).then(user => {return user})
+                .catch(err => console.log(err));
+
+
+            console.log(currentUser.attributes.sub);
+            let currentUserSub = currentUser.attributes.sub
+            this.get(currentUserSub)
+        }
+
+        this.setState({authState: authState})
+    };
+
+    get = async (currentUserSub) => {
+        console.log('calling api');
+        const response = await API.get('groveRestapi', '/items/object/1'
+        );
+        alert(JSON.stringify(response, null, 2));
+    };
+
     render() {
 
-        if(this.state.authState === "signedIn") {
+        //Renders aws cognito if not signed in otherwise displays content of member page
+        if (this.state.authState === "signedIn") {
             return (
                 <PageContainer>
                     <TopMenu user={"member"}/>
@@ -31,24 +61,30 @@ class MemberPage extends React.Component {
                 </PageContainer>
             )
 
-        }else {
+        } else {
             return (
                 <div>
-                    <MainButton small onClick = {() => this.props.history.push("/")}>
+                    <MainButton small onClick={() => this.props.history.push("/")}>
                         Back to visitor site
                     </MainButton>
 
+                    {/*Diables sign up feature for users and applies custom theme*/}
                     <Authenticator
                         hide={[SignUp, Greetings]}
-                        onStateChange={(authState) => this.setState({authState: authState})}
+                        onStateChange={(authState) => this.handleAuthStateChange(authState)}
                         theme={cognitoTheme}
                     >
                     </Authenticator>
                 </div>
-
             )
         }
     }
 }
 
-export default withRouter(MemberPage)
+const mapStateToProps = (state) => {
+    return {
+        user: state.user.user,
+    };
+};
+
+export default withRouter(connect(mapStateToProps, {loadUser})(MemberPage))

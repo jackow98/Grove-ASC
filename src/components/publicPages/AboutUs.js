@@ -6,7 +6,7 @@ import TextCard from "../cards/TextCard";
 import {AlertCard} from "../../styling/cards";
 import {SecondaryHeader} from "../../styling/text";
 
-
+//Page with information about the club and link to contact form
 class AboutUs extends React.Component {
 
     render() {

@@ -1,3 +1,4 @@
+//Styling for custom aws cognito
 export const cognitoTheme = {
     formSection: {
         'backgroundColor': '#f0eeeecf',

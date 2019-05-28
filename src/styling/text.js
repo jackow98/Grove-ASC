@@ -10,12 +10,20 @@ export const MainHeader = styled.h1`
     line-height: 54px;
     text-align: ${props => (props.left ? "left" : "center")}
     
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 980px) {
+        font-size: 32px;
+    }
+    
+    @media only screen and (max-width: 800px) {
         font-size: 48px;
     }
     
-    @media only screen and (max-width: 450px) {
+    @media only screen and (max-width: 540px) {
         font-size: 32px;
+    }
+    
+    @media only screen and (max-width: 270px) {
+        font-size: 18px;
     }
 `;
 

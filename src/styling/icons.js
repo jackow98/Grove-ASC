@@ -15,6 +15,22 @@ export const LongNavyLogo = styled.img`
         cursor: pointer;
         opacity: 0.7;
     }
+    
+    @media only screen and (max-width: 1050px) {
+        margin: 1%;
+    }
+   
+    @media only screen and (max-width: 900px) {
+        margin: 1%;
+    }
+   
+    @media only screen and (max-width: 600px) {
+        margin: 2%;
+    }
+    
+    @media only screen and (max-width: 400px) {
+        margin: 2%;
+    }
 `;
 
 export const LabelIcon = styled(Document)`
@@ -52,12 +68,17 @@ export const MenuBarsIcon = styled(MenuAltLeft)`
 export const AvatarIcon = styled(Person)`
     color: #000040;
     height: 49.03px;
-    margin: 2%;
+    
     width: 49.03px;
+    
+    :hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
 `;
 
 //Icon for displaying a short text
-export const TextIcon = styled.p`
+export const TextIcon = styled.div`
     color: ${props => (props.white ? "#FFFFFF" : "#000040")}
     font-family: "PT Sans";
     font-size: 24px;

@@ -3,6 +3,7 @@ import {SliderText, SlidingMenuContainer} from "../../styling/menus";
 
 class SlidingMenu extends React.Component {
 
+    //Functions to change state depending on slide menu
     selectFastest = () => {
         this.setState({fastestSelected: true, eventsSelected: false})
     };

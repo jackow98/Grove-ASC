@@ -7,7 +7,7 @@ export const MainButton = styled.button`
     border-radius: 10px;
     bottom: ${props => (props.photo ? "2%" : "0%")}
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
-    color: white;
+    color: #FFF;
     font-family: "PT Sans";
     font-size: ${props => (props.small ? '24px' : '32px')};
     font-weight: bold;

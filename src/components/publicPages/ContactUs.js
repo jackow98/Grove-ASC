@@ -5,6 +5,7 @@ import TitleCard from "../cards/TitleCard";
 import ContactForm from "../form/ContactForm";
 import {MainButton} from "../../styling/buttons";
 
+//Page for users to fill out a form and send to the club
 class ContactUs extends React.Component {
     render() {
         return (
