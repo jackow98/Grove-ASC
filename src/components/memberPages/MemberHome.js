@@ -4,8 +4,6 @@ import {PageContent} from "../../styling/pages";
 import SmallPhotoCard from "../cards/SmallPhotoCard";
 import {FlexiGrid} from "../../styling/cards";
 import {withRouter} from "react-router-dom";
-import {API, Auth} from 'aws-amplify';
-import testUsers from '../../assets/testUsers'
 
 //TODO: Add account features
 //Member Home page acts as a window to all member features

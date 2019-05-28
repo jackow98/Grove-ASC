@@ -1,5 +1,5 @@
 import React from 'react'
-import {AvatarIcon, TextIcon} from "../../styling/icons";
+import {AvatarIcon} from "../../styling/icons";
 import {withRouter} from "react-router-dom";
 import {Auth} from 'aws-amplify'
 
