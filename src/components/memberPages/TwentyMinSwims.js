@@ -6,7 +6,7 @@ import DataCard from "../cards/DataCard";
 import {DataEntry, DataLine, FlexiGrid} from "../../styling/cards";
 import connect from "react-redux/es/connect/connect";
 import {Link} from "react-router-dom";
-import {getMonthYear} from "../../styling/prettyPrint";
+import {prettyMonthYear} from "../../styling/prettyPrint";
 
 //Member Timings to display all fastest timings and timings by event
 class TwentyMinSwims extends React.Component {
@@ -21,7 +21,7 @@ class TwentyMinSwims extends React.Component {
                 return Object.values(twentyMinSwims).map((key, index) => {
 
                     let dateString = Object.keys(key).toString();
-                    let prettyDate = getMonthYear(dateString)
+                    let prettyDate = prettyMonthYear(dateString);
 
                     return (
                         <DataLine key={index}>
@@ -69,7 +69,7 @@ class TwentyMinSwims extends React.Component {
 
                             {this.renderTwentyMinSwims()}
 
-                            </DataCard>
+                        </DataCard>
                     </FlexiGrid>
                 </PageContent>
             </MemberPage>

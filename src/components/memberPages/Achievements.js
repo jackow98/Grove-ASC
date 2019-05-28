@@ -2,14 +2,13 @@ import React from 'react'
 import MemberPage from "./MemberPage";
 import {PageContent} from "../../styling/pages";
 import TitleCard from "../cards/TitleCard";
-import {DataEntry, FlexiGrid} from "../../styling/cards";
+import {FlexiGrid} from "../../styling/cards";
 import TextCard from "../cards/TextCard";
 import connect from "react-redux/es/connect/connect";
-import {getMonthYear} from "../../styling/prettyPrint";
+import {prettyMonthYear} from "../../styling/prettyPrint";
 import {Link} from "react-router-dom";
 
 //Member Timings to display all fastest timings and timings by event
-//TODO: Integrate live data
 class Achievements extends React.Component {
 
     //Iterate over achievements object and retrieve
@@ -22,10 +21,11 @@ class Achievements extends React.Component {
 
                     return (
                         <TextCard
+                            key={index}
                             grey
                             center
                             mainBackground={key['photo']}
-                            subTitle={getMonthYear(key['date'])}
+                            subTitle={prettyMonthYear(key['date'])}
                             header={key['title']}
                         />
                     )

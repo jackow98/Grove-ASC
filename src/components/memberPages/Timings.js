@@ -5,10 +5,62 @@ import TitleCard from "../cards/TitleCard";
 import SlidingMenu from "../navigation/SlidingMenuContainer";
 import DataCard from "../cards/DataCard";
 import {DataEntry, DataLine, FlexiGrid} from "../../styling/cards";
+import connect from "react-redux/es/connect/connect";
+import {prettyDistance} from "../../styling/prettyPrint";
+import {Link} from "react-router-dom";
 
 //Member Timings to display all fastest timings and timings by event
 //TODO: Integrate live data
 class Timings extends React.Component {
+
+    renderStrokes = () => {
+        let strokes = ["Butterfly", "Backstroke", "Breaststroke", "Front Crawl", "IM"];
+
+        return strokes.map((stroke) => {
+            return(
+                <DataCard mainTitle={stroke}>
+                    <DataLine>
+                        <DataEntry bold>Distance</DataEntry>
+                        <DataEntry bold>Time</DataEntry>
+                    </DataLine>
+                    {this.renderStrokeTimings(stroke.replace(/\s/g, '').toLowerCase())}
+                </DataCard>
+            )
+        })
+
+
+    };
+
+    //Iterate over achievements object and retrieve
+    renderStrokeTimings = (stroke) => {
+        if (this.props.user) {
+            if (this.props.user[0][stroke]) {
+                const butterfly = this.props.user[0][stroke];
+                console.log(butterfly);
+                return Object.values(butterfly).map((key, index) => {
+
+                    let keys = Object.keys(butterfly);
+
+                    return (
+                        <DataLine>
+                            <DataEntry>{prettyDistance(keys[index])}</DataEntry>
+                            <DataEntry>{key}</DataEntry>
+                        </DataLine>
+                    )
+                })
+            } else {
+                return (
+                    <DataLine>
+                        <DataEntry bold red> No Records available</DataEntry>
+                        <DataEntry>
+                            <Link to={"/Contact-Us"}>
+                                Something wrong?
+                            </Link></DataEntry>
+                    </DataLine>
+                )
+            }
+        }
+    };
 
     render() {
         return (
@@ -21,108 +73,7 @@ class Timings extends React.Component {
                     <SlidingMenu/>
 
                     <FlexiGrid>
-                        <DataCard mainTitle={"Butterfly"}>
-                            <DataLine>
-                                <DataEntry bold>Distance</DataEntry>
-                                <DataEntry bold>Time</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>25y</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>25m</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>50y</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>50y</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>50y</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                        </DataCard>
-
-                        <DataCard mainTitle={"Front Carwl"}>
-                            <DataLine>
-                                <DataEntry bold>Distance</DataEntry>
-                                <DataEntry bold>Time</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>25y</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>25m</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>50y</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                        </DataCard>
-
-                        <DataCard mainTitle={"Backstroke"}>
-                            <DataLine>
-                                <DataEntry bold>Distance</DataEntry>
-                                <DataEntry bold>Time</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>25y</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>25m</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>50y</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                        </DataCard>
-
-                        <DataCard mainTitle={"Breaststroke"}>
-                            <DataLine>
-                                <DataEntry bold>Distance</DataEntry>
-                                <DataEntry bold>Time</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>25y</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>25m</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>50y</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                        </DataCard>
-
-                        <DataCard mainTitle={"IM"}>
-                            <DataLine>
-                                <DataEntry bold>Distance</DataEntry>
-                                <DataEntry bold>Time</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>25y</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>25m</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>50y</DataEntry>
-                                <DataEntry>00:11:02</DataEntry>
-                            </DataLine>
-                        </DataCard>
+                        {this.renderStrokes()}
                     </FlexiGrid>
                 </PageContent>
             </MemberPage>
@@ -130,4 +81,10 @@ class Timings extends React.Component {
     }
 }
 
-export default Timings
+const mapStateToProps = (state) => {
+    return {
+        user: state.user.user,
+    };
+};
+
+export default connect(mapStateToProps, {})(Timings)

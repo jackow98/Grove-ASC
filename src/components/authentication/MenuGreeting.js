@@ -1,5 +1,4 @@
 import React from 'react'
-import {AvatarIcon} from "../../styling/icons";
 import {withRouter} from "react-router-dom";
 import {Auth} from 'aws-amplify'
 import connect from "react-redux/es/connect/connect";
@@ -14,7 +13,7 @@ class MenuGreeting extends React.Component {
                         Sign In
                     </div> :
                     <div onClick={() => Auth.signOut()}>
-                        {this.props.user?this.props.user[0]['forename']:null}
+                        {this.props.user ? this.props.user[0]['forename'] : null}
                     </div>
 
 
