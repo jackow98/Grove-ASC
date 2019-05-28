@@ -29,7 +29,7 @@ class MemberPage extends React.Component {
             let currentUserSub = currentUser.attributes.sub;
             this.props.loadUser(await this.get(currentUserSub))
 
-        //If user signs out, remove data from redux
+            //If user signs out, remove data from redux
         } else if (authState === 'signIn' && this.props.user) {
             this.props.loadUser(null)
         }
@@ -45,6 +45,7 @@ class MemberPage extends React.Component {
         return response
     };
 
+    //TODO: Remove post functionality, test purposes only
     post = async (user) => {
         console.log(user);
         console.log('calling api');
@@ -73,7 +74,10 @@ class MemberPage extends React.Component {
                     <TopMenu user={"member"}/>
                     {this.props.children}
                     <Footer user={"member"}/>
-                    <button onClick={() => {this.post(testUsers[0])}}>POST</button>
+                    <button onClick={() => {
+                        this.post(testUsers[1])
+                    }}>POST
+                    </button>
                 </PageContainer>
             )
 

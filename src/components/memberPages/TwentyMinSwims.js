@@ -4,10 +4,52 @@ import {PageContent} from "../../styling/pages";
 import TitleCard from "../cards/TitleCard";
 import DataCard from "../cards/DataCard";
 import {DataEntry, DataLine, FlexiGrid} from "../../styling/cards";
+import connect from "react-redux/es/connect/connect";
+import {Link} from "react-router-dom";
 
 //Member Timings to display all fastest timings and timings by event
 //TODO: Integrate live data
 class TwentyMinSwims extends React.Component {
+
+    //Iterate over twenty minute swims object and retrieve stroke counts
+    renderTwentyMinSwims = () => {
+        if (this.props.user) {
+            if (this.props.user[0]['twentyMinSwims']) {
+
+                const twentyMinSwims = this.props.user[0]['twentyMinSwims'];
+
+
+                return Object.values(twentyMinSwims).map((key, index) => {
+                    let dateString = Object.keys(key).toString();
+                    let monthList = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                    let year = dateString.split("-", 2)[0];
+                    let month = dateString.split("-", 2)[1];
+
+                    return (
+                        <DataLine key={index}>
+                            <DataEntry>{monthList[parseInt(month) - 1]} {year}</DataEntry>
+                            <DataEntry>{key[dateString]}</DataEntry>
+                            <DataEntry>{key[dateString] * 25}y</DataEntry>
+                        </DataLine>
+                    )
+                })
+            } else {
+                return (
+                    <DataLine>
+                        <DataEntry bold red>
+                            No Records available
+                        </DataEntry>
+                        <DataEntry>
+                            <Link to={"/Contact-Us"}>
+                                Something wrong?
+                            </Link>
+                        </DataEntry>
+                    </DataLine>
+
+                )
+            }
+        }
+    };
 
     render() {
         return (
@@ -17,35 +59,19 @@ class TwentyMinSwims extends React.Component {
                         mainBackground={"https://lh4.googleusercontent.com/mh1pURaPvzHRdAf8t0u1lhREKbl32Pux8H3Gz_d-nDTqvmyhjGO6YkR98Gs=w2400"}
                         title={"20 Min Swims"}
                     />
-
                     <FlexiGrid>
+
+
                         <DataCard subTitle={"The table below shows the number of lengths"}>
                             <DataLine>
                                 <DataEntry bold>Date</DataEntry>
                                 <DataEntry bold>Lengths</DataEntry>
                                 <DataEntry bold>Distance</DataEntry>
                             </DataLine>
-                            <DataLine>
-                                <DataEntry>May 2018</DataEntry>
-                                <DataEntry>54</DataEntry>
-                                <DataEntry>{54 * 25}y</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>May 2017</DataEntry>
-                                <DataEntry>54</DataEntry>
-                                <DataEntry>{54 * 25}y</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>May 2016</DataEntry>
-                                <DataEntry>54</DataEntry>
-                                <DataEntry>{54 * 25}y</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry>May 2015</DataEntry>
-                                <DataEntry>54</DataEntry>
-                                <DataEntry>{54 * 25}y</DataEntry>
-                            </DataLine>
-                        </DataCard>
+
+                            {this.renderTwentyMinSwims()}
+
+                            </DataCard>
                     </FlexiGrid>
                 </PageContent>
             </MemberPage>
@@ -53,4 +79,10 @@ class TwentyMinSwims extends React.Component {
     }
 }
 
-export default TwentyMinSwims
+const mapStateToProps = (state) => {
+    return {
+        user: state.user.user,
+    };
+};
+
+export default connect(mapStateToProps, {})(TwentyMinSwims)
