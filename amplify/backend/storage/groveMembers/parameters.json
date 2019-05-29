@@ -1,0 +1,7 @@
+{
+    "tableName": "Members",
+    "partitionKeyName": "cognitoSub",
+    "partitionKeyType": "S",
+    "sortKeyName": "SASANumber",
+    "sortKeyType": "S"
+}

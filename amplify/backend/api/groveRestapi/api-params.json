@@ -1,0 +1,49 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "groveLambda",
+            "privacy": {
+                "protected": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ],
+                "unauth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            }
+        }
+    ],
+    "resourceName": "groveRestapi",
+    "apiName": "groveRestapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "groveLambda"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 1,
+        "authRoleName": "grove-grove-20190528202723-authRole",
+        "unAuthRoleName": "grove-grove-20190528202723-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "groveLambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "9001fa7d"
+}
