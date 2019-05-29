@@ -34,15 +34,13 @@ class MemberPage extends React.Component {
             this.props.loadUser(null)
         }
 
-        console.log(this.props.user);
         this.setState({authState: authState})
     };
 
     //Gets record of currently logged in user using rest api
     get = async (currentUserSub) => {
         console.log('calling api');
-        const response = await API.get('groveRestapi', `/items/${currentUserSub}`);
-        return response
+        return await API.get('groveRestapi', `/items/${currentUserSub}`);
     };
 
     //TODO: Remove post functionality, test purposes only

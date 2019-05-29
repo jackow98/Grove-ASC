@@ -35,27 +35,64 @@ class Calendar extends React.Component {
                             </DataLine>
                         </DataCard>
 
-                        <DataCard mainTitle={"May 2019"}>
-                            <DataLine>
-                                <DataEntry red bold>Mon 20th</DataEntry>
-                                <DataEntry>Bank Holiday</DataEntry>
-                            </DataLine>
-                            <DataLine>
-                                <DataEntry red bold>Mon 27th</DataEntry>
-                                <DataEntry>Bank Holiday</DataEntry>
-                            </DataLine>
-                        </DataCard>
-
                         <DataCard mainTitle={"June 2019"}>
                             <DataLine>
                                 <DataEntry lightBlue bold>Mon 24th</DataEntry>
                                 <DataEntry>Fun Session</DataEntry>
                             </DataLine>
                             <DataLine>
-                                <DataEntry lightBlue bold>Mon 27th</DataEntry>
-                                <DataEntry>Awards Night</DataEntry>
+                                <DataEntry lightBlue bold>Thu 27th</DataEntry>
+                                <DataEntry>Awards Night & Fun Session</DataEntry>
                             </DataLine>
                         </DataCard>
+
+                        <DataCard mainTitle={"July 2019"}>
+                            <DataLine>
+                                <DataEntry red bold>All Mon & Thu</DataEntry>
+                                <DataEntry>Summer Holidays</DataEntry>
+                            </DataLine>
+                        </DataCard>
+
+                        <DataCard mainTitle={"Aug 2019"}>
+                            <DataLine>
+                                <DataEntry red bold>Mon & Thu</DataEntry>
+                                <DataEntry>Summer Holidays</DataEntry>
+                            </DataLine>
+                            <DataLine>
+                                <DataEntry lightBlue bold>Mon 19th</DataEntry>
+                                <DataEntry>Grove resumes</DataEntry>
+                            </DataLine>
+                        </DataCard>
+
+                        <DataCard mainTitle={"Sep 2019"}>
+                            <DataLine>
+                                <DataEntry red bold>Mon 16th</DataEntry>
+                                <DataEntry>Bank holiday</DataEntry>
+                            </DataLine>
+                        </DataCard>
+
+                        <DataCard mainTitle={"Oct 2019"}>
+                            <DataLine>
+                                <DataEntry red bold>Mon 14th</DataEntry>
+                                <DataEntry>October break</DataEntry>
+                            </DataLine>
+                            <DataLine>
+                                <DataEntry red bold>Thu 17th</DataEntry>
+                                <DataEntry>October break</DataEntry>
+                            </DataLine>
+                            <DataLine>
+                                <DataEntry red bold>Mon 21st</DataEntry>
+                                <DataEntry>October break</DataEntry>
+                            </DataLine>
+                        </DataCard>
+
+                        <DataCard mainTitle={"Dec 2019"}>
+                            <DataLine>
+                                <DataEntry red bold>Mon 23rd</DataEntry>
+                                <DataEntry>Christmas break</DataEntry>
+                            </DataLine>
+                        </DataCard>
+
                     </FlexiGrid>
 
                 </PageContent>

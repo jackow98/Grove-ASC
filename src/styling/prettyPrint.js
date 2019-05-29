@@ -10,3 +10,21 @@ export const prettyMonthYear = (storedDate) => {
 export const prettyDistance = (storedDistance) => {
     return `${storedDistance.substring(1)}${storedDistance.substring(0, 1)}`
 }
+
+export const prettyStroke = (storedStroke) => {
+    switch (storedStroke) {
+        case "butterfly":
+            return "Butterfly";
+        case "backstroke":
+            return "Backstroke";
+        case "frontcrawl":
+            return "Front Crawl";
+        case "breaststroke":
+            return "Breaststroke";
+        case "im":
+            return "IM";
+        default:
+            return storedStroke;
+
+    }
+};

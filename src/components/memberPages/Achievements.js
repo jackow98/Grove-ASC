@@ -11,7 +11,7 @@ import {Link} from "react-router-dom";
 //Member Timings to display all fastest timings and timings by event
 class Achievements extends React.Component {
 
-    //Iterate over achievements object and retrieve
+    //Iterate over achievements object and display
     renderAchievements = () => {
         if (this.props.user) {
             if (this.props.user[0]['achievements']) {
