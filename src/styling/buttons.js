@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 //Big light blue button
 export const MainButton = styled.button`
-    background-color: #2FB6E1;
+    background-color: ${props => (props.red ? "red" : "#2FB6E1")};
     border: none;
     border-radius: 10px;
     bottom: ${props => (props.photo ? "2%" : "0%")}

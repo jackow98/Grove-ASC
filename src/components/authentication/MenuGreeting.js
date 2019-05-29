@@ -2,22 +2,52 @@ import React from 'react'
 import {withRouter} from "react-router-dom";
 import {Auth} from 'aws-amplify'
 import connect from "react-redux/es/connect/connect";
+import {loadUser} from "../../redux/actions";
+import {getUser} from "../../accountHandling/restFunctions";
 
 //Renders conditionally the icon in top left of page depednding on user auth status
 class MenuGreeting extends React.Component {
+
+    //Load in user and store in redux
+    getCurrentUser = async () => {
+        let currentUser = await Auth.currentAuthenticatedUser({
+            bypassCache: false
+        }).then(user => {
+            return user
+        })
+            .catch(err => console.log(err));
+
+        if (currentUser) {
+            let currentUserSub = currentUser.attributes.sub;
+            this.props.loadUser(await getUser(currentUserSub));
+        }
+
+    };
+
+    renderIcons = () => {
+
+        if (this.props.authState === "signIn") {
+            return (
+                <div onClick={() => this.props.history.push("/Members/Home")}>
+                    Sign In
+                </div>
+            )
+            //If public page reloaded and user isn't loaded, load details
+        } else if (this.props.authState === "signedIn" && this.props.user === null) {
+            this.getCurrentUser()
+        } else {
+            return (
+                <div onClick={() => this.props.history.push("/Members/Account")}>
+                    {this.props.user ? this.props.user[0]['forename'] : null}
+                </div>
+            )
+        }
+    };
+
     render() {
         return (
             <div>
-                {this.props.authState === "signIn" ?
-                    <div>
-                        Sign In
-                    </div> :
-                    <div onClick={() => Auth.signOut()}>
-                        {this.props.user ? this.props.user[0]['forename'] : null}
-                    </div>
-
-
-                }
+                {this.renderIcons()}
             </div>
 
         )
@@ -30,4 +60,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default withRouter(connect(mapStateToProps, {})(MenuGreeting))
+export default withRouter(connect(mapStateToProps, {loadUser})(MenuGreeting))

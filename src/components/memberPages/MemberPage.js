@@ -1,7 +1,7 @@
 import React from 'react'
 import {withRouter} from "react-router-dom";
 import {Authenticator, Greetings, SignUp} from "aws-amplify-react";
-import {API, Auth} from 'aws-amplify'
+import {Auth} from 'aws-amplify'
 import {cognitoTheme} from "../../styling/authentication";
 import Footer from "../navigation/Footer";
 import TopMenu from "../navigation/TopMenu";
@@ -10,6 +10,7 @@ import {MainButton} from "../../styling/buttons";
 import connect from "react-redux/es/connect/connect";
 import {loadUser} from "../../redux/actions";
 import testUsers from "../../assets/testUsers"
+import {getUser} from "../../accountHandling/restFunctions";
 
 //Container for all pages that can be viewed by members
 class MemberPage extends React.Component {
@@ -27,7 +28,7 @@ class MemberPage extends React.Component {
                 .catch(err => console.log(err));
 
             let currentUserSub = currentUser.attributes.sub;
-            this.props.loadUser(await this.get(currentUserSub))
+            this.props.loadUser(await getUser(currentUserSub))
 
             //If user signs out, remove data from redux
         } else if (authState === 'signIn' && this.props.user) {
@@ -37,21 +38,6 @@ class MemberPage extends React.Component {
         this.setState({authState: authState})
     };
 
-    //Gets record of currently logged in user using rest api
-    get = async (currentUserSub) => {
-        console.log('calling api');
-        return await API.get('groveRestapi', `/items/${currentUserSub}`);
-    };
-
-    //TODO: Remove post functionality, test purposes only
-    post = async (user) => {
-        console.log(user);
-        console.log('calling api');
-        const response = await API.post('groveRestapi', '/items', {
-            body: user
-        });
-        alert(JSON.stringify(response, null, 2));
-    };
 
     //TODO: Refactor to not require use of local state, this is a temporary fix but I feel there is a better way
     constructor(props) {
@@ -73,8 +59,8 @@ class MemberPage extends React.Component {
                     {this.props.children}
                     <Footer user={"member"}/>
                     <button onClick={() => {
-                        this.post(testUsers[1])
-                    }}>POST
+                        this.postUser(testUsers[1])
+                    }}>postUser
                     </button>
                 </PageContainer>
             )
