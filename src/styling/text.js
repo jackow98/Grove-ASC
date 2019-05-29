@@ -82,6 +82,7 @@ export const Description = styled.p`
     line-height: 24px;    
     margin: ${props => (props.small ? "4%" : "0")}
     text-align: left;
+    text-decoration: none;
     width: ${props => (props.small ? "40%" : "100%")} ;
 
     @media only screen and (max-width: 800px) {
@@ -112,4 +113,9 @@ export const InputLabel = styled.label`
         line-height: 18px;   
      
     }
+`;
+
+export const simpleLink = styled.a`
+    text-decoration: none;
+    display: flex;
 `;

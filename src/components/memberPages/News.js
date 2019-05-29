@@ -5,6 +5,9 @@ import TitleCard from "../cards/TitleCard";
 import {FlexiGrid} from "../../styling/cards";
 import {MainHeader} from "../../styling/text";
 import IconCard from "../cards/IconCard";
+import groveJounreyPDF from "../../assets/Grove ASC Journey.pdf"
+import groveLanePlanPDF from "../../assets/Grove ASC Lane Plan 2019.pdf"
+import groveCoursesPDF from "../../assets/2019 Courses for Swimmers.pdf"
 
 //Member Timings to display all fastest timings and timings by event
 //TODO: Integrate live data
@@ -27,47 +30,30 @@ class TwentyMinSwims extends React.Component {
                         <IconCard
                             icon={"File"}
                             label={"Courses For Swimmers"}
+                            link={groveCoursesPDF}
                         />
                         <IconCard
                             icon={"File"}
                             label={"Lane development plan"}
+                            link={groveLanePlanPDF}
                         />
                         <IconCard
                             icon={"File"}
-                            label={"Developing with Grove"}
+                            label={"Journey with Grove"}
+                            link={groveJounreyPDF}
                         />
+
                         <IconCard
                             icon={"File"}
-                            label={"Spring/Summer calendar 2019"}
+                            label={"Newsletters"}
+                            link={"https://us18.campaign-archive.com/home/?u=c2ecfdaaa76610560743f8c25&id=c496751bbe"}
                         />
 
                     </FlexiGrid>
 
                     <FlexiGrid>
-                        <MainHeader left>
-                            Newsletters
-                        </MainHeader>
-
-                        <IconCard
-                            icon={"File"}
-                            label={"Courses For Swimmers"}
-                        />
-                        <IconCard
-                            icon={"File"}
-                            label={"Lane development plan"}
-                        />
-                        <IconCard
-                            icon={"File"}
-                            label={"Developing with Grove"}
-                        />
-                        <IconCard
-                            icon={"File"}
-                            label={"Spring/Summer calendar 2019"}
-                        />
-
 
                     </FlexiGrid>
-
 
                 </PageContent>
             </MemberPage>

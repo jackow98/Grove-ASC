@@ -148,7 +148,7 @@ export const FlexiGrid = styled.div`
 
 
 //Container for a card rendering an icon beside some text
-export const IconCardContainer = styled.div`
+export const IconCardContainer = styled.a`
     align-content: center;
     align-items: center;
     background-color: #f0eeeecf;
@@ -157,6 +157,7 @@ export const IconCardContainer = styled.div`
     height: 100px;
     justify-content: center;
     margin: 1% 3.5%;
+    text-decoration: none;
     width: 43%
     
     :hover {
