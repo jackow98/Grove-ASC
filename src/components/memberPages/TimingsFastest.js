@@ -31,17 +31,21 @@ class TimingsFastest extends React.Component {
     renderStrokeTimings = (stroke) => {
         if (this.props.user) {
             if (this.props.user[0][stroke]) {
-                const butterfly = this.props.user[0][stroke]
+                const butterfly = this.props.user[0][stroke];
 
                 return Object.values(butterfly).map((key, index) => {
                     let keys = Object.keys(butterfly);
 
-                    return (
-                        <DataLine key={index}>
-                            <DataEntry>{prettyDistance(keys[index])}</DataEntry>
-                            <DataEntry>{key}</DataEntry>
-                        </DataLine>
-                    )
+                    if(key !== "NT" && key){
+                        return (
+
+                            <DataLine key={index}>
+                                <DataEntry>{prettyDistance(keys[index])}</DataEntry>
+                                <DataEntry>{key}</DataEntry>
+                            </DataLine>
+                        )
+                    }
+
                 })
             } else {
                 return (
