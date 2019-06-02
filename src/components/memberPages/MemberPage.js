@@ -9,8 +9,8 @@ import {PageContainer} from "../../styling/pages";
 import {MainButton} from "../../styling/buttons";
 import connect from "react-redux/es/connect/connect";
 import {loadUser} from "../../redux/actions";
-import testUsers from "../../assets/testUsers"
-import {getUser} from "../../accountHandling/restFunctions";
+import KirstyBrown from "../../assets/KirstyBrown"
+import {getUser, postUser} from "../../accountHandling/restFunctions";
 
 //Container for all pages that can be viewed by members
 class MemberPage extends React.Component {
@@ -58,8 +58,9 @@ class MemberPage extends React.Component {
                     <TopMenu user={"member"}/>
                     {this.props.children}
                     <Footer user={"member"}/>
+                    {/*TODO: Remove post button and user test files from assets*/}
                     <button onClick={() => {
-                        this.postUser(testUsers[1])
+                        postUser(KirstyBrown)
                     }}>postUser
                     </button>
                 </PageContainer>

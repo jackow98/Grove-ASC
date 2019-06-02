@@ -35,12 +35,22 @@ class MenuGreeting extends React.Component {
             //If public page reloaded and user isn't loaded, load details
         } else if (this.props.authState === "signedIn" && this.props.user === null) {
             this.getCurrentUser()
-        } else {
-            return (
-                <div onClick={() => this.props.history.push("/Members/Account")}>
-                    {this.props.user ? this.props.user[0]['forename'] : null}
-                </div>
-            )
+        } else if(this.props.user){
+            //TODO: Improve error checking for missing dynamo data for a user
+            if(this.props.user[0]){
+                return (
+                    <div onClick={() => this.props.history.push("/Members/Account")}>
+                        {this.props.user ? this.props.user[0]['forename'] : null}
+                    </div>
+                )
+            }else{
+                return (
+                    <div onClick={() => Auth.signOut()}>
+                        Sign Out
+                    </div>
+                )
+            }
+
         }
     };
 

@@ -13,25 +13,45 @@ import {Auth} from "aws-amplify";
 class Account extends React.Component {
 
     renderArray = (label, array) => {
-        return array.map((key, index) => {
-            return (
+        if(array){
+            return array.map((key, index) => {
+                return (
+                    <DataLine>
+                        <DataEntry bold>{`${label} ${index + 1}`}</DataEntry>
+                        <DataEntry>{key}</DataEntry>
+                    </DataLine>
+                )
+            })
+        }else{
+            return(
                 <DataLine>
-                    <DataEntry bold>{`${label} ${index + 1}`}</DataEntry>
-                    <DataEntry>{key}</DataEntry>
+                    <DataEntry bold>{label}</DataEntry>
+                    <DataEntry>-</DataEntry>
                 </DataLine>
             )
-        })
+        }
+
     };
 
     renderObject = (label, object) => {
-        return Object.values(object).map((key, index) => {
-            return (
+        if(object){
+            return Object.values(object).map((key, index) => {
+                return (
+                    <DataLine>
+                        <DataEntry bold>{`${label} ${index + 1}`}</DataEntry>
+                        <DataEntry>{`${key['forename']?key['forename']:"-"} ${key['surname']?key['surname']:"-"}`}</DataEntry>
+                    </DataLine>
+                )
+            })
+        }else{
+            return(
                 <DataLine>
-                    <DataEntry bold>{`${label} ${index + 1}`}</DataEntry>
-                    <DataEntry>{`${key['forename']} ${key['surname']}`}</DataEntry>
+                    <DataEntry bold>{label}</DataEntry>
+                    <DataEntry>-</DataEntry>
                 </DataLine>
             )
-        })
+        }
+
     };
 
     renderUserAccount = () => {
@@ -40,15 +60,22 @@ class Account extends React.Component {
                 <DataCard>
                     <DataLine>
                         <DataEntry bold>SASA No.</DataEntry>
-                        <DataEntry>{this.props.user[0]['SASANumber']}</DataEntry>
+                        {this.props.user[0]['SASANumber'] ?
+                            <DataEntry>{this.props.user[0]['SASANumber']}</DataEntry>
+                            : <DataEntry>-</DataEntry>
+                        }
                     </DataLine>
                     <DataLine>
                         <DataEntry bold>Forename</DataEntry>
-                        <DataEntry>{this.props.user[0]['forename']}</DataEntry>
+                        {this.props.user[0]['forename'] ?
+                            <DataEntry>{this.props.user[0]['forename']}</DataEntry> : <DataEntry>-</DataEntry>
+                        }
                     </DataLine>
                     <DataLine>
                         <DataEntry bold>Surname</DataEntry>
-                        <DataEntry>{this.props.user[0]['surname']}</DataEntry>
+                        {this.props.user[0]['surname'] ?
+                            <DataEntry>{this.props.user[0]['surname']}</DataEntry> : <DataEntry>-</DataEntry>
+                        }
                     </DataLine>
                     {this.renderArray("Email", this.props.user[0]['emails'])}
                     {this.renderArray("Phone", this.props.user[0]['phones'])}
