@@ -29,3 +29,16 @@ export const MainButton = styled.button`
 `;
 
 
+export const AuthButton = styled.div`
+
+     font-size: 24px;
+       color: #000040;
+      :hover {
+         opacity: 0.7;
+         cursor:pointer;
+    }
+    
+       @media screen and (max-width: 400px){
+        font-size: 18px;
+    }
+`;

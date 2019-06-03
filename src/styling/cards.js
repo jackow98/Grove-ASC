@@ -218,8 +218,8 @@ export const DataLine = styled.div`
     width: 100%;
     
      @media only screen and (max-width: 800px) {
-        font-size: 18px;
-        line-height: 18px;
+        font-size: 16px;
+        line-height: 16px;
     }
 `;
 

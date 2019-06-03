@@ -16,7 +16,11 @@ export const LongNavyLogo = styled.img`
         cursor: pointer;
         opacity: 0.7;
     }
-
+    
+    @media screen and (max-width: 400px){
+        height: 40px;
+        margin: 15px 0 15px 0;
+    }
 
 `;
 
@@ -43,7 +47,7 @@ export const MenuBarsIcon = styled(MenuAltLeft)`
     color: #000040;
     height: 50px;
     width: auto;
-    margin: 10px 0 10px 20px;
+    margin: 10px 0 10px 20px;    
     
     :hover {
         cursor: pointer;
@@ -71,8 +75,9 @@ export const TextIcon = styled.div`
    
     height: 50px;
     width: auto;
-    line-height: 44px;
+    line-height: 50px;
     margin: 10px 20px 10px 0;
+    border-radius: 10px;
     
     text-align: ${props => (props.left ? "left" : "center")}
     

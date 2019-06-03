@@ -32,7 +32,7 @@ class TopMenu extends React.Component {
                 <LongNavyLogo onClick={() => this.props.history.push("/")}/>
 
                 {/*Uses aws cognito to render menu greeting conditionally */}
-                <TextIcon>
+                <TextIcon white>
                     <Authenticator
                         hideDefault={true}
                         onStateChange={this.handleAuthStateChange}

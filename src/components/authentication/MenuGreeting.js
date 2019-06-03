@@ -4,6 +4,7 @@ import {Auth} from 'aws-amplify'
 import connect from "react-redux/es/connect/connect";
 import {loadUser} from "../../redux/actions";
 import {getUser} from "../../accountHandling/restFunctions";
+import {AuthButton} from "../../styling/buttons";
 
 //Renders conditionally the icon in top left of page depednding on user auth status
 class MenuGreeting extends React.Component {
@@ -28,9 +29,9 @@ class MenuGreeting extends React.Component {
 
         if (this.props.authState === "signIn") {
             return (
-                <div onClick={() => this.props.history.push("/Members/Home")}>
+                <AuthButton onClick={() => this.props.history.push("/Members/Home")}>
                     Sign In
-                </div>
+                </AuthButton>
             )
             //If public page reloaded and user isn't loaded, load details
         } else if (this.props.authState === "signedIn" && this.props.user === null) {
@@ -39,15 +40,15 @@ class MenuGreeting extends React.Component {
             //TODO: Improve error checking for missing dynamo data for a user
             if (this.props.user[0]) {
                 return (
-                    <div onClick={() => this.props.history.push("/Members/Account")}>
+                    <AuthButton onClick={() => this.props.history.push("/Members/Account")}>
                         {this.props.user ? this.props.user[0]['forename'] : null}
-                    </div>
+                    </AuthButton>
                 )
             } else {
                 return (
-                    <div onClick={() => Auth.signOut()}>
+                    <AuthButton onClick={() => Auth.signOut()}>
                         Sign Out
-                    </div>
+                    </AuthButton>
                 )
             }
 
