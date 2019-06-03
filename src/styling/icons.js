@@ -8,29 +8,16 @@ import {Document} from "styled-icons/typicons/Document";
 
 export const LongNavyLogo = styled.img`
     content: url(${logo});
-    height: 49.03px;
-    margin: 2%;
+    height: 50px;
+    width: auto;
+    margin: 10px 0 10px 0;
    
     :hover {
         cursor: pointer;
         opacity: 0.7;
     }
-    
-    @media only screen and (max-width: 1050px) {
-        margin: 1%;
-    }
-   
-    @media only screen and (max-width: 900px) {
-        margin: 1%;
-    }
-   
-    @media only screen and (max-width: 600px) {
-        margin: 2%;
-    }
-    
-    @media only screen and (max-width: 400px) {
-        margin: 2%;
-    }
+
+
 `;
 
 export const LabelIcon = styled(Document)`
@@ -54,9 +41,9 @@ export const CloseIcon = styled(Close)`
 `;
 export const MenuBarsIcon = styled(MenuAltLeft)`  
     color: #000040;
-    height: 49.03px;
-    margin: 2%;
-    width: 49.03px;
+    height: 50px;
+    width: auto;
+    margin: 10px 0 10px 20px;
     
     :hover {
         cursor: pointer;
@@ -69,7 +56,7 @@ export const AvatarIcon = styled(Person)`
     color: #000040;
     height: 49.03px;
     
-    width: 49.03px;
+    width: 49.03px; 
     
     :hover {
         cursor: pointer;
@@ -81,22 +68,17 @@ export const AvatarIcon = styled(Person)`
 export const TextIcon = styled.div`
     color: ${props => (props.white ? "#FFFFFF" : "#000040")}
     font-family: "PT Sans";
-    font-size: 24px;
-    font-weight: 700;
-    height: 49.03px;
-    line-height: 24px;    
-    margin: 2.5% 2%;
+   
+    height: 50px;
+    width: auto;
+    line-height: 44px;
+    margin: 10px 20px 10px 0;
+    
     text-align: ${props => (props.left ? "left" : "center")}
-    width: 80.03px;
+    
      
     :hover {
         cursor: pointer;
         opacity: 0.7;
-    }
-    
-    @media screen and (max-width: 800px) {
-        font-size: 16px;
-        line-height: 16px;  
-        margin: 4% 0;
     }
 `;

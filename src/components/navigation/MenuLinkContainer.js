@@ -41,9 +41,6 @@ class MenuLinkContainer extends React.Component {
 
     handLeLinkClick = (key) => {
         //Reloads page if user is currently viewing that page
-        console.log(this.props.location.pathname);
-        console.log(key);
-
         if (this.props.location.pathname === key.link) {
             window.location.reload();
         } else {

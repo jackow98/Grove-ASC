@@ -9,7 +9,7 @@ import {PageContainer} from "../../styling/pages";
 import {MainButton} from "../../styling/buttons";
 import connect from "react-redux/es/connect/connect";
 import {loadUser} from "../../redux/actions";
-import KirstyBrown from "../../assets/KirstyBrown"
+import KirstyBrown from "../../assets/ScottGallagher"
 import {getUser, postUser} from "../../accountHandling/restFunctions";
 
 //Container for all pages that can be viewed by members

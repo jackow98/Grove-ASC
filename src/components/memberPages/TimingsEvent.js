@@ -3,7 +3,7 @@ import DataCard from "../cards/DataCard";
 import {DataEntry, DataLine, FlexiGrid} from "../../styling/cards";
 import connect from "react-redux/es/connect/connect";
 import {Link} from "react-router-dom";
-import {prettyStroke} from "../../styling/prettyPrint";
+import {prettyDistance, prettyStroke} from "../../styling/prettyPrint";
 
 //Iterate over all events and display the timings for each stroke
 class TimingsEvent extends React.Component {
@@ -11,7 +11,6 @@ class TimingsEvent extends React.Component {
     //Iterate over events object and retrieve each event
     renderEvents = () => {
         if (this.props.user) {
-            console.log(this.props.user);
             if (this.props.user[0]['eventTimings']) {
                 const eventTimings = this.props.user[0]['eventTimings'];
 
@@ -20,6 +19,11 @@ class TimingsEvent extends React.Component {
 
                     return (
                         <DataCard mainTitle={eventString}>
+                            <DataLine>
+                                <DataEntry bold>Stroke</DataEntry>
+                                <DataEntry bold>Distance</DataEntry>
+                                <DataEntry bold>Time</DataEntry>
+                            </DataLine>
                             {this.renderEventStrokes(key)}
                         </DataCard>
                     )
@@ -52,14 +56,18 @@ class TimingsEvent extends React.Component {
             let distance = Object.keys(key[stroke]);
             let time = key[stroke][distance];
 
-            return (
-                <DataLine>
-                    {console.log(key[stroke])}
-                    <DataEntry>{prettyStroke(stroke)}</DataEntry>
-                    <DataEntry>{key[0]}</DataEntry>
-                    <DataEntry>{time}</DataEntry>
-                </DataLine>
-            )
+            if (distance[0]) {
+                return (
+
+                    <DataLine key={index}>
+                        <DataEntry>{prettyStroke(stroke)}</DataEntry>
+                        <DataEntry>{distance[0] ? prettyDistance(distance[0]) : null}</DataEntry>
+
+                        <DataEntry>{time}</DataEntry>
+                    </DataLine>
+                )
+            }
+
         })
     };
 

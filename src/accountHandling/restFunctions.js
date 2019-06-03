@@ -8,7 +8,6 @@ export const getUser = async (currentUserSub) => {
 
 //TODO: Remove post functionality, test purposes only
 export const postUser = async (user) => {
-    console.log(user);
     console.log('calling api');
     const response = await API.post('groveRestapi', '/items', {
         body: user

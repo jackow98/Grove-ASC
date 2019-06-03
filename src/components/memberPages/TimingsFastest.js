@@ -36,7 +36,7 @@ class TimingsFastest extends React.Component {
                 return Object.values(butterfly).map((key, index) => {
                     let keys = Object.keys(butterfly);
 
-                    if(key !== "NT" && key){
+                    if (key !== "NT" && key) {
                         return (
 
                             <DataLine key={index}>

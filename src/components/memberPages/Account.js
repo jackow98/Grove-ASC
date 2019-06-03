@@ -8,13 +8,17 @@ import connect from "react-redux/es/connect/connect";
 import {Link} from "react-router-dom";
 import {MainButton} from "../../styling/buttons";
 import {Auth} from "aws-amplify";
+import {prettyPhone} from "../../styling/prettyPrint";
 
 //Member Account page to view details of currrent user
 class Account extends React.Component {
 
     renderArray = (label, array) => {
-        if(array){
+        if (array) {
             return array.map((key, index) => {
+                if (label === "Phone") {
+                    key = prettyPhone(key)
+                }
                 return (
                     <DataLine>
                         <DataEntry bold>{`${label} ${index + 1}`}</DataEntry>
@@ -22,8 +26,8 @@ class Account extends React.Component {
                     </DataLine>
                 )
             })
-        }else{
-            return(
+        } else {
+            return (
                 <DataLine>
                     <DataEntry bold>{label}</DataEntry>
                     <DataEntry>-</DataEntry>
@@ -34,17 +38,17 @@ class Account extends React.Component {
     };
 
     renderObject = (label, object) => {
-        if(object){
+        if (object) {
             return Object.values(object).map((key, index) => {
                 return (
                     <DataLine>
                         <DataEntry bold>{`${label} ${index + 1}`}</DataEntry>
-                        <DataEntry>{`${key['forename']?key['forename']:"-"} ${key['surname']?key['surname']:"-"}`}</DataEntry>
+                        <DataEntry>{`${key['forename'] ? key['forename'] : "-"} ${key['surname'] ? key['surname'] : "-"}`}</DataEntry>
                     </DataLine>
                 )
             })
-        }else{
-            return(
+        } else {
+            return (
                 <DataLine>
                     <DataEntry bold>{label}</DataEntry>
                     <DataEntry>-</DataEntry>

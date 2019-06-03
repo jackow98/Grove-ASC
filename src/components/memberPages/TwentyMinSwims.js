@@ -26,8 +26,8 @@ class TwentyMinSwims extends React.Component {
                     return (
                         <DataLine key={index}>
                             <DataEntry>{prettyDate}</DataEntry>
-                            <DataEntry>{key[dateString]?key[dateString]:"-"}</DataEntry>
-                            <DataEntry>{isNaN(key[dateString] * 25)?"-":key[dateString] * 25}y</DataEntry>
+                            <DataEntry>{key[dateString] ? key[dateString] : "-"}</DataEntry>
+                            <DataEntry>{isNaN(key[dateString] * 25) ? "-" : key[dateString] * 25}y</DataEntry>
                         </DataLine>
                     )
                 })

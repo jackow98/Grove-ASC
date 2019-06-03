@@ -28,3 +28,11 @@ export const prettyStroke = (storedStroke) => {
 
     }
 };
+
+export const prettyPhone = (storedPhone) => {
+    if (storedPhone[0].substring(0, 1) !== "0") {
+        return `0${storedPhone}`
+    } else {
+        return storedPhone.replace(/\s/g, '');
+    }
+};
