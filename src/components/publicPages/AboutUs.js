@@ -15,7 +15,7 @@ class AboutUs extends React.Component {
                 <PageContent>
                     <TitleCard
                         mainBackground={"https://lh6.googleusercontent.com/t6UweLs2ilp0tAikXKF5jph2Rq_E84G_s7n9Mp32gfCGu30C518iMmoJNgc=w2400"}
-                        title={"About Us"}
+                        title={"About the club"}
                     />
 
                     <TextCard
@@ -40,7 +40,7 @@ class AboutUs extends React.Component {
                     />
 
                     <AlertCard onClick={() => this.props.history.push("Contact-Us")}>
-                        <SecondaryHeader white>
+                        <SecondaryHeader color={"white"}>
                             Book a free trial today
                         </SecondaryHeader>
                     </AlertCard>

@@ -9,6 +9,7 @@ import {Link} from "react-router-dom";
 import {MainButton} from "../../styling/buttons";
 import {Auth} from "aws-amplify";
 import {prettyPhone} from "../../styling/prettyPrint";
+import {SimpleLink} from "../../styling/text";
 
 //Member Account page to view details of currrent user
 class Account extends React.Component {
@@ -20,7 +21,7 @@ class Account extends React.Component {
                     key = prettyPhone(key)
                 }
                 return (
-                    <DataLine>
+                    <DataLine forceBlock>
                         <DataEntry bold>{`${label} ${index + 1}`}</DataEntry>
                         <DataEntry>{key}</DataEntry>
                     </DataLine>
@@ -28,7 +29,7 @@ class Account extends React.Component {
             })
         } else {
             return (
-                <DataLine>
+                <DataLine forceBlock>
                     <DataEntry bold>{label}</DataEntry>
                     <DataEntry>-</DataEntry>
                 </DataLine>
@@ -41,7 +42,7 @@ class Account extends React.Component {
         if (object) {
             return Object.values(object).map((key, index) => {
                 return (
-                    <DataLine>
+                    <DataLine forceBlock>
                         <DataEntry bold>{`${label} ${index + 1}`}</DataEntry>
                         <DataEntry>{`${key['forename'] ? key['forename'] : "-"} ${key['surname'] ? key['surname'] : "-"}`}</DataEntry>
                     </DataLine>
@@ -49,7 +50,7 @@ class Account extends React.Component {
             })
         } else {
             return (
-                <DataLine>
+                <DataLine forceBlock>
                     <DataEntry bold>{label}</DataEntry>
                     <DataEntry>-</DataEntry>
                 </DataLine>
@@ -62,20 +63,20 @@ class Account extends React.Component {
         if (this.props.user) {
             return (
                 <DataCard>
-                    <DataLine>
+                    <DataLine forceBlock>
                         <DataEntry bold>SASA No.</DataEntry>
                         {this.props.user[0]['SASANumber'] ?
                             <DataEntry>{this.props.user[0]['SASANumber']}</DataEntry>
                             : <DataEntry>-</DataEntry>
                         }
                     </DataLine>
-                    <DataLine>
+                    <DataLine forceBlock>
                         <DataEntry bold>Forename</DataEntry>
                         {this.props.user[0]['forename'] ?
                             <DataEntry>{this.props.user[0]['forename']}</DataEntry> : <DataEntry>-</DataEntry>
                         }
                     </DataLine>
-                    <DataLine>
+                    <DataLine forceBlock>
                         <DataEntry bold>Surname</DataEntry>
                         {this.props.user[0]['surname'] ?
                             <DataEntry>{this.props.user[0]['surname']}</DataEntry> : <DataEntry>-</DataEntry>
@@ -85,14 +86,17 @@ class Account extends React.Component {
                     {this.renderArray("Phone", this.props.user[0]['phones'])}
                     {this.renderObject("Guardian", this.props.user[0]['guardians'])}
 
-                    <DataLine>
+                    <DataLine forceBlock>
                         <DataEntry>
                             <DataEntry bold red>
 
                             </DataEntry>
+                            <SimpleLink>
                             <Link to={"/Contact-Us"}>
-                                Something wrong?
+                                    Something wrong?
+
                             </Link>
+                            </SimpleLink>
                         </DataEntry>
                     </DataLine>
                 </DataCard>

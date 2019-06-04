@@ -20,13 +20,13 @@ class Calendar extends React.Component {
                     <FlexiGrid>
 
                         <DataCard grey>
-                            <DataLine>
+                            <DataLine >
                                 <DataEntry>
                                     <Dot red/>
                                 </DataEntry>
                                 <DataEntry bold>No swimming</DataEntry>
                             </DataLine>
-                            <DataLine>
+                            <DataLine >
                                 <DataEntry>
                                     <Dot lightBlue/>
                                 </DataEntry>
@@ -37,11 +37,11 @@ class Calendar extends React.Component {
                         <DataCard mainTitle={"June 2019"}>
                             <DataLine>
                                 <DataEntry lightBlue bold>Mon 24th</DataEntry>
-                                <DataEntry>Fun Session</DataEntry>
+                                <DataEntry>Awards Night & Fun Session</DataEntry>
                             </DataLine>
                             <DataLine>
                                 <DataEntry lightBlue bold>Thu 27th</DataEntry>
-                                <DataEntry>Awards Night & Fun Session</DataEntry>
+                                <DataEntry>Fun Session</DataEntry>
                             </DataLine>
                         </DataCard>
 

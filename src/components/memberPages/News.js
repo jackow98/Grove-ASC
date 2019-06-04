@@ -28,23 +28,23 @@ class TwentyMinSwims extends React.Component {
 
                         <IconCard
                             icon={"File"}
-                            label={"Courses For Swimmers"}
+                            label={"2019 Courses For Swimmers"}
                             link={groveCoursesPDF}
                         />
                         <IconCard
                             icon={"File"}
-                            label={"Lane development plan"}
+                            label={"2019 Lane development plan"}
                             link={groveLanePlanPDF}
                         />
                         <IconCard
                             icon={"File"}
-                            label={"Journey with Grove"}
+                            label={"Grove development plan"}
                             link={groveJounreyPDF}
                         />
 
                         <IconCard
                             icon={"File"}
-                            label={"Newsletters"}
+                            label={"Newsletters archive"}
                             link={"https://us18.campaign-archive.com/home/?u=c2ecfdaaa76610560743f8c25&id=c496751bbe"}
                         />
 

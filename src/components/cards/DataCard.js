@@ -7,7 +7,7 @@ class DataCard extends React.Component {
     render() {
         return (
             <DataCardContainer grey={this.props.grey}>
-                <SecondaryHeader left>
+                <SecondaryHeader left color={"navy"}>
                     {this.props.mainTitle}
                 </SecondaryHeader>
                 <TertiaryHeader left>

@@ -33,7 +33,13 @@ export const MainHeader = styled.h1`
 
 
 export const SecondaryHeader = styled.h2`
-    color: ${props => (props.white ? "#FFFFFF" : "#000040")}
+    
+    color: ${props =>
+        (props.color === 'blue' && '#2FB6E1') ||
+        (props.color === 'white' && '#FFFFFF') ||
+        (props.color === 'navy' && '#000040')
+    }
+    
     display: flex;
     font-family: "PT Sans";
     font-size: 36px;
@@ -44,7 +50,7 @@ export const SecondaryHeader = styled.h2`
 `;
 
 export const TertiaryHeader = styled.h3`
-    color: ${props => (props.white ? "#FFFFFF" : "#2FB6E1")};
+    color: ${props => (props.white ? "#FFFFFF" : "#000040")};
     display: flex;
     font-family: "PT Sans";
     font-size: 24px;
@@ -119,7 +125,7 @@ export const InputLabel = styled.label`
     }
 `;
 
-export const simpleLink = styled.a`
+export const SimpleLink = styled.a`
     text-decoration: none;
-    display: flex;
+    color: #2FB6E1;
 `;
