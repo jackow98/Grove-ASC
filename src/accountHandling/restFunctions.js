@@ -14,3 +14,11 @@ export const postUser = async (user) => {
     });
     alert(JSON.stringify(response, null, 2));
 };
+
+export const postContactForm = async (contents) => {
+    console.log('calling api');
+    const response = await API.post('groveContactApi', '/items', {
+        body: contents
+    });
+    alert(JSON.stringify(response, null, 2));
+};
