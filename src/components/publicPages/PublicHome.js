@@ -13,13 +13,13 @@ class PublicHome extends React.Component {
                     <LargePhotoCard
                         mainBackground={"https://lh6.googleusercontent.com/t6UweLs2ilp0tAikXKF5jph2Rq_E84G_s7n9Mp32gfCGu30C518iMmoJNgc=w2400"}
                         mainText={"Take those first steps into club swimming"}
-                        buttonText={"About Us"}
+                        buttonText={"About the club"}
                         link={"/About-Us"}
                     />
                     <LargePhotoCard
                         mainBackground={"https://lh6.googleusercontent.com/jrh4UI4C-vDdq0N5tvYipQ8ZOyu0zrruQL7rMce7-XO08POVesB6UFcMyUU=w2400"}
                         mobileBackground={"https://lh5.googleusercontent.com/ARThs942DoODUHCOQz_Oa_Fj4PGHtfPzn5kLfyMEjhCu6m4i-qIGwIKCPDg=w2400"}
-                        mainText={"Track your Progress"}
+                        mainText={"Dates, News, Timings and more"}
                         buttonText={"Members"}
                         link={"/Members/Home"}
                     />

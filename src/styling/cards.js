@@ -49,23 +49,23 @@ export const Card = styled.div`
 //A container for a text box overlaying a photo
 export const PhotoTextBox = styled.div`
     align-items: center;
-    background-color: white;
+    background-color: ${props => (props.blue ? "#2FB6E1;" : "#FFFF")}
     border-radius: 10px;
     display: flex;
     height: 40%;
     justify-content: center;
-    opacity: 0.9;
+    opacity: ${props => (props.blue ? "1" : "0.9")};
     width: ${props => (props.small ? "82%" : "40%")}
    
-    :hover {
-         opacity 1;
-         cursor:pointer;
-    }
+    // :hover {
+    //      opacity: 1;
+    //      cursor:pointer;
+    // }
     
     @media only screen and (max-width: 800px) {
        border-radius: ${props => (props.small ? "10px" : "0px")};
        height: ${props => (props.small ? "35%" : "30%")};
-       opacity 0.9;
+       opacity: 0.9;
        width: ${props => (props.small ? "82%" : "100%")};
     }
 `;
@@ -209,7 +209,7 @@ export const DataCardContainer = styled.div`
 `;
 
 export const DataLine = styled.div`
-    display: flex
+    display: flex;
     flex: 1 3 auto;
     font-family: "PT Sans";
     font-size: 24px;
@@ -220,6 +220,7 @@ export const DataLine = styled.div`
      @media only screen and (max-width: 800px) {
         font-size: 16px;
         line-height: 16px;
+        display: ${props => (props.forceBlock? 'block':'flex')};
     }
 `;
 
@@ -232,14 +233,14 @@ export const DataPhotoCardContainer = styled.div`
 `;
 
 export const DataEntry = styled.div`
-    color: ${props => props.red ? "red" : "#000040"};
     color: ${props =>
-    (props.red && 'red') ||
-    (props.lightBlue && '#2FB6E1') ||
-    '#000040'
+        (props.red && 'red') ||
+        (props.lightBlue && '#2FB6E1') ||
+        '#000040'
     }
     font-weight: ${props => props.bold ? "bold" : "normal"};
-    width: 50%;
+    width: 50%; 
+    word-wrap: break-wrap;
 `;
 
 export const Dot = styled.span`

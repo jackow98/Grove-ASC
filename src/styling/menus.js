@@ -9,7 +9,7 @@ export const SideMenuContainer = styled.div`
     padding-top: 2%;
     position: fixed;
     text-align: center; 
-    transition: 0.5s;
+    transition: 0.3s;
     width: ${props => props.open ? "100%;" : "0;"};
     z-index: 2;
     
@@ -63,7 +63,7 @@ export const SlidingMenuContainer = styled.div`
 
 export const SliderText = styled.div`
     background-color: #FFF;
-    border-bottom: ${props => props.selected ? "5px solid #000040" : "1px solid #abb1bf"};
+    border-bottom: ${props => props.selected ? "5px solid #2FB6E1" : "1px solid #2FB6E1"};
     display: flex;
     font-family: "PT Sans";
     font-size: 24px;
@@ -73,6 +73,7 @@ export const SliderText = styled.div`
     margin: 2%;
     text-align: center; 
     text-decoration: none;
+    color: #2FB6E1;
     width: 45%;
     font-weight: ${props => props.selected ? "bold" : "normal"};
     
@@ -95,13 +96,12 @@ export const MenuLink = styled.a`
     color: #A0DDF1;
     display: block;
     font-family: "PT Sans";
-    font-size: ${props => props.menuType === "SideMenu" ? "48px" : "24px"};
+    font-size: ${props => props.menuType === "SideMenu" ? "24px" : "24px"};
     line-height: 100%;
-    margin-left: 35%
-    margin-right: 35%
+    margin-left: 35%;
+    margin-right: 35%;
     padding-top: ${props => props.menuType === "SideMenu" ? "4%" : "1%"};
     text-align: center;
-    transition: 0.3s;
     width: 30%;
        
     :hover {
@@ -110,10 +110,11 @@ export const MenuLink = styled.a`
     }
     
     @media screen and (max-width: 600px) {
-        padding-top: ${props => props.menuType === "SideMenu" ? "12%" : "6%"};
+        padding-top: ${props => props.menuType === "SideMenu" ? "10%" : "6%"};
     }
     
     @media screen and (max-width: 800px) {
+        font-size: ${props => props.menuType === "SideMenu" ? "24px" : "24px"};
         margin-left: 15%
         margin-right: 15%
 

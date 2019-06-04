@@ -7,6 +7,7 @@ import TextCard from "../cards/TextCard";
 import connect from "react-redux/es/connect/connect";
 import {prettyMonthYear} from "../../styling/prettyPrint";
 import {Link} from "react-router-dom";
+import {SimpleLink} from "../../styling/text";
 
 //Member Timings to display all fastest timings and timings by event
 class Achievements extends React.Component {
@@ -38,7 +39,9 @@ class Achievements extends React.Component {
                         mainBackground={"https://lh6.googleusercontent.com/c9hXlfKHAGsFW1HadfNILLTn5UO-U-37nLObV60azLhC-lPnVvWOotSvHhk=w2400"}
                         subTitle={
                             <Link to={"/Contact-Us"}>
-                                Something wrong?
+                                <SimpleLink>
+                                    Something wrong?
+                                </SimpleLink>
                             </Link>
                         }
                         header={"No Records available"}

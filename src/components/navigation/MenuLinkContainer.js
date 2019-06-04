@@ -11,11 +11,11 @@ class MenuLinkContainer extends React.Component {
             "link": "/"
         },
         "About-Us": {
-            "name": "About Us",
+            "name": "About the club",
             "link": "/About-us"
         },
         "Members": {
-            "name": "Members",
+            "name": "Member Home",
             "link": "/Members/Home"
         },
         "Contact-Us": {
@@ -26,17 +26,34 @@ class MenuLinkContainer extends React.Component {
 
     memberPageItems = {
         "MemberHome": {
-            "name": "Members",
+            "name": "Member Home",
             "link": "/Members/Home"
         },
-        "Contact-Us": {
-            "name": "Contact Us",
-            "link": "/Contact-Us"
+        "Timings": {
+            "name": "Timings",
+            "link": "/Members/Timings"
         },
-        "PublicHome": {
-            "name": "Visitor site",
-            "link": "/"
+        "Achievements": {
+            "name": "Achievements",
+            "link": "/Members/Achievements"
+        },
+        "News": {
+            "name": "News",
+            "link": "/Members/News"
+        },
+        "Calendar": {
+            "name": "Calendar",
+            "link": "/Members/Calendar"
+        },
+        "20 Min Swims": {
+            "name": "20 Min Swims",
+            "link": "/Members/TwentyMinSwims"
+        },
+        "Account": {
+            "name": "Account",
+            "link": "/Members/Account"
         }
+
     };
 
     handLeLinkClick = (key) => {

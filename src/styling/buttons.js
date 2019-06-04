@@ -32,7 +32,8 @@ export const MainButton = styled.button`
 export const AuthButton = styled.div`
 
      font-size: 24px;
-       color: #000040;
+       color: #2FB6E1;
+       font-weight: 700;
       :hover {
          opacity: 0.7;
          cursor:pointer;

@@ -16,7 +16,7 @@ class LargePhotoCard extends React.Component {
             >
 
                 <PhotoTextBox small onClick={() => this.props.history.push(this.props.link)}>
-                    <SecondaryHeader>
+                    <SecondaryHeader color={"blue"}>
                         {this.props.mainText}
                     </SecondaryHeader>
                 </PhotoTextBox>

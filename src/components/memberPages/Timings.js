@@ -19,7 +19,7 @@ class Timings extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {fastestSelected: true, eventsSelected: false};
+        this.state = {fastestSelected: false, eventsSelected: true};
     }
 
     render() {
@@ -32,13 +32,12 @@ class Timings extends React.Component {
                     />
 
                     <SlidingMenuContainer>
+                        <SliderText selected={this.state.eventsSelected} onClick={() => this.selectEvents()}>
+                            Events
+                        </SliderText>
 
                         <SliderText selected={this.state.fastestSelected} onClick={() => this.selectFastest()}>
                             Fastest
-                        </SliderText>
-
-                        <SliderText selected={this.state.eventsSelected} onClick={() => this.selectEvents()}>
-                            Events
                         </SliderText>
                     </SlidingMenuContainer>
 
