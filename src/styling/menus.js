@@ -30,6 +30,18 @@ export const TopMenuContainer = styled.div`
     z-index: 1;
 `;
 
+export const returnToMainsite = styled.div`
+    background: #000040;
+    display: flex;
+    clear: both;
+    justify-content: space-between;
+    position: fixed;
+    text-align: center; 
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+`;
+
 export const FooterContainer = styled.div`
     background-color: #000040;
     display: flex;

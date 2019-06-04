@@ -7,7 +7,6 @@ import {SliderText, SlidingMenuContainer} from "../../styling/menus";
 import TimingsEvent from "./TimingsEvent";
 
 //Member Timings to display all fastest timings and timings by event
-//TODO: Integrate live data
 class Timings extends React.Component {
 
     //Functions to change state depending on slide menu

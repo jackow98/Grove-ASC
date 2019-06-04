@@ -10,7 +10,6 @@ import groveLanePlanPDF from "../../assets/Grove ASC Lane Plan 2019.pdf"
 import groveCoursesPDF from "../../assets/2019 Courses for Swimmers.pdf"
 
 //Member Timings to display all fastest timings and timings by event
-//TODO: Integrate live data
 class TwentyMinSwims extends React.Component {
 
     render() {

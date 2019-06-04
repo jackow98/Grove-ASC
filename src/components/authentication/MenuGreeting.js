@@ -40,7 +40,7 @@ class MenuGreeting extends React.Component {
             //TODO: Improve error checking for missing dynamo data for a user
             if (this.props.user[0]) {
                 return (
-                    <AuthButton onClick={() => this.props.history.push("/Members/Account")}>
+                    <AuthButton onClick={() => this.props.history.push("/Members/Home")}>
                         {this.props.user ? this.props.user[0]['forename'] : null}
                     </AuthButton>
                 )

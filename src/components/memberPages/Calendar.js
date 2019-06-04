@@ -6,7 +6,6 @@ import {DataEntry, DataLine, Dot, FlexiGrid} from "../../styling/cards";
 import DataCard from "../cards/DataCard";
 
 //Member Timings to display all fastest timings and timings by event
-//TODO: Integrate live data
 class Calendar extends React.Component {
 
     render() {

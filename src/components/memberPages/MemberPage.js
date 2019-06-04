@@ -58,11 +58,10 @@ class MemberPage extends React.Component {
                     <TopMenu user={"member"}/>
                     {this.props.children}
                     <Footer user={"member"}/>
-                    {/*TODO: Remove post button and user test files from assets*/}
-                    <button onClick={() => {
-                        postUser(KirstyBrown)
-                    }}>postUser
-                    </button>
+                    {/*<button onClick={() => {*/}
+                        {/*postUser(KirstyBrown)*/}
+                    {/*}}>postUser*/}
+                    {/*</button>*/}
                 </PageContainer>
             )
 
