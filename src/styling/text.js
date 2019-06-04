@@ -10,12 +10,24 @@ export const MainHeader = styled.h1`
     line-height: 54px;
     text-align: ${props => (props.left ? "left" : "center")}
     
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 1024px) {
+        font-size: 32px;
+    }
+    
+    @media only screen and (max-width: 980px) {
+        font-size: 32px;
+    }
+    
+    @media only screen and (max-width: 800px) {
         font-size: 48px;
     }
     
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 540px) {
         font-size: 32px;
+    }
+    
+    @media only screen and (max-width: 270px) {
+        font-size: 18px;
     }
 `;
 
@@ -74,6 +86,7 @@ export const Description = styled.p`
     line-height: 24px;    
     margin: ${props => (props.small ? "4%" : "0")}
     text-align: left;
+    text-decoration: none;
     width: ${props => (props.small ? "40%" : "100%")} ;
 
     @media only screen and (max-width: 800px) {
@@ -84,7 +97,7 @@ export const Description = styled.p`
     }
     
     @media only screen and (max-width: 400px) {
-        font-size: ${props => (props.small ? "12px" : "18px")}
+        font-size: ${props => (props.small ? "10px" : "18px")}
     }
 `;
 
@@ -98,4 +111,15 @@ export const InputLabel = styled.label`
     margin 1%;
     text-align: ${props => (props.left ? "left" : "center")}
     width: 20%
+    
+    @media only screen and (max-width: 800px) {
+        font-size: 18px;
+        line-height: 18px;   
+     
+    }
+`;
+
+export const simpleLink = styled.a`
+    text-decoration: none;
+    display: flex;
 `;

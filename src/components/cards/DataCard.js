@@ -3,7 +3,7 @@ import {DataCardContainer} from "../../styling/cards";
 import React from "react";
 
 //Card for rendering retrieved data
-class IconCard extends React.Component {
+class DataCard extends React.Component {
     render() {
         return (
             <DataCardContainer grey={this.props.grey}>
@@ -20,4 +20,4 @@ class IconCard extends React.Component {
     }
 }
 
-export default IconCard
+export default DataCard

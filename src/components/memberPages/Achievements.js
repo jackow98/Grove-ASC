@@ -4,10 +4,49 @@ import {PageContent} from "../../styling/pages";
 import TitleCard from "../cards/TitleCard";
 import {FlexiGrid} from "../../styling/cards";
 import TextCard from "../cards/TextCard";
+import connect from "react-redux/es/connect/connect";
+import {prettyMonthYear} from "../../styling/prettyPrint";
+import {Link} from "react-router-dom";
 
 //Member Timings to display all fastest timings and timings by event
-//TODO: Integrate live data
 class Achievements extends React.Component {
+
+    //Iterate over achievements object and display
+    renderAchievements = () => {
+        if (this.props.user) {
+            if (this.props.user[0]['achievements']) {
+                const achievements = this.props.user[0]['achievements'];
+
+                return Object.values(achievements).map((key, index) => {
+
+                    return (
+                        <TextCard
+                            key={index}
+                            grey
+                            center
+                            mainBackground={key['photo']}
+                            subTitle={prettyMonthYear(key['date'])}
+                            header={key['title']}
+                        />
+                    )
+                })
+            } else {
+                return (
+                    <TextCard
+                        grey
+                        center
+                        mainBackground={"https://lh6.googleusercontent.com/c9hXlfKHAGsFW1HadfNILLTn5UO-U-37nLObV60azLhC-lPnVvWOotSvHhk=w2400"}
+                        subTitle={
+                            <Link to={"/Contact-Us"}>
+                                Something wrong?
+                            </Link>
+                        }
+                        header={"No Records available"}
+                    />
+                )
+            }
+        }
+    };
 
     render() {
         return (
@@ -19,29 +58,7 @@ class Achievements extends React.Component {
                     />
 
                     <FlexiGrid>
-                        <TextCard
-                            grey
-                            center
-                            mainBackground={"https://lh5.googleusercontent.com/Cy2Tm23nnNANZyOSvCLIkiAKutqT2pWOq7LXMdnfi99ueqWxrbEfN5vXYbk=w2400"}
-                            header={"1st March 2018"}
-                            subTitle={"2017 Club Championships U14 1st place"}
-                        />
-                        <TextCard
-                            grey
-                            center
-                            mainBackground={"https://lh5.googleusercontent.com/Cy2Tm23nnNANZyOSvCLIkiAKutqT2pWOq7LXMdnfi99ueqWxrbEfN5vXYbk=w2400"}
-                            header={"2017 Club Championships U14 1st place"}
-                            subTitle={"1st March 2018"}
-                        />
-                        <TextCard
-                            grey
-                            center
-                            mainBackground={"https://lh5.googleusercontent.com/Cy2Tm23nnNANZyOSvCLIkiAKutqT2pWOq7LXMdnfi99ueqWxrbEfN5vXYbk=w2400"}
-                            header={"2017 Club Championships U14 1st place"}
-                            subTitle={"1st March 2018"}
-                        />
-
-
+                        {this.renderAchievements()}
                     </FlexiGrid>
                 </PageContent>
             </MemberPage>
@@ -49,4 +66,11 @@ class Achievements extends React.Component {
     }
 }
 
-export default Achievements
+
+const mapStateToProps = (state) => {
+    return {
+        user: state.user.user,
+    };
+};
+
+export default connect(mapStateToProps, {})(Achievements)

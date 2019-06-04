@@ -1,11 +1,13 @@
 import React from 'react'
 import SideMenu from "./SideMenu";
 import {TopMenuContainer} from "../../styling/menus";
-import {AvatarIcon, LongNavyLogo, MenuBarsIcon, TextIcon} from "../../styling/icons";
+import {LongNavyLogo, MenuBarsIcon, TextIcon} from "../../styling/icons";
 import {withRouter} from "react-router-dom";
+import {Authenticator} from "aws-amplify-react";
+import {cognitoTheme} from "../../styling/authentication";
+import MenuGreeting from "../authentication/MenuGreeting";
 
 //Top menu bar fixed to top of all pages
-//TODO: Add conditional rendering for avatar and sign in
 
 class TopMenu extends React.Component {
 
@@ -28,12 +30,19 @@ class TopMenu extends React.Component {
                           closeSideMenu={() => this.closeSideMenu}/>
                 <MenuBarsIcon onClick={this.openSideMenu}/>
                 <LongNavyLogo onClick={() => this.props.history.push("/")}/>
-                {this.props.user === "member" ?
-                    <AvatarIcon onClick={() => this.props.history.push("/Members")}/> :
-                    <TextIcon onClick={() => this.props.history.push("/Members")}>
-                        Sign In
-                    </TextIcon>
-                }
+
+                {/*Uses aws cognito to render menu greeting conditionally */}
+                <TextIcon white>
+                    <Authenticator
+                        hideDefault={true}
+                        onStateChange={this.handleAuthStateChange}
+                        theme={cognitoTheme}
+                    >
+                        <MenuGreeting override={'Greetings'}/>
+                    </Authenticator>
+                </TextIcon>
+
+
             </TopMenuContainer>
         )
     }

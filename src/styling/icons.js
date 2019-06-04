@@ -8,13 +8,20 @@ import {Document} from "styled-icons/typicons/Document";
 
 export const LongNavyLogo = styled.img`
     content: url(${logo});
-    height: 49.03px;
-    margin: 2%;
+    height: 50px;
+    width: auto;
+    margin: 10px 0 10px 0;
    
     :hover {
         cursor: pointer;
         opacity: 0.7;
     }
+    
+    @media screen and (max-width: 400px){
+        height: 40px;
+        margin: 15px 0 15px 0;
+    }
+
 `;
 
 export const LabelIcon = styled(Document)`
@@ -38,9 +45,9 @@ export const CloseIcon = styled(Close)`
 `;
 export const MenuBarsIcon = styled(MenuAltLeft)`  
     color: #000040;
-    height: 49.03px;
-    margin: 2%;
-    width: 49.03px;
+    height: 50px;
+    width: auto;
+    margin: 10px 0 10px 20px;    
     
     :hover {
         cursor: pointer;
@@ -52,30 +59,31 @@ export const MenuBarsIcon = styled(MenuAltLeft)`
 export const AvatarIcon = styled(Person)`
     color: #000040;
     height: 49.03px;
-    margin: 2%;
-    width: 49.03px;
-`;
-
-//Icon for displaying a short text
-export const TextIcon = styled.p`
-    color: ${props => (props.white ? "#FFFFFF" : "#000040")}
-    font-family: "PT Sans";
-    font-size: 24px;
-    font-weight: 700;
-    height: 49.03px;
-    line-height: 24px;    
-    margin: 2%;
-    text-align: ${props => (props.left ? "left" : "center")}
-    width: 49.03px;
-     
+    
+    width: 49.03px; 
+    
     :hover {
         cursor: pointer;
         opacity: 0.7;
     }
+`;
+
+//Icon for displaying a short text
+export const TextIcon = styled.div`
+    color: ${props => (props.white ? "#FFFFFF" : "#000040")}
+    font-family: "PT Sans";
+   
+    height: 50px;
+    width: auto;
+    line-height: 50px;
+    margin: 10px 20px 10px 0;
+    border-radius: 10px;
     
-    @media screen and (max-width: 800px) {
-        font-size: 18px;
-        line-height: 18px;  
-        margin: 4%;
+    text-align: ${props => (props.left ? "left" : "center")}
+    
+     
+    :hover {
+        cursor: pointer;
+        opacity: 0.7;
     }
 `;

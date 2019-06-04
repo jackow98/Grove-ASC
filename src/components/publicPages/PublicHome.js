@@ -21,7 +21,7 @@ class PublicHome extends React.Component {
                         mobileBackground={"https://lh5.googleusercontent.com/ARThs942DoODUHCOQz_Oa_Fj4PGHtfPzn5kLfyMEjhCu6m4i-qIGwIKCPDg=w2400"}
                         mainText={"Track your Progress"}
                         buttonText={"Members"}
-                        link={"/Members"}
+                        link={"/Members/Home"}
                     />
                     <LargePhotoCard
                         mainBackground={"https://lh3.googleusercontent.com/qeHFmOtkqYOvho2p8dkPi4sT9AxOf3LLZVJJ0O3FbNaAnvf8p2DG4dOrUjc=w2400"}

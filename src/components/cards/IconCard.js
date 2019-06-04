@@ -9,12 +9,19 @@ import {LabelIcon} from "../../styling/icons";
 class IconCard extends React.Component {
     render() {
         return (
-            <IconCardContainer narrow={this.props.narrow} icon={this.props.icon}>
+
+            <IconCardContainer
+                href={this.props.link}
+                target={"blank"}
+                narrow={this.props.narrow}
+                icon={this.props.icon}
+            >
                 <LabelIcon icon={"Document"}/>
                 <Description center>
                     {this.props.label}
                 </Description>
             </IconCardContainer>
+
         )
     }
 }

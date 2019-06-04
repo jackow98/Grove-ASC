@@ -34,10 +34,10 @@ export const Card = styled.div`
         border-radius: 10px;    
         display: ${props => (props.cardType === 'TextCard' && 'block')};
         height: ${props =>
-            (props.cardType === 'TitleCard' && '100px') ||
-            (props.cardType === 'LargePhotoCard' && '500.22px') ||
-            (props.cardType === 'TextCard' && '100%')
-        };
+    (props.cardType === 'TitleCard' && '100px') ||
+    (props.cardType === 'LargePhotoCard' && '500.22px') ||
+    (props.cardType === 'TextCard' && '100%')
+    };
     
         justify-content: none;
         margin: 5% 3.5%;
@@ -148,7 +148,7 @@ export const FlexiGrid = styled.div`
 
 
 //Container for a card rendering an icon beside some text
-export const IconCardContainer = styled.div`
+export const IconCardContainer = styled.a`
     align-content: center;
     align-items: center;
     background-color: #f0eeeecf;
@@ -157,6 +157,7 @@ export const IconCardContainer = styled.div`
     height: 100px;
     justify-content: center;
     margin: 1% 3.5%;
+    text-decoration: none;
     width: 43%
     
     :hover {
@@ -217,8 +218,8 @@ export const DataLine = styled.div`
     width: 100%;
     
      @media only screen and (max-width: 800px) {
-        font-size: 18px;
-        line-height: 18px;
+        font-size: 16px;
+        line-height: 16px;
     }
 `;
 
@@ -232,10 +233,10 @@ export const DataPhotoCardContainer = styled.div`
 
 export const DataEntry = styled.div`
     color: ${props => props.red ? "red" : "#000040"};
-    color: ${props => 
-        (props.red && 'red') ||
-        (props.lightBlue && '#2FB6E1') ||
-        '#000040'
+    color: ${props =>
+    (props.red && 'red') ||
+    (props.lightBlue && '#2FB6E1') ||
+    '#000040'
     }
     font-weight: ${props => props.bold ? "bold" : "normal"};
     width: 50%;
@@ -243,9 +244,9 @@ export const DataEntry = styled.div`
 
 export const Dot = styled.span`
     background-color: ${props =>
-        (props.red && 'red') ||
-        (props.lightBlue && '#2FB6E1') ||
-        '#000040'
+    (props.red && 'red') ||
+    (props.lightBlue && '#2FB6E1') ||
+    '#000040'
     }  
     border-radius: 50%;
     display: inline-block; 

@@ -1,15 +1,7 @@
 import styled from "styled-components";
 
 export const PageContent = styled.div`
-    margin-top: 7%; 
-    
-    @media only screen and (max-width: 600px) {
-        margin-top: 12%;
-    }
-    
-    @media only screen and (max-width: 600px) {
-        margin-top: 14%;
-    }
+    margin-top: 70px; 
 `;
 
 export const PageContainer = styled.div`

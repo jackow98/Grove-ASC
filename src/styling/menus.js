@@ -22,24 +22,24 @@ export const TopMenuContainer = styled.div`
     background: #FFFF;
     display: flex;
     clear: both;
-    height: 12%;
     justify-content: space-between;
     position: fixed;
     text-align: center; 
     width: 100%;
+    height: 70px;
     z-index: 1;
-    
-    @media only screen and (max-width: 1050px) {
-        height: 7%;
-    }
-   
-    @media only screen and (max-width: 800px) {
-        height: 9%;
-    }
-   
-    @media only screen and (max-width: 600px) {
-        height: 10%;
-    }
+`;
+
+export const returnToMainsite = styled.div`
+    background: #000040;
+    display: flex;
+    clear: both;
+    justify-content: space-between;
+    position: fixed;
+    text-align: center; 
+    width: 100%;
+    height: 70px;
+    z-index: 1;
 `;
 
 export const FooterContainer = styled.div`

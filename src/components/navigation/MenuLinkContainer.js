@@ -16,7 +16,7 @@ class MenuLinkContainer extends React.Component {
         },
         "Members": {
             "name": "Members",
-            "link": "/Members"
+            "link": "/Members/Home"
         },
         "Contact-Us": {
             "name": "Contact Us",
@@ -26,7 +26,7 @@ class MenuLinkContainer extends React.Component {
 
     memberPageItems = {
         "MemberHome": {
-            "name": "Member home",
+            "name": "Members",
             "link": "/Members/Home"
         },
         "Contact-Us": {
@@ -39,13 +39,26 @@ class MenuLinkContainer extends React.Component {
         }
     };
 
+    handLeLinkClick = (key) => {
+        //Reloads page if user is currently viewing that page
+        if (this.props.location.pathname === key.link) {
+            window.location.reload();
+        } else {
+            this.props.history.push(key.link)
+        }
+    };
+
     renderLinks = () => {
 
         const menuItems = this.props.user === "public" ? this.publicPageItems : this.memberPageItems;
 
         return Object.values(menuItems).map((key, index) => {
             return (
-                <MenuLink menuType={this.props.menuType} onClick={() => this.props.history.push(key.link)}>
+                <MenuLink
+                    menuType={this.props.menuType}
+                    key={index}
+                    onClick={() => this.handLeLinkClick(key)}
+                >
                     {key.name}
                 </MenuLink>
             )

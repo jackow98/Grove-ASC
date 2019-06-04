@@ -5,7 +5,10 @@ import SmallPhotoCard from "../cards/SmallPhotoCard";
 import {FlexiGrid} from "../../styling/cards";
 import {withRouter} from "react-router-dom";
 
+//TODO: Add store
+//TODO: Add swimmer stories
 //Member Home page acts as a window to all member features
+
 class MemberHome extends React.Component {
 
     render() {
@@ -37,6 +40,11 @@ class MemberHome extends React.Component {
                             mainBackground={"https://lh4.googleusercontent.com/mh1pURaPvzHRdAf8t0u1lhREKbl32Pux8H3Gz_d-nDTqvmyhjGO6YkR98Gs=w2400"}
                             mainText={"20 Min Swims"}
                             link={"/Members/TwentyMinSwims"}
+                        />
+                        <SmallPhotoCard
+                            mainBackground={"https://lh6.googleusercontent.com/jrh4UI4C-vDdq0N5tvYipQ8ZOyu0zrruQL7rMce7-XO08POVesB6UFcMyUU=w2400"}
+                            mainText={"Account"}
+                            link={"/Members/Account"}
                         />
                         {/*<SmallPhotoCard*/}
                         {/*mobileBackground={"https://lh5.googleusercontent.com/4p4GwiDsncZ7OVIjW2UTM4vtWcyE9YecM1O7vWBx3881SJjmVznoqaQ3cMQ=w2400"}*/}
