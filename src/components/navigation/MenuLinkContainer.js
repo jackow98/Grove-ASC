@@ -57,12 +57,13 @@ class MenuLinkContainer extends React.Component {
     };
 
     handLeLinkClick = (key) => {
+        //TODO: Make this close side bar if currently on that page
         //Reloads page if user is currently viewing that page
-        if (this.props.location.pathname === key.link) {
-            window.location.reload();
-        } else {
+        // if (this.props.location.pathname === key.link) {
+        //     window.location.reload();
+        // } else {
             this.props.history.push(key.link)
-        }
+        // }
     };
 
     renderLinks = () => {
