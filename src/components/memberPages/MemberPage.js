@@ -9,8 +9,7 @@ import {PageContainer} from "../../styling/pages";
 import {MainButton} from "../../styling/buttons";
 import connect from "react-redux/es/connect/connect";
 import {loadUser} from "../../redux/actions";
-import KirstyBrown from "../../assets/ScottGallagher"
-import {getUser, postUser} from "../../accountHandling/restFunctions";
+import {getUser} from "../../accountHandling/restFunctions";
 
 //Container for all pages that can be viewed by members
 class MemberPage extends React.Component {
@@ -59,7 +58,7 @@ class MemberPage extends React.Component {
                     {this.props.children}
                     <Footer user={"member"}/>
                     {/*<button onClick={() => {*/}
-                        {/*postUser(KirstyBrown)*/}
+                    {/*postUser(KirstyBrown)*/}
                     {/*}}>postUser*/}
                     {/*</button>*/}
                 </PageContainer>
