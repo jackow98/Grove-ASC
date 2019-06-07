@@ -38,12 +38,13 @@ class TimingsFastest extends React.Component {
 
                     if (key !== "NT" && key) {
                         return (
-
                             <DataLine key={index}>
                                 <DataEntry>{prettyDistance(keys[index])}</DataEntry>
                                 <DataEntry>{key}</DataEntry>
                             </DataLine>
                         )
+                    } else {
+                        return null
                     }
 
                 })

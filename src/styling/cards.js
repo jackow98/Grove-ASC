@@ -95,11 +95,14 @@ export const Photo = styled.div`
     height: 400.41px;
     justify-content: center; 
     margin: 0px;
+    padding-top: ${props => props.big ? "10%" : null};
+    padding-bottom: ${props => props.big ? "20%" : null};
     width: 100%; 
     
      @media only screen and (max-width: 800px) {
          height: 200.41px;
          border-radius: 10px 10px 0px 0px;
+         padding-bottom: ${props => props.big ? "50%" : null};
      }
  `;
 
@@ -220,7 +223,7 @@ export const DataLine = styled.div`
      @media only screen and (max-width: 800px) {
         font-size: 16px;
         line-height: 16px;
-        display: ${props => (props.forceBlock? 'block':'flex')};
+        display: ${props => (props.forceBlock ? 'block' : 'flex')};
     }
 `;
 
@@ -234,9 +237,9 @@ export const DataPhotoCardContainer = styled.div`
 
 export const DataEntry = styled.div`
     color: ${props =>
-        (props.red && 'red') ||
-        (props.lightBlue && '#2FB6E1') ||
-        '#000040'
+    (props.red && 'red') ||
+    (props.lightBlue && '#2FB6E1') ||
+    '#000040'
     }
     font-weight: ${props => props.bold ? "bold" : "normal"};
     width: 50%; 

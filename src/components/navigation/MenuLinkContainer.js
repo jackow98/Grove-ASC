@@ -62,7 +62,7 @@ class MenuLinkContainer extends React.Component {
         // if (this.props.location.pathname === key.link) {
         //     window.location.reload();
         // } else {
-            this.props.history.push(key.link)
+        this.props.history.push(key.link)
         // }
     };
 

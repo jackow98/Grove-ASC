@@ -10,6 +10,7 @@ class TextCard extends React.Component {
         return (
             <Card cardType="TextCard" grey={this.props.grey}>
                 <Photo
+                    big={this.props.big}
                     mainBackground={this.props.mainBackground}
                 />
 

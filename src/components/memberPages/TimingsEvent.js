@@ -66,6 +66,8 @@ class TimingsEvent extends React.Component {
                         <DataEntry>{time}</DataEntry>
                     </DataLine>
                 )
+            } else {
+                return null
             }
 
         })

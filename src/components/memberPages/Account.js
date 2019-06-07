@@ -92,10 +92,10 @@ class Account extends React.Component {
 
                             </DataEntry>
                             <SimpleLink>
-                            <Link to={"/Contact-Us"}>
+                                <Link to={"/Contact-Us"}>
                                     Something wrong?
 
-                            </Link>
+                                </Link>
                             </SimpleLink>
                         </DataEntry>
                     </DataLine>

@@ -35,9 +35,9 @@ export const MainHeader = styled.h1`
 export const SecondaryHeader = styled.h2`
     
     color: ${props =>
-        (props.color === 'blue' && '#2FB6E1') ||
-        (props.color === 'white' && '#FFFFFF') ||
-        (props.color === 'navy' && '#000040')
+    (props.color === 'blue' && '#2FB6E1') ||
+    (props.color === 'white' && '#FFFFFF') ||
+    (props.color === 'navy' && '#000040')
     }
     
     display: flex;

@@ -22,6 +22,7 @@ class Achievements extends React.Component {
 
                     return (
                         <TextCard
+                            big
                             key={index}
                             grey
                             center
