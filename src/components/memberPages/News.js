@@ -9,6 +9,7 @@ import groveJounreyPDF from "../../assets/Grove ASC Journey.pdf"
 import groveLanePlanPDF from "../../assets/Grove ASC Lane Plan 2019.pdf"
 import groveCoursesPDF from "../../assets/2019 Courses for Swimmers.pdf"
 import grovePlacingsPDF from "../../assets/Grove Placings for Board.pdf"
+import grovePostSummerPlan from "../../assets/2019 Post Summer Calendar.pdf"
 
 //Member Timings to display all fastest timings and timings by event
 class TwentyMinSwims extends React.Component {
@@ -26,6 +27,12 @@ class TwentyMinSwims extends React.Component {
                         <MainHeader left>
                             Information
                         </MainHeader>
+
+                        <IconCard
+                            icon={"File"}
+                            label={"2019 Post Summer Calendar"}
+                            link={grovePostSummerPlan}
+                        />
 
                         <IconCard
                             icon={"File"}
