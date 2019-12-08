@@ -22,7 +22,7 @@ class ContactUs extends React.Component {
                         description={<p>You can message us on <SimpleLink
                             href="https://m.me/Groveasc">facebook</SimpleLink> using the messenger icon in the
                             bottom right or drop us an email at <SimpleLink
-                                href="mailto:groveasc@gmail.co.uk">groveasc@gmail.co.uk</SimpleLink></p>}
+                                href="mailto:groveasc@gmail.com">groveasc@gmail.com</SimpleLink></p>}
                     />
 
                     {/*<ContactForm/>*/}
