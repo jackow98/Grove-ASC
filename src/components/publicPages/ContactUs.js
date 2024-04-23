@@ -1,39 +1,42 @@
-import React from 'react'
-import {PageContent} from "../../styling/pages";
+import React from "react";
+import { PageContent } from "../../styling/pages";
 import PublicPage from "./PublicPage";
 import TitleCard from "../cards/TitleCard";
 import TextCard from "../cards/TextCard";
-import {SimpleLink} from "../../styling/text";
+import { SimpleLink } from "../../styling/text";
 
 //Page for users to fill out a form and send to the club
 class ContactUs extends React.Component {
-    render() {
-        return (
-            <PublicPage>
-                <PageContent>
-                    <TitleCard
-                        mainBackground={"https://lh3.googleusercontent.com/qeHFmOtkqYOvho2p8dkPi4sT9AxOf3LLZVJJ0O3FbNaAnvf8p2DG4dOrUjc=w2400"}
-                        title={"Contact Us"}
-                    />
+  render() {
+    return (
+      <PublicPage>
+        <PageContent>
+          <TitleCard
+            mainBackground={
+              "https://lh3.googleusercontent.com/drive-viewer/AKGpihZyuBBRhuactt53haOQc5cfGw0CqDjTW-CESSCLWtzoCaMFEEJBsZ-oNxfPsqymB041nmZ7zJ1pbcXd3iidnZrXOUiIXS2CQ80=w2400"
+            }
+            title={"Contact Us"}
+          />
 
-                    <TextCard
-                        mainBackground={"https://lh5.googleusercontent.com/4p4GwiDsncZ7OVIjW2UTM4vtWcyE9YecM1O7vWBx3881SJjmVznoqaQ3cMQ=w2400"}
-                        header={"Get in touch"}
-                        description={<p>You can message us on <SimpleLink
-                            href="https://m.me/Groveasc">facebook</SimpleLink> using the messenger icon in the
-                            bottom right or drop us an email at <SimpleLink
-                                href="mailto:groveasc@gmail.com">groveasc@gmail.com</SimpleLink></p>}
-                    />
-
-                    {/*<ContactForm/>*/}
-
-                    {/*<MainButton onClick={() => {postContactForm()}}>*/}
-                    {/*Submit*/}
-                    {/*</MainButton>*/}
-                </PageContent>
-            </PublicPage>
-        )
-    }
+          <TextCard
+            mainBackground={
+              "https://lh3.googleusercontent.com/drive-viewer/AKGpihbRY7x9TPCqNvFndb_v73vWwZp96ODKrWlK-kd5b79oM940239YnouCD2RtUci1Tr7LbCeqDwqgZPqCw95j_23eYYD0LtushQA=w2400"
+            }
+            header={"Get in touch"}
+            description={
+              <p style={{ justifyContent: "left", width: "100%" }}>
+                Drop us an email at{" "}
+                <SimpleLink href="mailto:groveasc@gmail.com">
+                  {" "}
+                  groveasc@gmail.com
+                </SimpleLink>
+              </p>
+            }
+          />
+        </PageContent>
+      </PublicPage>
+    );
+  }
 }
 
 export default ContactUs;
