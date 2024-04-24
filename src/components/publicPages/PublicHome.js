@@ -32,7 +32,7 @@ class PublicHome extends React.Component {
           <LargePhotoCard
             mainBackground={"https://lh3.googleusercontent.com/drive-viewer/AKGpihaPGf9NUkvrt0dd9iUJTH0MhSubYpEmbR1yL3e12JQ50ywYvmrk1VqpixNaTeXOzri4lEOL0Y6ELKCXTATLPD_pUDv-3bFdWxs=w2400"}
             mainText={"Coach at Grove"}
-            buttonText={"Enquire today"}
+            buttonText={"Find out more"}
             link={"/Coach"}
           />
         </PageContent>
