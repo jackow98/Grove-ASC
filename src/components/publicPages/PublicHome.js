@@ -14,6 +14,9 @@ class PublicHome extends React.Component {
             mainBackground={
               "https://lh3.googleusercontent.com/drive-viewer/AKGpihZyuBBRhuactt53haOQc5cfGw0CqDjTW-CESSCLWtzoCaMFEEJBsZ-oNxfPsqymB041nmZ7zJ1pbcXd3iidnZrXOUiIXS2CQ80=w2400"
             }
+            mobileBackground={
+              "https://lh3.googleusercontent.com/drive-viewer/AKGpiha_Mzqo7-c3uVDqrOSu7pYqFegsbP7QatgvO-SZsvLsFZM33KtURHZiYZcwBw4mrK7tLPp1JcXXCefI_YZDHnllw1Td7pEWwO4=w2400"
+            }
             mainText={"Take those first steps into club swimming"}
             buttonText={"About the club"}
             link={"/About-Us"}
