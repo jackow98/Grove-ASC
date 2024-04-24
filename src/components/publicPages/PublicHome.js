@@ -23,6 +23,9 @@ class PublicHome extends React.Component {
           />
           <LargePhotoCard
             mainBackground={
+              "https://lh3.googleusercontent.com/drive-viewer/AKGpihY24rvfdkRj9lQD6SEPfGZwAMGJ0t0HD2YFiqCwhYNKdltxLc2ITL8Yzx9kS0Z9xBLtLbd7KnGZ9uYBbxp6_akWQoK_JJHfDwA=w2400"
+            }
+            mobileBackground={
               "https://lh3.googleusercontent.com/drive-viewer/AKGpihYjrS-0kb-TJIii0YRueK7kw_oslCwbKmVe8x1ZT181vPR6_Eo42AgESPMMQK0quw5zmmExqx4JGKckWKkjb3RR26nv0YbWbFE=w2400"
             }
             mainText={"Swim with us"}
@@ -30,7 +33,12 @@ class PublicHome extends React.Component {
             link={"/Contact-Us"}
           />
           <LargePhotoCard
-            mainBackground={"https://lh3.googleusercontent.com/drive-viewer/AKGpihaPGf9NUkvrt0dd9iUJTH0MhSubYpEmbR1yL3e12JQ50ywYvmrk1VqpixNaTeXOzri4lEOL0Y6ELKCXTATLPD_pUDv-3bFdWxs=w2400"}
+            mainBackground={
+              "https://lh3.googleusercontent.com/drive-viewer/AKGpihbPJuw3lv7JWdJ8odqQYQxvJAH58tt2PkAKWqILnWtrGQVrAiY6ZPaNpBU-Nixisarnq38tERA-St9ASYUcUtiltFbW7i7uAdQ=w2400"
+            }
+            mobileBackground={
+              "https://lh3.googleusercontent.com/drive-viewer/AKGpihaPGf9NUkvrt0dd9iUJTH0MhSubYpEmbR1yL3e12JQ50ywYvmrk1VqpixNaTeXOzri4lEOL0Y6ELKCXTATLPD_pUDv-3bFdWxs=w2400"
+            }
             mainText={"Coach at Grove"}
             buttonText={"Find out more"}
             link={"/Coach"}
