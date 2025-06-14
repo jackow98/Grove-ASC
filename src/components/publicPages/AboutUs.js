@@ -5,10 +5,10 @@ import TitleCard from "../cards/TitleCard";
 import TextCard from "../cards/TextCard";
 import { AlertCard } from "../../styling/cards";
 import { SecondaryHeader } from "../../styling/text";
-import smilingCoach from '../../assets/images/smilingCoach.png';
-import sidePool from '../../assets/images/swimmerSide.png';
-import clubStairs from '../../assets/images/clubStairs.png';
-import smilingSwimmer from '../../assets/images/smilingSwimmer.png';
+import smilingCoach from '../../assets/images/lowQual/smilingCoach.png';
+import sidePool from '../../assets/images/lowQual/swimmerSide.png';
+import clubStairs from '../../assets/images/lowQual/clubStairs.png';
+import smilingSwimmer from '../../assets/images/lowQual/smilingSwimmer.jpg';
 
 //Page with information about the club and link to contact form
 class AboutUs extends React.Component {

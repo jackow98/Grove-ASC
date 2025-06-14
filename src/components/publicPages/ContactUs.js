@@ -4,7 +4,7 @@ import PublicPage from "./PublicPage";
 import TitleCard from "../cards/TitleCard";
 import TextCard from "../cards/TextCard";
 import { SimpleLink } from "../../styling/text";
-import swimmerBackTwo from '../../assets/images/swimmerBackTwo.png';
+import backSwimmerTwo from '../../assets/images/lowQual/backSwimmerTwo.png';
 
 //Page for users to fill out a form and send to the club
 class ContactUs extends React.Component {
@@ -19,7 +19,7 @@ class ContactUs extends React.Component {
 
           <TextCard
             mainBackground={
-              swimmerBackTwo
+              backSwimmerTwo
                         }
             header={"Get in touch"}
             description={
