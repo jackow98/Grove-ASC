@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, PhotoOverlay } from "../../styling/cards";
 import { OverlayHeader } from "../../styling/text";
+import gradient from '../../assets/images/gradient.png';
+
 
 //Card for a page title and an image background to be used as header of page or link to page
 class TitleCard extends React.Component {
@@ -8,8 +10,7 @@ class TitleCard extends React.Component {
     return (
       <Card
         cardType="TitleCard"
-        mainBackground={this.props.mainBackground}
-        mobileBackground={this.props.mobileBackground}
+        mainBackground={gradient}
         title={this.props.title}
       >
         <PhotoOverlay>

@@ -5,6 +5,10 @@ import TitleCard from "../cards/TitleCard";
 import TextCard from "../cards/TextCard";
 import { AlertCard } from "../../styling/cards";
 import { SecondaryHeader } from "../../styling/text";
+import awardsGroup from '../../assets/images/awardsGroup.png';
+import timeKeeper from '../../assets/images/timeKeeper.png';
+import swimmerWall from '../../assets/images/swimmerWall.png';
+import clubStairs from '../../assets/images/clubStairs.png';
 
 //Page with information about the club and link to contact form
 class AboutUs extends React.Component {
@@ -13,15 +17,12 @@ class AboutUs extends React.Component {
       <PublicPage>
         <PageContent>
           <TitleCard
-            mainBackground={
-              "https://lh3.googleusercontent.com/drive-viewer/AKGpihZyuBBRhuactt53haOQc5cfGw0CqDjTW-CESSCLWtzoCaMFEEJBsZ-oNxfPsqymB041nmZ7zJ1pbcXd3iidnZrXOUiIXS2CQ80=w2400"
-            }
             title={"Coach with us"}
           />
 
           <TextCard
             mainBackground={
-              "https://lh3.googleusercontent.com/drive-viewer/AKGpihbRY7x9TPCqNvFndb_v73vWwZp96ODKrWlK-kd5b79oM940239YnouCD2RtUci1Tr7LbCeqDwqgZPqCw95j_23eYYD0LtushQA=w2400"
+              awardsGroup
             }
             header={"Why Grove?"}
             description={
@@ -30,7 +31,7 @@ class AboutUs extends React.Component {
           />
           <TextCard
             mainBackground={
-              "https://lh3.googleusercontent.com/drive-viewer/AKGpihYYwZtCiLqbqT98II0OR1SWwmr6q5MKyqjjl1v29pYAPQXXiQlCLKQRmCYazbDmKnUzkPN74FYhaqPGiV1hnQhG7zak-wl1Fko=w2400"
+              timeKeeper
             }
             header={"Opportunities"}
             description={
@@ -39,7 +40,7 @@ class AboutUs extends React.Component {
           />
           <TextCard
             mainBackground={
-              "https://lh3.googleusercontent.com/drive-viewer/AKGpiha_Mzqo7-c3uVDqrOSu7pYqFegsbP7QatgvO-SZsvLsFZM33KtURHZiYZcwBw4mrK7tLPp1JcXXCefI_YZDHnllw1Td7pEWwO4=w2400"
+              swimmerWall
             }
             header={"What we offer"}
             description={
@@ -48,7 +49,7 @@ class AboutUs extends React.Component {
           />
           <TextCard
             mainBackground={
-              "https://lh3.googleusercontent.com/drive-viewer/AKGpihYCzobAbOtAqfCN9hLCmAlmZjAWFgtUfvJzopSXTt3Z5Mr_WSe9333HwAjRGcU-O56GXDVOOuq-253Mo4Tnc3UHBvM_CDSXQQ0=w2400"
+              clubStairs
             }
             header={"Role"}
             description={
